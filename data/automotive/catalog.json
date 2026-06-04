@@ -1,0 +1,10231 @@
+[
+  {
+    "name": "Abarth",
+    "models": [
+      {
+        "name": "500",
+        "ranges": [
+          {
+            "from": 2008,
+            "to": 2024
+          }
+        ]
+      },
+      {
+        "name": "595",
+        "ranges": [
+          {
+            "from": 2012,
+            "to": 2024
+          }
+        ]
+      },
+      {
+        "name": "695",
+        "ranges": [
+          {
+            "from": 2012,
+            "to": 2024
+          }
+        ]
+      },
+      {
+        "name": "124 Spider",
+        "ranges": [
+          {
+            "from": 2016,
+            "to": 2019
+          }
+        ]
+      },
+      {
+        "name": "Punto",
+        "ranges": [
+          {
+            "from": 2007,
+            "to": 2014
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Acura",
+    "models": [
+      {
+        "name": "NSX",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2005
+          },
+          {
+            "from": 2016,
+            "to": 2022
+          }
+        ]
+      },
+      {
+        "name": "Integra",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2001
+          },
+          {
+            "from": 2023,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Legend",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1995
+          }
+        ]
+      },
+      {
+        "name": "Vigor",
+        "ranges": [
+          {
+            "from": 1992,
+            "to": 1994
+          }
+        ]
+      },
+      {
+        "name": "RL",
+        "ranges": [
+          {
+            "from": 1996,
+            "to": 2012
+          }
+        ]
+      },
+      {
+        "name": "TL",
+        "ranges": [
+          {
+            "from": 1996,
+            "to": 2014
+          }
+        ]
+      },
+      {
+        "name": "CL",
+        "ranges": [
+          {
+            "from": 1997,
+            "to": 2003
+          }
+        ]
+      },
+      {
+        "name": "MDX",
+        "ranges": [
+          {
+            "from": 2001,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "RSX",
+        "ranges": [
+          {
+            "from": 2002,
+            "to": 2006
+          }
+        ]
+      },
+      {
+        "name": "TSX",
+        "ranges": [
+          {
+            "from": 2004,
+            "to": 2014
+          }
+        ]
+      },
+      {
+        "name": "RDX",
+        "ranges": [
+          {
+            "from": 2007,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "ZDX",
+        "ranges": [
+          {
+            "from": 2010,
+            "to": 2013
+          },
+          {
+            "from": 2024,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "ILX",
+        "ranges": [
+          {
+            "from": 2013,
+            "to": 2022
+          }
+        ]
+      },
+      {
+        "name": "RLX",
+        "ranges": [
+          {
+            "from": 2014,
+            "to": 2020
+          }
+        ]
+      },
+      {
+        "name": "TLX",
+        "ranges": [
+          {
+            "from": 2015,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Alfa Romeo",
+    "models": [
+      {
+        "name": "33",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1995
+          }
+        ]
+      },
+      {
+        "name": "75",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1992
+          }
+        ]
+      },
+      {
+        "name": "155",
+        "ranges": [
+          {
+            "from": 1992,
+            "to": 1998
+          }
+        ]
+      },
+      {
+        "name": "145",
+        "ranges": [
+          {
+            "from": 1994,
+            "to": 2001
+          }
+        ]
+      },
+      {
+        "name": "146",
+        "ranges": [
+          {
+            "from": 1995,
+            "to": 2001
+          }
+        ]
+      },
+      {
+        "name": "156",
+        "ranges": [
+          {
+            "from": 1997,
+            "to": 2007
+          }
+        ]
+      },
+      {
+        "name": "166",
+        "ranges": [
+          {
+            "from": 1998,
+            "to": 2007
+          }
+        ]
+      },
+      {
+        "name": "147",
+        "ranges": [
+          {
+            "from": 2000,
+            "to": 2010
+          }
+        ]
+      },
+      {
+        "name": "GT",
+        "ranges": [
+          {
+            "from": 2003,
+            "to": 2010
+          }
+        ]
+      },
+      {
+        "name": "159",
+        "ranges": [
+          {
+            "from": 2005,
+            "to": 2011
+          }
+        ]
+      },
+      {
+        "name": "Brera",
+        "ranges": [
+          {
+            "from": 2005,
+            "to": 2010
+          }
+        ]
+      },
+      {
+        "name": "Spider",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1993
+          },
+          {
+            "from": 1995,
+            "to": 2010
+          }
+        ]
+      },
+      {
+        "name": "8C Competizione",
+        "ranges": [
+          {
+            "from": 2007,
+            "to": 2010
+          }
+        ]
+      },
+      {
+        "name": "MiTo",
+        "ranges": [
+          {
+            "from": 2008,
+            "to": 2018
+          }
+        ]
+      },
+      {
+        "name": "Giulietta",
+        "ranges": [
+          {
+            "from": 2010,
+            "to": 2020
+          }
+        ]
+      },
+      {
+        "name": "4C",
+        "ranges": [
+          {
+            "from": 2013,
+            "to": 2020
+          }
+        ]
+      },
+      {
+        "name": "Giulia",
+        "ranges": [
+          {
+            "from": 2016,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Stelvio",
+        "ranges": [
+          {
+            "from": 2017,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Tonale",
+        "ranges": [
+          {
+            "from": 2022,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Junior",
+        "ranges": [
+          {
+            "from": 2024,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Alpina",
+    "models": [
+      {
+        "name": "B3",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "B5",
+        "ranges": [
+          {
+            "from": 2005,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "B7",
+        "ranges": [
+          {
+            "from": 2001,
+            "to": 2022
+          }
+        ]
+      },
+      {
+        "name": "D3",
+        "ranges": [
+          {
+            "from": 2005,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "XD3",
+        "ranges": [
+          {
+            "from": 2013,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Alpine",
+    "models": [
+      {
+        "name": "A110",
+        "ranges": [
+          {
+            "from": 2017,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "A290",
+        "ranges": [
+          {
+            "from": 2024,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Aston Martin",
+    "models": [
+      {
+        "name": "DB7",
+        "ranges": [
+          {
+            "from": 1994,
+            "to": 2004
+          }
+        ]
+      },
+      {
+        "name": "DB9",
+        "ranges": [
+          {
+            "from": 2004,
+            "to": 2016
+          }
+        ]
+      },
+      {
+        "name": "DB11",
+        "ranges": [
+          {
+            "from": 2016,
+            "to": 2023
+          }
+        ]
+      },
+      {
+        "name": "DB12",
+        "ranges": [
+          {
+            "from": 2023,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Vantage",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Vanquish",
+        "ranges": [
+          {
+            "from": 2001,
+            "to": 2018
+          },
+          {
+            "from": 2024,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Rapide",
+        "ranges": [
+          {
+            "from": 2010,
+            "to": 2020
+          }
+        ]
+      },
+      {
+        "name": "DBS",
+        "ranges": [
+          {
+            "from": 2007,
+            "to": 2012
+          },
+          {
+            "from": 2018,
+            "to": 2024
+          }
+        ]
+      },
+      {
+        "name": "DBX",
+        "ranges": [
+          {
+            "from": 2020,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Valkyrie",
+        "ranges": [
+          {
+            "from": 2021,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Audi",
+    "models": [
+      {
+        "name": "80",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1996
+          }
+        ]
+      },
+      {
+        "name": "100",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1994
+          }
+        ]
+      },
+      {
+        "name": "A1",
+        "ranges": [
+          {
+            "from": 2010,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "A2",
+        "ranges": [
+          {
+            "from": 1999,
+            "to": 2005
+          }
+        ]
+      },
+      {
+        "name": "A3",
+        "ranges": [
+          {
+            "from": 1996,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "A4",
+        "ranges": [
+          {
+            "from": 1994,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "A5",
+        "ranges": [
+          {
+            "from": 2007,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "A6",
+        "ranges": [
+          {
+            "from": 1994,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "A7",
+        "ranges": [
+          {
+            "from": 2010,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "A8",
+        "ranges": [
+          {
+            "from": 1994,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Q2",
+        "ranges": [
+          {
+            "from": 2016,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Q3",
+        "ranges": [
+          {
+            "from": 2011,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Q4 e-tron",
+        "ranges": [
+          {
+            "from": 2021,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Q5",
+        "ranges": [
+          {
+            "from": 2008,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Q6 e-tron",
+        "ranges": [
+          {
+            "from": 2024,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Q7",
+        "ranges": [
+          {
+            "from": 2005,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Q8",
+        "ranges": [
+          {
+            "from": 2018,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "TT",
+        "ranges": [
+          {
+            "from": 1998,
+            "to": 2023
+          }
+        ]
+      },
+      {
+        "name": "R8",
+        "ranges": [
+          {
+            "from": 2006,
+            "to": 2024
+          }
+        ]
+      },
+      {
+        "name": "e-tron",
+        "ranges": [
+          {
+            "from": 2018,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bentley",
+    "models": [
+      {
+        "name": "Continental R",
+        "ranges": [
+          {
+            "from": 1991,
+            "to": 2003
+          }
+        ]
+      },
+      {
+        "name": "Azure",
+        "ranges": [
+          {
+            "from": 1995,
+            "to": 2003
+          },
+          {
+            "from": 2006,
+            "to": 2009
+          }
+        ]
+      },
+      {
+        "name": "Arnage",
+        "ranges": [
+          {
+            "from": 1998,
+            "to": 2009
+          }
+        ]
+      },
+      {
+        "name": "Continental GT",
+        "ranges": [
+          {
+            "from": 2003,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Continental Flying Spur",
+        "ranges": [
+          {
+            "from": 2005,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Mulsanne",
+        "ranges": [
+          {
+            "from": 2010,
+            "to": 2020
+          }
+        ]
+      },
+      {
+        "name": "Bentayga",
+        "ranges": [
+          {
+            "from": 2015,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Bacalar",
+        "ranges": [
+          {
+            "from": 2020,
+            "to": 2022
+          }
+        ]
+      },
+      {
+        "name": "Batur",
+        "ranges": [
+          {
+            "from": 2022,
+            "to": 2024
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "BMW",
+    "models": [
+      {
+        "name": "1 Series",
+        "ranges": [
+          {
+            "from": 2004,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "2 Series",
+        "ranges": [
+          {
+            "from": 2014,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "3 Series",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "4 Series",
+        "ranges": [
+          {
+            "from": 2013,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "5 Series",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "6 Series",
+        "ranges": [
+          {
+            "from": 2003,
+            "to": 2023
+          }
+        ]
+      },
+      {
+        "name": "7 Series",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "8 Series",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1999
+          },
+          {
+            "from": 2018,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Z3",
+        "ranges": [
+          {
+            "from": 1995,
+            "to": 2002
+          }
+        ]
+      },
+      {
+        "name": "Z4",
+        "ranges": [
+          {
+            "from": 2002,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Z8",
+        "ranges": [
+          {
+            "from": 2000,
+            "to": 2003
+          }
+        ]
+      },
+      {
+        "name": "X1",
+        "ranges": [
+          {
+            "from": 2009,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "X2",
+        "ranges": [
+          {
+            "from": 2017,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "X3",
+        "ranges": [
+          {
+            "from": 2003,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "X4",
+        "ranges": [
+          {
+            "from": 2014,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "X5",
+        "ranges": [
+          {
+            "from": 1999,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "X6",
+        "ranges": [
+          {
+            "from": 2008,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "X7",
+        "ranges": [
+          {
+            "from": 2018,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "i3",
+        "ranges": [
+          {
+            "from": 2013,
+            "to": 2022
+          }
+        ]
+      },
+      {
+        "name": "i4",
+        "ranges": [
+          {
+            "from": 2021,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "i8",
+        "ranges": [
+          {
+            "from": 2014,
+            "to": 2020
+          }
+        ]
+      },
+      {
+        "name": "iX",
+        "ranges": [
+          {
+            "from": 2021,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "i7",
+        "ranges": [
+          {
+            "from": 2022,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "XM",
+        "ranges": [
+          {
+            "from": 2022,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bugatti",
+    "models": [
+      {
+        "name": "EB110",
+        "ranges": [
+          {
+            "from": 1991,
+            "to": 1995
+          }
+        ]
+      },
+      {
+        "name": "Veyron",
+        "ranges": [
+          {
+            "from": 2005,
+            "to": 2015
+          }
+        ]
+      },
+      {
+        "name": "Chiron",
+        "ranges": [
+          {
+            "from": 2016,
+            "to": 2024
+          }
+        ]
+      },
+      {
+        "name": "Divo",
+        "ranges": [
+          {
+            "from": 2019,
+            "to": 2021
+          }
+        ]
+      },
+      {
+        "name": "Centodieci",
+        "ranges": [
+          {
+            "from": 2022,
+            "to": 2022
+          }
+        ]
+      },
+      {
+        "name": "Mistral",
+        "ranges": [
+          {
+            "from": 2024,
+            "to": 2025
+          }
+        ]
+      },
+      {
+        "name": "Tourbillon",
+        "ranges": [
+          {
+            "from": 2026,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Buick",
+    "models": [
+      {
+        "name": "Century",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2005
+          }
+        ]
+      },
+      {
+        "name": "LeSabre",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2005
+          }
+        ]
+      },
+      {
+        "name": "Park Avenue",
+        "ranges": [
+          {
+            "from": 1991,
+            "to": 2005
+          }
+        ]
+      },
+      {
+        "name": "Regal",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2020
+          }
+        ]
+      },
+      {
+        "name": "Riviera",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1999
+          }
+        ]
+      },
+      {
+        "name": "Roadmaster",
+        "ranges": [
+          {
+            "from": 1991,
+            "to": 1996
+          }
+        ]
+      },
+      {
+        "name": "Skylark",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1998
+          }
+        ]
+      },
+      {
+        "name": "Enclave",
+        "ranges": [
+          {
+            "from": 2007,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Encore",
+        "ranges": [
+          {
+            "from": 2013,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Envision",
+        "ranges": [
+          {
+            "from": 2014,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "LaCrosse",
+        "ranges": [
+          {
+            "from": 2005,
+            "to": 2019
+          }
+        ]
+      },
+      {
+        "name": "Lucerne",
+        "ranges": [
+          {
+            "from": 2006,
+            "to": 2011
+          }
+        ]
+      },
+      {
+        "name": "Verano",
+        "ranges": [
+          {
+            "from": 2011,
+            "to": 2017
+          }
+        ]
+      },
+      {
+        "name": "Envista",
+        "ranges": [
+          {
+            "from": 2023,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "BYD",
+    "models": [
+      {
+        "name": "F3",
+        "ranges": [
+          {
+            "from": 2005,
+            "to": 2021
+          }
+        ]
+      },
+      {
+        "name": "F6",
+        "ranges": [
+          {
+            "from": 2008,
+            "to": 2012
+          }
+        ]
+      },
+      {
+        "name": "Qin",
+        "ranges": [
+          {
+            "from": 2012,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Tang",
+        "ranges": [
+          {
+            "from": 2015,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Yuan",
+        "ranges": [
+          {
+            "from": 2016,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Song",
+        "ranges": [
+          {
+            "from": 2015,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Han",
+        "ranges": [
+          {
+            "from": 2020,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Dolphin",
+        "ranges": [
+          {
+            "from": 2021,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Atto 3",
+        "ranges": [
+          {
+            "from": 2022,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Seal",
+        "ranges": [
+          {
+            "from": 2022,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Seagull",
+        "ranges": [
+          {
+            "from": 2023,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Cadillac",
+    "models": [
+      {
+        "name": "Deville",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2005
+          }
+        ]
+      },
+      {
+        "name": "Eldorado",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2002
+          }
+        ]
+      },
+      {
+        "name": "Fleetwood",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1996
+          }
+        ]
+      },
+      {
+        "name": "Seville",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2004
+          }
+        ]
+      },
+      {
+        "name": "Catera",
+        "ranges": [
+          {
+            "from": 1997,
+            "to": 2001
+          }
+        ]
+      },
+      {
+        "name": "CTS",
+        "ranges": [
+          {
+            "from": 2003,
+            "to": 2019
+          }
+        ]
+      },
+      {
+        "name": "DTS",
+        "ranges": [
+          {
+            "from": 2006,
+            "to": 2011
+          }
+        ]
+      },
+      {
+        "name": "STS",
+        "ranges": [
+          {
+            "from": 2005,
+            "to": 2011
+          }
+        ]
+      },
+      {
+        "name": "XLR",
+        "ranges": [
+          {
+            "from": 2004,
+            "to": 2009
+          }
+        ]
+      },
+      {
+        "name": "SRX",
+        "ranges": [
+          {
+            "from": 2004,
+            "to": 2016
+          }
+        ]
+      },
+      {
+        "name": "Escalade",
+        "ranges": [
+          {
+            "from": 1999,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "ATS",
+        "ranges": [
+          {
+            "from": 2013,
+            "to": 2019
+          }
+        ]
+      },
+      {
+        "name": "XTS",
+        "ranges": [
+          {
+            "from": 2013,
+            "to": 2019
+          }
+        ]
+      },
+      {
+        "name": "CT4",
+        "ranges": [
+          {
+            "from": 2020,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "CT5",
+        "ranges": [
+          {
+            "from": 2020,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "CT6",
+        "ranges": [
+          {
+            "from": 2016,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "XT4",
+        "ranges": [
+          {
+            "from": 2019,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "XT5",
+        "ranges": [
+          {
+            "from": 2017,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "XT6",
+        "ranges": [
+          {
+            "from": 2020,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Lyriq",
+        "ranges": [
+          {
+            "from": 2022,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Celestiq",
+        "ranges": [
+          {
+            "from": 2024,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Chevrolet",
+    "models": [
+      {
+        "name": "Camaro",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2002
+          },
+          {
+            "from": 2010,
+            "to": 2024
+          }
+        ]
+      },
+      {
+        "name": "Cavalier",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2005
+          }
+        ]
+      },
+      {
+        "name": "Corvette",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Impala",
+        "ranges": [
+          {
+            "from": 1994,
+            "to": 1996
+          },
+          {
+            "from": 2000,
+            "to": 2020
+          }
+        ]
+      },
+      {
+        "name": "Lumina",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2001
+          }
+        ]
+      },
+      {
+        "name": "Malibu",
+        "ranges": [
+          {
+            "from": 1997,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Monte Carlo",
+        "ranges": [
+          {
+            "from": 1995,
+            "to": 2007
+          }
+        ]
+      },
+      {
+        "name": "Aveo",
+        "ranges": [
+          {
+            "from": 2002,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Cruze",
+        "ranges": [
+          {
+            "from": 2008,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Spark",
+        "ranges": [
+          {
+            "from": 1998,
+            "to": 2022
+          }
+        ]
+      },
+      {
+        "name": "Volt",
+        "ranges": [
+          {
+            "from": 2011,
+            "to": 2019
+          }
+        ]
+      },
+      {
+        "name": "Bolt EV",
+        "ranges": [
+          {
+            "from": 2017,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Equinox",
+        "ranges": [
+          {
+            "from": 2005,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Traverse",
+        "ranges": [
+          {
+            "from": 2009,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Tahoe",
+        "ranges": [
+          {
+            "from": 1995,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Suburban",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Blazer",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2005
+          },
+          {
+            "from": 2019,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Silverado",
+        "ranges": [
+          {
+            "from": 1999,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Chrysler",
+    "models": [
+      {
+        "name": "LeBaron",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1995
+          }
+        ]
+      },
+      {
+        "name": "New Yorker",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1996
+          }
+        ]
+      },
+      {
+        "name": "Imperial",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1993
+          }
+        ]
+      },
+      {
+        "name": "Concorde",
+        "ranges": [
+          {
+            "from": 1993,
+            "to": 2004
+          }
+        ]
+      },
+      {
+        "name": "LHS",
+        "ranges": [
+          {
+            "from": 1994,
+            "to": 2001
+          }
+        ]
+      },
+      {
+        "name": "Sebring",
+        "ranges": [
+          {
+            "from": 1995,
+            "to": 2010
+          }
+        ]
+      },
+      {
+        "name": "Cirrus",
+        "ranges": [
+          {
+            "from": 1995,
+            "to": 2000
+          }
+        ]
+      },
+      {
+        "name": "300M",
+        "ranges": [
+          {
+            "from": 1999,
+            "to": 2004
+          }
+        ]
+      },
+      {
+        "name": "PT Cruiser",
+        "ranges": [
+          {
+            "from": 2000,
+            "to": 2010
+          }
+        ]
+      },
+      {
+        "name": "300",
+        "ranges": [
+          {
+            "from": 2005,
+            "to": 2023
+          }
+        ]
+      },
+      {
+        "name": "Crossfire",
+        "ranges": [
+          {
+            "from": 2004,
+            "to": 2008
+          }
+        ]
+      },
+      {
+        "name": "Pacifica",
+        "ranges": [
+          {
+            "from": 2004,
+            "to": 2008
+          },
+          {
+            "from": 2017,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Aspen",
+        "ranges": [
+          {
+            "from": 2007,
+            "to": 2009
+          }
+        ]
+      },
+      {
+        "name": "200",
+        "ranges": [
+          {
+            "from": 2011,
+            "to": 2017
+          }
+        ]
+      },
+      {
+        "name": "Voyager",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Citroën",
+    "models": [
+      {
+        "name": "AX",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1998
+          }
+        ]
+      },
+      {
+        "name": "BX",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1994
+          }
+        ]
+      },
+      {
+        "name": "CX",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1991
+          }
+        ]
+      },
+      {
+        "name": "XM",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2000
+          }
+        ]
+      },
+      {
+        "name": "ZX",
+        "ranges": [
+          {
+            "from": 1991,
+            "to": 1998
+          }
+        ]
+      },
+      {
+        "name": "Xantia",
+        "ranges": [
+          {
+            "from": 1993,
+            "to": 2002
+          }
+        ]
+      },
+      {
+        "name": "Saxo",
+        "ranges": [
+          {
+            "from": 1996,
+            "to": 2004
+          }
+        ]
+      },
+      {
+        "name": "Xsara",
+        "ranges": [
+          {
+            "from": 1997,
+            "to": 2006
+          }
+        ]
+      },
+      {
+        "name": "C1",
+        "ranges": [
+          {
+            "from": 2005,
+            "to": 2021
+          }
+        ]
+      },
+      {
+        "name": "C2",
+        "ranges": [
+          {
+            "from": 2003,
+            "to": 2009
+          }
+        ]
+      },
+      {
+        "name": "C3",
+        "ranges": [
+          {
+            "from": 2002,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "C4",
+        "ranges": [
+          {
+            "from": 2004,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "C5",
+        "ranges": [
+          {
+            "from": 2001,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "C6",
+        "ranges": [
+          {
+            "from": 2005,
+            "to": 2012
+          },
+          {
+            "from": 2016,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "C8",
+        "ranges": [
+          {
+            "from": 2002,
+            "to": 2014
+          }
+        ]
+      },
+      {
+        "name": "Berlingo",
+        "ranges": [
+          {
+            "from": 1996,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Picasso models",
+        "ranges": [
+          {
+            "from": 1999,
+            "to": 2022
+          }
+        ]
+      },
+      {
+        "name": "DS models",
+        "ranges": [
+          {
+            "from": 2009,
+            "to": 2015
+          }
+        ]
+      },
+      {
+        "name": "C-Crosser",
+        "ranges": [
+          {
+            "from": 2007,
+            "to": 2012
+          }
+        ]
+      },
+      {
+        "name": "C4 Cactus",
+        "ranges": [
+          {
+            "from": 2014,
+            "to": 2020
+          }
+        ]
+      },
+      {
+        "name": "Ami",
+        "ranges": [
+          {
+            "from": 2020,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Dacia",
+    "models": [
+      {
+        "name": "1300/1310",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2004
+          }
+        ]
+      },
+      {
+        "name": "Nova",
+        "ranges": [
+          {
+            "from": 1995,
+            "to": 2000
+          }
+        ]
+      },
+      {
+        "name": "SupeRNova",
+        "ranges": [
+          {
+            "from": 2000,
+            "to": 2003
+          }
+        ]
+      },
+      {
+        "name": "Solenza",
+        "ranges": [
+          {
+            "from": 2003,
+            "to": 2005
+          }
+        ]
+      },
+      {
+        "name": "Logan",
+        "ranges": [
+          {
+            "from": 2004,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Sandero",
+        "ranges": [
+          {
+            "from": 2007,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Duster",
+        "ranges": [
+          {
+            "from": 2010,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Lodgy",
+        "ranges": [
+          {
+            "from": 2012,
+            "to": 2022
+          }
+        ]
+      },
+      {
+        "name": "Dokker",
+        "ranges": [
+          {
+            "from": 2012,
+            "to": 2021
+          }
+        ]
+      },
+      {
+        "name": "Jogger",
+        "ranges": [
+          {
+            "from": 2021,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Spring",
+        "ranges": [
+          {
+            "from": 2021,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Daewoo",
+    "models": [
+      {
+        "name": "Tico",
+        "ranges": [
+          {
+            "from": 1991,
+            "to": 2001
+          }
+        ]
+      },
+      {
+        "name": "Nexia/Cielo",
+        "ranges": [
+          {
+            "from": 1994,
+            "to": 2016
+          }
+        ]
+      },
+      {
+        "name": "Espero",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1999
+          }
+        ]
+      },
+      {
+        "name": "Lanos",
+        "ranges": [
+          {
+            "from": 1997,
+            "to": 2002
+          }
+        ]
+      },
+      {
+        "name": "Nubira",
+        "ranges": [
+          {
+            "from": 1997,
+            "to": 2008
+          }
+        ]
+      },
+      {
+        "name": "Leganza",
+        "ranges": [
+          {
+            "from": 1997,
+            "to": 2002
+          }
+        ]
+      },
+      {
+        "name": "Matiz",
+        "ranges": [
+          {
+            "from": 1998,
+            "to": 2011
+          }
+        ]
+      },
+      {
+        "name": "Kalos",
+        "ranges": [
+          {
+            "from": 2002,
+            "to": 2007
+          }
+        ]
+      },
+      {
+        "name": "Lacetti",
+        "ranges": [
+          {
+            "from": 2002,
+            "to": 2011
+          }
+        ]
+      },
+      {
+        "name": "Tacuma",
+        "ranges": [
+          {
+            "from": 2000,
+            "to": 2008
+          }
+        ]
+      },
+      {
+        "name": "Magnus",
+        "ranges": [
+          {
+            "from": 2000,
+            "to": 2006
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Daihatsu",
+    "models": [
+      {
+        "name": "Charade",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2000
+          },
+          {
+            "from": 2011,
+            "to": 2013
+          }
+        ]
+      },
+      {
+        "name": "Mira/Cuore",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Move",
+        "ranges": [
+          {
+            "from": 1995,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Terios",
+        "ranges": [
+          {
+            "from": 1997,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Sirion",
+        "ranges": [
+          {
+            "from": 1998,
+            "to": 2015
+          }
+        ]
+      },
+      {
+        "name": "Copen",
+        "ranges": [
+          {
+            "from": 2002,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Materia",
+        "ranges": [
+          {
+            "from": 2006,
+            "to": 2011
+          }
+        ]
+      },
+      {
+        "name": "Trevis",
+        "ranges": [
+          {
+            "from": 2006,
+            "to": 2009
+          }
+        ]
+      },
+      {
+        "name": "Rocky",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2002
+          },
+          {
+            "from": 2019,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Dodge",
+    "models": [
+      {
+        "name": "Shadow",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1994
+          }
+        ]
+      },
+      {
+        "name": "Spirit",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1995
+          }
+        ]
+      },
+      {
+        "name": "Dynasty",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1993
+          }
+        ]
+      },
+      {
+        "name": "Monaco",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1992
+          }
+        ]
+      },
+      {
+        "name": "Stealth",
+        "ranges": [
+          {
+            "from": 1991,
+            "to": 1996
+          }
+        ]
+      },
+      {
+        "name": "Viper",
+        "ranges": [
+          {
+            "from": 1992,
+            "to": 2017
+          }
+        ]
+      },
+      {
+        "name": "Intrepid",
+        "ranges": [
+          {
+            "from": 1993,
+            "to": 2004
+          }
+        ]
+      },
+      {
+        "name": "Neon",
+        "ranges": [
+          {
+            "from": 1994,
+            "to": 2005
+          },
+          {
+            "from": 2016,
+            "to": 2021
+          }
+        ]
+      },
+      {
+        "name": "Stratus",
+        "ranges": [
+          {
+            "from": 1995,
+            "to": 2006
+          }
+        ]
+      },
+      {
+        "name": "Avenger",
+        "ranges": [
+          {
+            "from": 1995,
+            "to": 2014
+          }
+        ]
+      },
+      {
+        "name": "Durango",
+        "ranges": [
+          {
+            "from": 1998,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Magnum",
+        "ranges": [
+          {
+            "from": 2005,
+            "to": 2008
+          }
+        ]
+      },
+      {
+        "name": "Charger",
+        "ranges": [
+          {
+            "from": 2006,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Challenger",
+        "ranges": [
+          {
+            "from": 2008,
+            "to": 2023
+          }
+        ]
+      },
+      {
+        "name": "Journey",
+        "ranges": [
+          {
+            "from": 2009,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Dart",
+        "ranges": [
+          {
+            "from": 2013,
+            "to": 2016
+          }
+        ]
+      },
+      {
+        "name": "Hornet",
+        "ranges": [
+          {
+            "from": 2023,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "DS Automobiles",
+    "models": [
+      {
+        "name": "DS 3",
+        "ranges": [
+          {
+            "from": 2010,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "DS 4",
+        "ranges": [
+          {
+            "from": 2011,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "DS 5",
+        "ranges": [
+          {
+            "from": 2011,
+            "to": 2018
+          }
+        ]
+      },
+      {
+        "name": "DS 7 Crossback",
+        "ranges": [
+          {
+            "from": 2017,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "DS 9",
+        "ranges": [
+          {
+            "from": 2020,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Eagle",
+    "models": [
+      {
+        "name": "Talon",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1998
+          }
+        ]
+      },
+      {
+        "name": "Summit",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1996
+          }
+        ]
+      },
+      {
+        "name": "Premier",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1992
+          }
+        ]
+      },
+      {
+        "name": "Vision",
+        "ranges": [
+          {
+            "from": 1993,
+            "to": 1997
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Ferrari",
+    "models": [
+      {
+        "name": "348",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1995
+          }
+        ]
+      },
+      {
+        "name": "F40",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1992
+          }
+        ]
+      },
+      {
+        "name": "512 TR/M",
+        "ranges": [
+          {
+            "from": 1991,
+            "to": 1996
+          }
+        ]
+      },
+      {
+        "name": "456",
+        "ranges": [
+          {
+            "from": 1992,
+            "to": 2003
+          }
+        ]
+      },
+      {
+        "name": "F355",
+        "ranges": [
+          {
+            "from": 1994,
+            "to": 1999
+          }
+        ]
+      },
+      {
+        "name": "F50",
+        "ranges": [
+          {
+            "from": 1995,
+            "to": 1997
+          }
+        ]
+      },
+      {
+        "name": "550/575M Maranello",
+        "ranges": [
+          {
+            "from": 1996,
+            "to": 2006
+          }
+        ]
+      },
+      {
+        "name": "360 Modena",
+        "ranges": [
+          {
+            "from": 1999,
+            "to": 2005
+          }
+        ]
+      },
+      {
+        "name": "Enzo",
+        "ranges": [
+          {
+            "from": 2002,
+            "to": 2004
+          }
+        ]
+      },
+      {
+        "name": "612 Scaglietti",
+        "ranges": [
+          {
+            "from": 2004,
+            "to": 2011
+          }
+        ]
+      },
+      {
+        "name": "F430",
+        "ranges": [
+          {
+            "from": 2004,
+            "to": 2009
+          }
+        ]
+      },
+      {
+        "name": "599 GTB",
+        "ranges": [
+          {
+            "from": 2006,
+            "to": 2012
+          }
+        ]
+      },
+      {
+        "name": "California",
+        "ranges": [
+          {
+            "from": 2008,
+            "to": 2017
+          }
+        ]
+      },
+      {
+        "name": "458 Italia",
+        "ranges": [
+          {
+            "from": 2009,
+            "to": 2015
+          }
+        ]
+      },
+      {
+        "name": "FF",
+        "ranges": [
+          {
+            "from": 2011,
+            "to": 2016
+          }
+        ]
+      },
+      {
+        "name": "F12berlinetta",
+        "ranges": [
+          {
+            "from": 2012,
+            "to": 2017
+          }
+        ]
+      },
+      {
+        "name": "LaFerrari",
+        "ranges": [
+          {
+            "from": 2013,
+            "to": 2018
+          }
+        ]
+      },
+      {
+        "name": "488 GTB",
+        "ranges": [
+          {
+            "from": 2015,
+            "to": 2019
+          }
+        ]
+      },
+      {
+        "name": "GTC4Lusso",
+        "ranges": [
+          {
+            "from": 2016,
+            "to": 2020
+          }
+        ]
+      },
+      {
+        "name": "812 Superfast",
+        "ranges": [
+          {
+            "from": 2017,
+            "to": 2024
+          }
+        ]
+      },
+      {
+        "name": "Portofino",
+        "ranges": [
+          {
+            "from": 2017,
+            "to": 2023
+          }
+        ]
+      },
+      {
+        "name": "F8 Tributo",
+        "ranges": [
+          {
+            "from": 2019,
+            "to": 2023
+          }
+        ]
+      },
+      {
+        "name": "Roma",
+        "ranges": [
+          {
+            "from": 2019,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "SF90 Stradale",
+        "ranges": [
+          {
+            "from": 2019,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "296 GTB",
+        "ranges": [
+          {
+            "from": 2021,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Purosangue",
+        "ranges": [
+          {
+            "from": 2022,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "12Cilindri",
+        "ranges": [
+          {
+            "from": 2024,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fiat",
+    "models": [
+      {
+        "name": "Panda",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Uno",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1995
+          },
+          {
+            "from": 2010,
+            "to": 2021
+          }
+        ]
+      },
+      {
+        "name": "Tipo",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1995
+          },
+          {
+            "from": 2015,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Tempra",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1997
+          }
+        ]
+      },
+      {
+        "name": "Croma",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1996
+          },
+          {
+            "from": 2005,
+            "to": 2010
+          }
+        ]
+      },
+      {
+        "name": "Cinquecento",
+        "ranges": [
+          {
+            "from": 1991,
+            "to": 1998
+          }
+        ]
+      },
+      {
+        "name": "Coupe",
+        "ranges": [
+          {
+            "from": 1993,
+            "to": 2000
+          }
+        ]
+      },
+      {
+        "name": "Punto",
+        "ranges": [
+          {
+            "from": 1993,
+            "to": 2018
+          }
+        ]
+      },
+      {
+        "name": "Barchetta",
+        "ranges": [
+          {
+            "from": 1995,
+            "to": 2005
+          }
+        ]
+      },
+      {
+        "name": "Bravo/Brava",
+        "ranges": [
+          {
+            "from": 1995,
+            "to": 2001
+          }
+        ]
+      },
+      {
+        "name": "Marea",
+        "ranges": [
+          {
+            "from": 1996,
+            "to": 2007
+          }
+        ]
+      },
+      {
+        "name": "Palio",
+        "ranges": [
+          {
+            "from": 1996,
+            "to": 2020
+          }
+        ]
+      },
+      {
+        "name": "Seicento",
+        "ranges": [
+          {
+            "from": 1998,
+            "to": 2010
+          }
+        ]
+      },
+      {
+        "name": "Multipla",
+        "ranges": [
+          {
+            "from": 1998,
+            "to": 2010
+          }
+        ]
+      },
+      {
+        "name": "Stilo",
+        "ranges": [
+          {
+            "from": 2001,
+            "to": 2010
+          }
+        ]
+      },
+      {
+        "name": "Idea",
+        "ranges": [
+          {
+            "from": 2003,
+            "to": 2016
+          }
+        ]
+      },
+      {
+        "name": "Grande Punto",
+        "ranges": [
+          {
+            "from": 2005,
+            "to": 2012
+          }
+        ]
+      },
+      {
+        "name": "Sedici",
+        "ranges": [
+          {
+            "from": 2005,
+            "to": 2014
+          }
+        ]
+      },
+      {
+        "name": "Bravo",
+        "ranges": [
+          {
+            "from": 2007,
+            "to": 2014
+          }
+        ]
+      },
+      {
+        "name": "500",
+        "ranges": [
+          {
+            "from": 2007,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Freemont",
+        "ranges": [
+          {
+            "from": 2011,
+            "to": 2015
+          }
+        ]
+      },
+      {
+        "name": "500L",
+        "ranges": [
+          {
+            "from": 2012,
+            "to": 2022
+          }
+        ]
+      },
+      {
+        "name": "500X",
+        "ranges": [
+          {
+            "from": 2014,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "124 Spider",
+        "ranges": [
+          {
+            "from": 2016,
+            "to": 2020
+          }
+        ]
+      },
+      {
+        "name": "Pulse",
+        "ranges": [
+          {
+            "from": 2021,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Fastback",
+        "ranges": [
+          {
+            "from": 2022,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Grande Panda",
+        "ranges": [
+          {
+            "from": 2024,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Ford",
+    "models": [
+      {
+        "name": "Fiesta",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2023
+          }
+        ]
+      },
+      {
+        "name": "Escort",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2004
+          },
+          {
+            "from": 2015,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Sierra",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1993
+          }
+        ]
+      },
+      {
+        "name": "Mondeo",
+        "ranges": [
+          {
+            "from": 1993,
+            "to": 2022
+          },
+          {
+            "from": 2022,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Scorpio",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1998
+          }
+        ]
+      },
+      {
+        "name": "Focus",
+        "ranges": [
+          {
+            "from": 1998,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Ka",
+        "ranges": [
+          {
+            "from": 1996,
+            "to": 2021
+          }
+        ]
+      },
+      {
+        "name": "Puma",
+        "ranges": [
+          {
+            "from": 1997,
+            "to": 2002
+          },
+          {
+            "from": 2019,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Galaxy",
+        "ranges": [
+          {
+            "from": 1995,
+            "to": 2023
+          }
+        ]
+      },
+      {
+        "name": "S-Max",
+        "ranges": [
+          {
+            "from": 2006,
+            "to": 2023
+          }
+        ]
+      },
+      {
+        "name": "Kuga",
+        "ranges": [
+          {
+            "from": 2008,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "EcoSport",
+        "ranges": [
+          {
+            "from": 2003,
+            "to": 2023
+          }
+        ]
+      },
+      {
+        "name": "Mustang",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Explorer",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Expedition",
+        "ranges": [
+          {
+            "from": 1997,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "F-Series",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Ranger",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Mach-E",
+        "ranges": [
+          {
+            "from": 2020,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Capri EV",
+        "ranges": [
+          {
+            "from": 2024,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "GAC",
+    "models": [
+      {
+        "name": "Trumpchi models",
+        "ranges": [
+          {
+            "from": 2010,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Aion models",
+        "ranges": [
+          {
+            "from": 2018,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Geely",
+    "models": [
+      {
+        "name": "CK",
+        "ranges": [
+          {
+            "from": 2005,
+            "to": 2016
+          }
+        ]
+      },
+      {
+        "name": "MK",
+        "ranges": [
+          {
+            "from": 2006,
+            "to": 2020
+          }
+        ]
+      },
+      {
+        "name": "Emgrand models",
+        "ranges": [
+          {
+            "from": 2009,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Boyue",
+        "ranges": [
+          {
+            "from": 2016,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Binyue",
+        "ranges": [
+          {
+            "from": 2018,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Xingyue",
+        "ranges": [
+          {
+            "from": 2019,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Geometry models",
+        "ranges": [
+          {
+            "from": 2019,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Genesis",
+    "models": [
+      {
+        "name": "G70",
+        "ranges": [
+          {
+            "from": 2017,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "G80",
+        "ranges": [
+          {
+            "from": 2016,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "G90",
+        "ranges": [
+          {
+            "from": 2015,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "GV60",
+        "ranges": [
+          {
+            "from": 2021,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "GV70",
+        "ranges": [
+          {
+            "from": 2020,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "GV80",
+        "ranges": [
+          {
+            "from": 2020,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "GMC",
+    "models": [
+      {
+        "name": "Sierra",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Yukon",
+        "ranges": [
+          {
+            "from": 1991,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Jimmy",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2005
+          }
+        ]
+      },
+      {
+        "name": "Safari",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2005
+          }
+        ]
+      },
+      {
+        "name": "Sonoma",
+        "ranges": [
+          {
+            "from": 1991,
+            "to": 2004
+          }
+        ]
+      },
+      {
+        "name": "Envoy",
+        "ranges": [
+          {
+            "from": 1998,
+            "to": 2009
+          }
+        ]
+      },
+      {
+        "name": "Acadia",
+        "ranges": [
+          {
+            "from": 2007,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Terrain",
+        "ranges": [
+          {
+            "from": 2009,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Canyon",
+        "ranges": [
+          {
+            "from": 2004,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Hummer EV",
+        "ranges": [
+          {
+            "from": 2021,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Great Wall",
+    "models": [
+      {
+        "name": "Steed/Wingle",
+        "ranges": [
+          {
+            "from": 2006,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Hover/H3/H5",
+        "ranges": [
+          {
+            "from": 2005,
+            "to": 2020
+          }
+        ]
+      },
+      {
+        "name": "Voleex C30",
+        "ranges": [
+          {
+            "from": 2010,
+            "to": 2016
+          }
+        ]
+      },
+      {
+        "name": "Ora models",
+        "ranges": [
+          {
+            "from": 2018,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Tank models",
+        "ranges": [
+          {
+            "from": 2020,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Honda",
+    "models": [
+      {
+        "name": "Civic",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Accord",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Prelude",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2001
+          },
+          {
+            "from": 2025,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "NSX",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2005
+          },
+          {
+            "from": 2016,
+            "to": 2022
+          }
+        ]
+      },
+      {
+        "name": "CR-X",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1991
+          }
+        ]
+      },
+      {
+        "name": "CR-V",
+        "ranges": [
+          {
+            "from": 1995,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "HR-V",
+        "ranges": [
+          {
+            "from": 1998,
+            "to": 2006
+          },
+          {
+            "from": 2013,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Jazz/Fit",
+        "ranges": [
+          {
+            "from": 2001,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Insight",
+        "ranges": [
+          {
+            "from": 1999,
+            "to": 2022
+          }
+        ]
+      },
+      {
+        "name": "S2000",
+        "ranges": [
+          {
+            "from": 1999,
+            "to": 2009
+          }
+        ]
+      },
+      {
+        "name": "Odyssey",
+        "ranges": [
+          {
+            "from": 1994,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Pilot",
+        "ranges": [
+          {
+            "from": 2002,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Ridgeline",
+        "ranges": [
+          {
+            "from": 2005,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "e",
+        "ranges": [
+          {
+            "from": 2020,
+            "to": 2024
+          }
+        ]
+      },
+      {
+        "name": "Prologue",
+        "ranges": [
+          {
+            "from": 2024,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Hummer",
+    "models": [
+      {
+        "name": "H1",
+        "ranges": [
+          {
+            "from": 1992,
+            "to": 2006
+          }
+        ]
+      },
+      {
+        "name": "H2",
+        "ranges": [
+          {
+            "from": 2002,
+            "to": 2009
+          }
+        ]
+      },
+      {
+        "name": "H3",
+        "ranges": [
+          {
+            "from": 2005,
+            "to": 2010
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Hyundai",
+    "models": [
+      {
+        "name": "Pony",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1990
+          }
+        ]
+      },
+      {
+        "name": "Excel",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1994
+          }
+        ]
+      },
+      {
+        "name": "Elantra/Lantra",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Sonata",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Scoupe",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1995
+          }
+        ]
+      },
+      {
+        "name": "Accent",
+        "ranges": [
+          {
+            "from": 1994,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Coupe/Tiburon",
+        "ranges": [
+          {
+            "from": 1996,
+            "to": 2008
+          }
+        ]
+      },
+      {
+        "name": "Atos",
+        "ranges": [
+          {
+            "from": 1997,
+            "to": 2014
+          }
+        ]
+      },
+      {
+        "name": "Santa Fe",
+        "ranges": [
+          {
+            "from": 2000,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Terracan",
+        "ranges": [
+          {
+            "from": 2001,
+            "to": 2007
+          }
+        ]
+      },
+      {
+        "name": "Matrix",
+        "ranges": [
+          {
+            "from": 2001,
+            "to": 2010
+          }
+        ]
+      },
+      {
+        "name": "Getz",
+        "ranges": [
+          {
+            "from": 2002,
+            "to": 2011
+          }
+        ]
+      },
+      {
+        "name": "Tucson",
+        "ranges": [
+          {
+            "from": 2004,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "i10",
+        "ranges": [
+          {
+            "from": 2007,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "i20",
+        "ranges": [
+          {
+            "from": 2008,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "i30",
+        "ranges": [
+          {
+            "from": 2007,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "i40",
+        "ranges": [
+          {
+            "from": 2011,
+            "to": 2019
+          }
+        ]
+      },
+      {
+        "name": "ix20",
+        "ranges": [
+          {
+            "from": 2010,
+            "to": 2019
+          }
+        ]
+      },
+      {
+        "name": "ix35",
+        "ranges": [
+          {
+            "from": 2009,
+            "to": 2015
+          }
+        ]
+      },
+      {
+        "name": "Veloster",
+        "ranges": [
+          {
+            "from": 2011,
+            "to": 2022
+          }
+        ]
+      },
+      {
+        "name": "Ioniq",
+        "ranges": [
+          {
+            "from": 2016,
+            "to": 2022
+          }
+        ]
+      },
+      {
+        "name": "Kona",
+        "ranges": [
+          {
+            "from": 2017,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Palisade",
+        "ranges": [
+          {
+            "from": 2018,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Ioniq 5",
+        "ranges": [
+          {
+            "from": 2021,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Ioniq 6",
+        "ranges": [
+          {
+            "from": 2022,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Bayon",
+        "ranges": [
+          {
+            "from": 2021,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Infiniti",
+    "models": [
+      {
+        "name": "G",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2015
+          }
+        ]
+      },
+      {
+        "name": "M",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1992
+          },
+          {
+            "from": 2002,
+            "to": 2013
+          }
+        ]
+      },
+      {
+        "name": "Q45",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2006
+          }
+        ]
+      },
+      {
+        "name": "J30",
+        "ranges": [
+          {
+            "from": 1992,
+            "to": 1997
+          }
+        ]
+      },
+      {
+        "name": "I30/I35",
+        "ranges": [
+          {
+            "from": 1995,
+            "to": 2004
+          }
+        ]
+      },
+      {
+        "name": "QX4",
+        "ranges": [
+          {
+            "from": 1996,
+            "to": 2003
+          }
+        ]
+      },
+      {
+        "name": "FX",
+        "ranges": [
+          {
+            "from": 2002,
+            "to": 2013
+          }
+        ]
+      },
+      {
+        "name": "EX",
+        "ranges": [
+          {
+            "from": 2007,
+            "to": 2013
+          }
+        ]
+      },
+      {
+        "name": "Q50",
+        "ranges": [
+          {
+            "from": 2013,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Q60",
+        "ranges": [
+          {
+            "from": 2013,
+            "to": 2022
+          }
+        ]
+      },
+      {
+        "name": "Q70",
+        "ranges": [
+          {
+            "from": 2013,
+            "to": 2019
+          }
+        ]
+      },
+      {
+        "name": "QX30",
+        "ranges": [
+          {
+            "from": 2016,
+            "to": 2019
+          }
+        ]
+      },
+      {
+        "name": "QX50",
+        "ranges": [
+          {
+            "from": 2013,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "QX55",
+        "ranges": [
+          {
+            "from": 2021,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "QX60",
+        "ranges": [
+          {
+            "from": 2012,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "QX80",
+        "ranges": [
+          {
+            "from": 2010,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Isuzu",
+    "models": [
+      {
+        "name": "Trooper",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2002
+          }
+        ]
+      },
+      {
+        "name": "Rodeo",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2004
+          }
+        ]
+      },
+      {
+        "name": "Amigo",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2000
+          }
+        ]
+      },
+      {
+        "name": "VehiCROSS",
+        "ranges": [
+          {
+            "from": 1997,
+            "to": 2001
+          }
+        ]
+      },
+      {
+        "name": "Axiom",
+        "ranges": [
+          {
+            "from": 2001,
+            "to": 2004
+          }
+        ]
+      },
+      {
+        "name": "Ascender",
+        "ranges": [
+          {
+            "from": 2003,
+            "to": 2008
+          }
+        ]
+      },
+      {
+        "name": "D-Max",
+        "ranges": [
+          {
+            "from": 2002,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "MU-X",
+        "ranges": [
+          {
+            "from": 2013,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Iveco",
+    "models": [
+      {
+        "name": "Massif",
+        "ranges": [
+          {
+            "from": 2007,
+            "to": 2011
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Jaguar",
+    "models": [
+      {
+        "name": "XJ",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2019
+          }
+        ]
+      },
+      {
+        "name": "XJS",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1996
+          }
+        ]
+      },
+      {
+        "name": "XK",
+        "ranges": [
+          {
+            "from": 1996,
+            "to": 2014
+          }
+        ]
+      },
+      {
+        "name": "S-Type",
+        "ranges": [
+          {
+            "from": 1999,
+            "to": 2008
+          }
+        ]
+      },
+      {
+        "name": "X-Type",
+        "ranges": [
+          {
+            "from": 2001,
+            "to": 2009
+          }
+        ]
+      },
+      {
+        "name": "XF",
+        "ranges": [
+          {
+            "from": 2007,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "XE",
+        "ranges": [
+          {
+            "from": 2015,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "F-Type",
+        "ranges": [
+          {
+            "from": 2013,
+            "to": 2024
+          }
+        ]
+      },
+      {
+        "name": "F-Pace",
+        "ranges": [
+          {
+            "from": 2016,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "E-Pace",
+        "ranges": [
+          {
+            "from": 2017,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "I-Pace",
+        "ranges": [
+          {
+            "from": 2018,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Jeep",
+    "models": [
+      {
+        "name": "Wrangler",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Cherokee",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2023
+          }
+        ]
+      },
+      {
+        "name": "Grand Cherokee",
+        "ranges": [
+          {
+            "from": 1992,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Comanche",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1992
+          }
+        ]
+      },
+      {
+        "name": "Liberty",
+        "ranges": [
+          {
+            "from": 2001,
+            "to": 2012
+          }
+        ]
+      },
+      {
+        "name": "Commander",
+        "ranges": [
+          {
+            "from": 2005,
+            "to": 2010
+          },
+          {
+            "from": 2021,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Compass",
+        "ranges": [
+          {
+            "from": 2006,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Patriot",
+        "ranges": [
+          {
+            "from": 2006,
+            "to": 2017
+          }
+        ]
+      },
+      {
+        "name": "Renegade",
+        "ranges": [
+          {
+            "from": 2014,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Gladiator",
+        "ranges": [
+          {
+            "from": 2019,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Wagoneer/Grand Wagoneer",
+        "ranges": [
+          {
+            "from": 2021,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Avenger",
+        "ranges": [
+          {
+            "from": 2023,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Kia",
+    "models": [
+      {
+        "name": "Pride",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2000
+          }
+        ]
+      },
+      {
+        "name": "Sephia",
+        "ranges": [
+          {
+            "from": 1992,
+            "to": 2003
+          }
+        ]
+      },
+      {
+        "name": "Sportage",
+        "ranges": [
+          {
+            "from": 1993,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Clarus",
+        "ranges": [
+          {
+            "from": 1995,
+            "to": 2001
+          }
+        ]
+      },
+      {
+        "name": "Rio",
+        "ranges": [
+          {
+            "from": 1999,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Carens",
+        "ranges": [
+          {
+            "from": 1999,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Carnival/Sedona",
+        "ranges": [
+          {
+            "from": 1998,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Magentis/Optima",
+        "ranges": [
+          {
+            "from": 2000,
+            "to": 2020
+          }
+        ]
+      },
+      {
+        "name": "Sorento",
+        "ranges": [
+          {
+            "from": 2002,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Picanto",
+        "ranges": [
+          {
+            "from": 2004,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Cerato/Forte",
+        "ranges": [
+          {
+            "from": 2003,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Cee'd",
+        "ranges": [
+          {
+            "from": 2006,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Soul",
+        "ranges": [
+          {
+            "from": 2008,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Venga",
+        "ranges": [
+          {
+            "from": 2009,
+            "to": 2019
+          }
+        ]
+      },
+      {
+        "name": "Stinger",
+        "ranges": [
+          {
+            "from": 2017,
+            "to": 2023
+          }
+        ]
+      },
+      {
+        "name": "Stonic",
+        "ranges": [
+          {
+            "from": 2017,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Niro",
+        "ranges": [
+          {
+            "from": 2016,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Seltos",
+        "ranges": [
+          {
+            "from": 2019,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "EV6",
+        "ranges": [
+          {
+            "from": 2021,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "EV9",
+        "ranges": [
+          {
+            "from": 2023,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "EV3",
+        "ranges": [
+          {
+            "from": 2024,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Koenigsegg",
+    "models": [
+      {
+        "name": "CC8S",
+        "ranges": [
+          {
+            "from": 2002,
+            "to": 2003
+          }
+        ]
+      },
+      {
+        "name": "CCR",
+        "ranges": [
+          {
+            "from": 2004,
+            "to": 2006
+          }
+        ]
+      },
+      {
+        "name": "CCX",
+        "ranges": [
+          {
+            "from": 2006,
+            "to": 2010
+          }
+        ]
+      },
+      {
+        "name": "Agera",
+        "ranges": [
+          {
+            "from": 2010,
+            "to": 2018
+          }
+        ]
+      },
+      {
+        "name": "One:1",
+        "ranges": [
+          {
+            "from": 2014,
+            "to": 2016
+          }
+        ]
+      },
+      {
+        "name": "Regera",
+        "ranges": [
+          {
+            "from": 2016,
+            "to": 2022
+          }
+        ]
+      },
+      {
+        "name": "Jesko",
+        "ranges": [
+          {
+            "from": 2021,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Gemera",
+        "ranges": [
+          {
+            "from": 2023,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Lamborghini",
+    "models": [
+      {
+        "name": "Countach",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1990
+          }
+        ]
+      },
+      {
+        "name": "Diablo",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2001
+          }
+        ]
+      },
+      {
+        "name": "Murciélago",
+        "ranges": [
+          {
+            "from": 2001,
+            "to": 2010
+          }
+        ]
+      },
+      {
+        "name": "Gallardo",
+        "ranges": [
+          {
+            "from": 2003,
+            "to": 2013
+          }
+        ]
+      },
+      {
+        "name": "Reventón",
+        "ranges": [
+          {
+            "from": 2007,
+            "to": 2009
+          }
+        ]
+      },
+      {
+        "name": "Aventador",
+        "ranges": [
+          {
+            "from": 2011,
+            "to": 2022
+          }
+        ]
+      },
+      {
+        "name": "Huracán",
+        "ranges": [
+          {
+            "from": 2014,
+            "to": 2024
+          }
+        ]
+      },
+      {
+        "name": "Urus",
+        "ranges": [
+          {
+            "from": 2018,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Sián",
+        "ranges": [
+          {
+            "from": 2020,
+            "to": 2022
+          }
+        ]
+      },
+      {
+        "name": "Countach LPI 800-4",
+        "ranges": [
+          {
+            "from": 2022,
+            "to": 2022
+          }
+        ]
+      },
+      {
+        "name": "Revuelto",
+        "ranges": [
+          {
+            "from": 2023,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Temerario",
+        "ranges": [
+          {
+            "from": 2024,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Lancia",
+    "models": [
+      {
+        "name": "Delta",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1999
+          },
+          {
+            "from": 2008,
+            "to": 2014
+          }
+        ]
+      },
+      {
+        "name": "Dedra",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1999
+          }
+        ]
+      },
+      {
+        "name": "Thema",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1994
+          },
+          {
+            "from": 2011,
+            "to": 2014
+          }
+        ]
+      },
+      {
+        "name": "Kappa",
+        "ranges": [
+          {
+            "from": 1994,
+            "to": 2000
+          }
+        ]
+      },
+      {
+        "name": "Zeta",
+        "ranges": [
+          {
+            "from": 1994,
+            "to": 2002
+          }
+        ]
+      },
+      {
+        "name": "Y/Ypsilon",
+        "ranges": [
+          {
+            "from": 1995,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Lybra",
+        "ranges": [
+          {
+            "from": 1999,
+            "to": 2005
+          }
+        ]
+      },
+      {
+        "name": "Thesis",
+        "ranges": [
+          {
+            "from": 2001,
+            "to": 2009
+          }
+        ]
+      },
+      {
+        "name": "Phedra",
+        "ranges": [
+          {
+            "from": 2002,
+            "to": 2010
+          }
+        ]
+      },
+      {
+        "name": "Musa",
+        "ranges": [
+          {
+            "from": 2004,
+            "to": 2012
+          }
+        ]
+      },
+      {
+        "name": "Voyager",
+        "ranges": [
+          {
+            "from": 2011,
+            "to": 2014
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Land Rover",
+    "models": [
+      {
+        "name": "Defender",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2016
+          },
+          {
+            "from": 2019,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Discovery",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Range Rover",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Range Rover Sport",
+        "ranges": [
+          {
+            "from": 2005,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Freelander",
+        "ranges": [
+          {
+            "from": 1997,
+            "to": 2014
+          }
+        ]
+      },
+      {
+        "name": "Range Rover Evoque",
+        "ranges": [
+          {
+            "from": 2011,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Discovery Sport",
+        "ranges": [
+          {
+            "from": 2014,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Range Rover Velar",
+        "ranges": [
+          {
+            "from": 2017,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Lexus",
+    "models": [
+      {
+        "name": "LS",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "ES",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "SC",
+        "ranges": [
+          {
+            "from": 1991,
+            "to": 2010
+          }
+        ]
+      },
+      {
+        "name": "GS",
+        "ranges": [
+          {
+            "from": 1993,
+            "to": 2020
+          }
+        ]
+      },
+      {
+        "name": "IS",
+        "ranges": [
+          {
+            "from": 1998,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "RX",
+        "ranges": [
+          {
+            "from": 1998,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "GX",
+        "ranges": [
+          {
+            "from": 2002,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "LX",
+        "ranges": [
+          {
+            "from": 1995,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "LFA",
+        "ranges": [
+          {
+            "from": 2010,
+            "to": 2012
+          }
+        ]
+      },
+      {
+        "name": "CT",
+        "ranges": [
+          {
+            "from": 2011,
+            "to": 2022
+          }
+        ]
+      },
+      {
+        "name": "NX",
+        "ranges": [
+          {
+            "from": 2014,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "RC",
+        "ranges": [
+          {
+            "from": 2014,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "LC",
+        "ranges": [
+          {
+            "from": 2017,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "UX",
+        "ranges": [
+          {
+            "from": 2018,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "RZ",
+        "ranges": [
+          {
+            "from": 2022,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "LBX",
+        "ranges": [
+          {
+            "from": 2023,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Lincoln",
+    "models": [
+      {
+        "name": "Town Car",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2011
+          }
+        ]
+      },
+      {
+        "name": "Continental",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2002
+          },
+          {
+            "from": 2016,
+            "to": 2020
+          }
+        ]
+      },
+      {
+        "name": "Mark Series",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1998
+          }
+        ]
+      },
+      {
+        "name": "Navigator",
+        "ranges": [
+          {
+            "from": 1998,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "LS",
+        "ranges": [
+          {
+            "from": 2000,
+            "to": 2006
+          }
+        ]
+      },
+      {
+        "name": "Aviator",
+        "ranges": [
+          {
+            "from": 2003,
+            "to": 2005
+          },
+          {
+            "from": 2019,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "MKZ",
+        "ranges": [
+          {
+            "from": 2006,
+            "to": 2020
+          }
+        ]
+      },
+      {
+        "name": "MKX",
+        "ranges": [
+          {
+            "from": 2007,
+            "to": 2018
+          }
+        ]
+      },
+      {
+        "name": "MKS",
+        "ranges": [
+          {
+            "from": 2009,
+            "to": 2016
+          }
+        ]
+      },
+      {
+        "name": "MKT",
+        "ranges": [
+          {
+            "from": 2010,
+            "to": 2019
+          }
+        ]
+      },
+      {
+        "name": "MKC",
+        "ranges": [
+          {
+            "from": 2014,
+            "to": 2019
+          }
+        ]
+      },
+      {
+        "name": "Nautilus",
+        "ranges": [
+          {
+            "from": 2019,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Corsair",
+        "ranges": [
+          {
+            "from": 2019,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Lotus",
+    "models": [
+      {
+        "name": "Esprit",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2004
+          }
+        ]
+      },
+      {
+        "name": "Elan",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1995
+          }
+        ]
+      },
+      {
+        "name": "Elise",
+        "ranges": [
+          {
+            "from": 1996,
+            "to": 2021
+          }
+        ]
+      },
+      {
+        "name": "Exige",
+        "ranges": [
+          {
+            "from": 2000,
+            "to": 2021
+          }
+        ]
+      },
+      {
+        "name": "Evora",
+        "ranges": [
+          {
+            "from": 2009,
+            "to": 2021
+          }
+        ]
+      },
+      {
+        "name": "Emira",
+        "ranges": [
+          {
+            "from": 2022,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Eletre",
+        "ranges": [
+          {
+            "from": 2023,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Emeya",
+        "ranges": [
+          {
+            "from": 2024,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Lucid",
+    "models": [
+      {
+        "name": "Air",
+        "ranges": [
+          {
+            "from": 2021,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Gravity",
+        "ranges": [
+          {
+            "from": 2024,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Maserati",
+    "models": [
+      {
+        "name": "Spyder",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1994
+          }
+        ]
+      },
+      {
+        "name": "Shamal",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1996
+          }
+        ]
+      },
+      {
+        "name": "Ghibli",
+        "ranges": [
+          {
+            "from": 1992,
+            "to": 1998
+          },
+          {
+            "from": 2013,
+            "to": 2024
+          }
+        ]
+      },
+      {
+        "name": "Quattroporte",
+        "ranges": [
+          {
+            "from": 1994,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "3200 GT",
+        "ranges": [
+          {
+            "from": 1998,
+            "to": 2002
+          }
+        ]
+      },
+      {
+        "name": "Coupé/Spyder",
+        "ranges": [
+          {
+            "from": 2001,
+            "to": 2007
+          }
+        ]
+      },
+      {
+        "name": "GranTurismo",
+        "ranges": [
+          {
+            "from": 2007,
+            "to": 2019
+          },
+          {
+            "from": 2023,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "GranCabrio",
+        "ranges": [
+          {
+            "from": 2010,
+            "to": 2019
+          },
+          {
+            "from": 2024,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Levante",
+        "ranges": [
+          {
+            "from": 2016,
+            "to": 2024
+          }
+        ]
+      },
+      {
+        "name": "MC20",
+        "ranges": [
+          {
+            "from": 2020,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Grecale",
+        "ranges": [
+          {
+            "from": 2022,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Mazda",
+    "models": [
+      {
+        "name": "121",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2002
+          }
+        ]
+      },
+      {
+        "name": "323",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2003
+          }
+        ]
+      },
+      {
+        "name": "626",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2002
+          }
+        ]
+      },
+      {
+        "name": "929",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1997
+          }
+        ]
+      },
+      {
+        "name": "MX-3",
+        "ranges": [
+          {
+            "from": 1991,
+            "to": 1998
+          }
+        ]
+      },
+      {
+        "name": "MX-5",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "MX-6",
+        "ranges": [
+          {
+            "from": 1991,
+            "to": 1997
+          }
+        ]
+      },
+      {
+        "name": "RX-7",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2002
+          }
+        ]
+      },
+      {
+        "name": "RX-8",
+        "ranges": [
+          {
+            "from": 2003,
+            "to": 2012
+          }
+        ]
+      },
+      {
+        "name": "Xedos 6",
+        "ranges": [
+          {
+            "from": 1992,
+            "to": 1999
+          }
+        ]
+      },
+      {
+        "name": "Xedos 9",
+        "ranges": [
+          {
+            "from": 1993,
+            "to": 2002
+          }
+        ]
+      },
+      {
+        "name": "Premacy",
+        "ranges": [
+          {
+            "from": 1999,
+            "to": 2005
+          }
+        ]
+      },
+      {
+        "name": "MPV",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2016
+          }
+        ]
+      },
+      {
+        "name": "Tribute",
+        "ranges": [
+          {
+            "from": 2000,
+            "to": 2011
+          }
+        ]
+      },
+      {
+        "name": "Mazda2",
+        "ranges": [
+          {
+            "from": 2002,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Mazda3",
+        "ranges": [
+          {
+            "from": 2003,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Mazda5",
+        "ranges": [
+          {
+            "from": 2004,
+            "to": 2018
+          }
+        ]
+      },
+      {
+        "name": "Mazda6",
+        "ranges": [
+          {
+            "from": 2002,
+            "to": 2024
+          }
+        ]
+      },
+      {
+        "name": "CX-3",
+        "ranges": [
+          {
+            "from": 2015,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "CX-30",
+        "ranges": [
+          {
+            "from": 2019,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "CX-5",
+        "ranges": [
+          {
+            "from": 2012,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "CX-7",
+        "ranges": [
+          {
+            "from": 2006,
+            "to": 2012
+          }
+        ]
+      },
+      {
+        "name": "CX-9",
+        "ranges": [
+          {
+            "from": 2006,
+            "to": 2023
+          }
+        ]
+      },
+      {
+        "name": "CX-60",
+        "ranges": [
+          {
+            "from": 2022,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "CX-80",
+        "ranges": [
+          {
+            "from": 2024,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "MX-30",
+        "ranges": [
+          {
+            "from": 2020,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "McLaren",
+    "models": [
+      {
+        "name": "F1",
+        "ranges": [
+          {
+            "from": 1992,
+            "to": 1998
+          }
+        ]
+      },
+      {
+        "name": "MP4-12C",
+        "ranges": [
+          {
+            "from": 2011,
+            "to": 2014
+          }
+        ]
+      },
+      {
+        "name": "P1",
+        "ranges": [
+          {
+            "from": 2013,
+            "to": 2015
+          }
+        ]
+      },
+      {
+        "name": "650S",
+        "ranges": [
+          {
+            "from": 2014,
+            "to": 2017
+          }
+        ]
+      },
+      {
+        "name": "570S",
+        "ranges": [
+          {
+            "from": 2015,
+            "to": 2021
+          }
+        ]
+      },
+      {
+        "name": "720S",
+        "ranges": [
+          {
+            "from": 2017,
+            "to": 2023
+          }
+        ]
+      },
+      {
+        "name": "Senna",
+        "ranges": [
+          {
+            "from": 2018,
+            "to": 2019
+          }
+        ]
+      },
+      {
+        "name": "GT",
+        "ranges": [
+          {
+            "from": 2019,
+            "to": 2024
+          }
+        ]
+      },
+      {
+        "name": "Speedtail",
+        "ranges": [
+          {
+            "from": 2020,
+            "to": 2020
+          }
+        ]
+      },
+      {
+        "name": "Artura",
+        "ranges": [
+          {
+            "from": 2021,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "750S",
+        "ranges": [
+          {
+            "from": 2023,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "GTS",
+        "ranges": [
+          {
+            "from": 2024,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Mercedes-Benz",
+    "models": [
+      {
+        "name": "190",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1993
+          }
+        ]
+      },
+      {
+        "name": "C-Class",
+        "ranges": [
+          {
+            "from": 1993,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "E-Class",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "S-Class",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "SL",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "SLK/SLC",
+        "ranges": [
+          {
+            "from": 1996,
+            "to": 2020
+          }
+        ]
+      },
+      {
+        "name": "CL",
+        "ranges": [
+          {
+            "from": 1992,
+            "to": 2014
+          }
+        ]
+      },
+      {
+        "name": "CLK",
+        "ranges": [
+          {
+            "from": 1997,
+            "to": 2010
+          }
+        ]
+      },
+      {
+        "name": "CLS",
+        "ranges": [
+          {
+            "from": 2004,
+            "to": 2023
+          }
+        ]
+      },
+      {
+        "name": "A-Class",
+        "ranges": [
+          {
+            "from": 1997,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "B-Class",
+        "ranges": [
+          {
+            "from": 2005,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "G-Class",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "M/GLE-Class",
+        "ranges": [
+          {
+            "from": 1997,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "GL/GLS-Class",
+        "ranges": [
+          {
+            "from": 2006,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "GLA",
+        "ranges": [
+          {
+            "from": 2013,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "GLB",
+        "ranges": [
+          {
+            "from": 2019,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "GLC",
+        "ranges": [
+          {
+            "from": 2015,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "EQA",
+        "ranges": [
+          {
+            "from": 2021,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "EQB",
+        "ranges": [
+          {
+            "from": 2021,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "EQC",
+        "ranges": [
+          {
+            "from": 2019,
+            "to": 2023
+          }
+        ]
+      },
+      {
+        "name": "EQE",
+        "ranges": [
+          {
+            "from": 2022,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "EQS",
+        "ranges": [
+          {
+            "from": 2021,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "AMG GT",
+        "ranges": [
+          {
+            "from": 2014,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "SLS AMG",
+        "ranges": [
+          {
+            "from": 2010,
+            "to": 2014
+          }
+        ]
+      },
+      {
+        "name": "SLR McLaren",
+        "ranges": [
+          {
+            "from": 2003,
+            "to": 2009
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "MG",
+    "models": [
+      {
+        "name": "MGF/TF",
+        "ranges": [
+          {
+            "from": 1995,
+            "to": 2011
+          }
+        ]
+      },
+      {
+        "name": "ZR",
+        "ranges": [
+          {
+            "from": 2001,
+            "to": 2005
+          }
+        ]
+      },
+      {
+        "name": "ZS",
+        "ranges": [
+          {
+            "from": 2001,
+            "to": 2005
+          },
+          {
+            "from": 2017,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "ZT",
+        "ranges": [
+          {
+            "from": 2001,
+            "to": 2005
+          }
+        ]
+      },
+      {
+        "name": "MG 3",
+        "ranges": [
+          {
+            "from": 2008,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "MG 6",
+        "ranges": [
+          {
+            "from": 2010,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "MG GS",
+        "ranges": [
+          {
+            "from": 2015,
+            "to": 2019
+          }
+        ]
+      },
+      {
+        "name": "MG HS",
+        "ranges": [
+          {
+            "from": 2018,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "MG 4 EV",
+        "ranges": [
+          {
+            "from": 2022,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "MG 5",
+        "ranges": [
+          {
+            "from": 2012,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Cyberster",
+        "ranges": [
+          {
+            "from": 2023,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "MINI",
+    "models": [
+      {
+        "name": "One/Cooper",
+        "ranges": [
+          {
+            "from": 2001,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Convertible",
+        "ranges": [
+          {
+            "from": 2004,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Clubman",
+        "ranges": [
+          {
+            "from": 2007,
+            "to": 2024
+          }
+        ]
+      },
+      {
+        "name": "Countryman",
+        "ranges": [
+          {
+            "from": 2010,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Coupé",
+        "ranges": [
+          {
+            "from": 2011,
+            "to": 2015
+          }
+        ]
+      },
+      {
+        "name": "Roadster",
+        "ranges": [
+          {
+            "from": 2012,
+            "to": 2015
+          }
+        ]
+      },
+      {
+        "name": "Paceman",
+        "ranges": [
+          {
+            "from": 2012,
+            "to": 2016
+          }
+        ]
+      },
+      {
+        "name": "Aceman",
+        "ranges": [
+          {
+            "from": 2024,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Mitsubishi",
+    "models": [
+      {
+        "name": "Colt",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2012
+          },
+          {
+            "from": 2023,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Lancer",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Galant",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2012
+          }
+        ]
+      },
+      {
+        "name": "Sigma",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1996
+          }
+        ]
+      },
+      {
+        "name": "Eclipse",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2011
+          }
+        ]
+      },
+      {
+        "name": "3000GT",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2000
+          }
+        ]
+      },
+      {
+        "name": "FTO",
+        "ranges": [
+          {
+            "from": 1994,
+            "to": 2000
+          }
+        ]
+      },
+      {
+        "name": "Carisma",
+        "ranges": [
+          {
+            "from": 1995,
+            "to": 2004
+          }
+        ]
+      },
+      {
+        "name": "Pajero/Montero",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2021
+          }
+        ]
+      },
+      {
+        "name": "Pajero Pinin",
+        "ranges": [
+          {
+            "from": 1998,
+            "to": 2005
+          }
+        ]
+      },
+      {
+        "name": "Pajero Sport",
+        "ranges": [
+          {
+            "from": 1996,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Outlander",
+        "ranges": [
+          {
+            "from": 2001,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "ASX",
+        "ranges": [
+          {
+            "from": 2010,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Space Star",
+        "ranges": [
+          {
+            "from": 1998,
+            "to": 2005
+          },
+          {
+            "from": 2012,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Grandis",
+        "ranges": [
+          {
+            "from": 2003,
+            "to": 2011
+          }
+        ]
+      },
+      {
+        "name": "i-MiEV",
+        "ranges": [
+          {
+            "from": 2009,
+            "to": 2021
+          }
+        ]
+      },
+      {
+        "name": "L200/Triton",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Eclipse Cross",
+        "ranges": [
+          {
+            "from": 2017,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Nio",
+    "models": [
+      {
+        "name": "ES8",
+        "ranges": [
+          {
+            "from": 2018,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "ES6",
+        "ranges": [
+          {
+            "from": 2019,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "EC6",
+        "ranges": [
+          {
+            "from": 2020,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "ET7",
+        "ranges": [
+          {
+            "from": 2021,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "ET5",
+        "ranges": [
+          {
+            "from": 2022,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "ES7/EL7",
+        "ranges": [
+          {
+            "from": 2022,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "EC7",
+        "ranges": [
+          {
+            "from": 2023,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "EL6",
+        "ranges": [
+          {
+            "from": 2023,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Nissan",
+    "models": [
+      {
+        "name": "Micra",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Sunny",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Almera",
+        "ranges": [
+          {
+            "from": 1995,
+            "to": 2006
+          },
+          {
+            "from": 2011,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Primera",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2008
+          }
+        ]
+      },
+      {
+        "name": "Maxima",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2023
+          }
+        ]
+      },
+      {
+        "name": "200SX/240SX",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2002
+          }
+        ]
+      },
+      {
+        "name": "300ZX",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2000
+          }
+        ]
+      },
+      {
+        "name": "350Z",
+        "ranges": [
+          {
+            "from": 2002,
+            "to": 2009
+          }
+        ]
+      },
+      {
+        "name": "370Z",
+        "ranges": [
+          {
+            "from": 2009,
+            "to": 2020
+          }
+        ]
+      },
+      {
+        "name": "Z",
+        "ranges": [
+          {
+            "from": 2022,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Skyline",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "GT-R",
+        "ranges": [
+          {
+            "from": 2007,
+            "to": 2024
+          }
+        ]
+      },
+      {
+        "name": "Patrol",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Terrano",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2006
+          },
+          {
+            "from": 2013,
+            "to": 2022
+          }
+        ]
+      },
+      {
+        "name": "Pathfinder",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "X-Trail",
+        "ranges": [
+          {
+            "from": 2000,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Qashqai",
+        "ranges": [
+          {
+            "from": 2006,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Juke",
+        "ranges": [
+          {
+            "from": 2010,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Leaf",
+        "ranges": [
+          {
+            "from": 2010,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Note",
+        "ranges": [
+          {
+            "from": 2004,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Murano",
+        "ranges": [
+          {
+            "from": 2002,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Ariya",
+        "ranges": [
+          {
+            "from": 2021,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Opel/Vauxhall",
+    "models": [
+      {
+        "name": "Corsa",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Kadett",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1991
+          }
+        ]
+      },
+      {
+        "name": "Astra",
+        "ranges": [
+          {
+            "from": 1991,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Vectra",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2008
+          }
+        ]
+      },
+      {
+        "name": "Insignia",
+        "ranges": [
+          {
+            "from": 2008,
+            "to": 2022
+          }
+        ]
+      },
+      {
+        "name": "Omega",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2003
+          }
+        ]
+      },
+      {
+        "name": "Senator",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1993
+          }
+        ]
+      },
+      {
+        "name": "Calibra",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1997
+          }
+        ]
+      },
+      {
+        "name": "Tigra",
+        "ranges": [
+          {
+            "from": 1994,
+            "to": 2001
+          },
+          {
+            "from": 2004,
+            "to": 2009
+          }
+        ]
+      },
+      {
+        "name": "Speedster",
+        "ranges": [
+          {
+            "from": 2000,
+            "to": 2005
+          }
+        ]
+      },
+      {
+        "name": "GT",
+        "ranges": [
+          {
+            "from": 2007,
+            "to": 2009
+          }
+        ]
+      },
+      {
+        "name": "Agila",
+        "ranges": [
+          {
+            "from": 2000,
+            "to": 2014
+          }
+        ]
+      },
+      {
+        "name": "Adam",
+        "ranges": [
+          {
+            "from": 2012,
+            "to": 2019
+          }
+        ]
+      },
+      {
+        "name": "Karl",
+        "ranges": [
+          {
+            "from": 2015,
+            "to": 2019
+          }
+        ]
+      },
+      {
+        "name": "Meriva",
+        "ranges": [
+          {
+            "from": 2003,
+            "to": 2017
+          }
+        ]
+      },
+      {
+        "name": "Zafira",
+        "ranges": [
+          {
+            "from": 1999,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Frontera",
+        "ranges": [
+          {
+            "from": 1991,
+            "to": 2004
+          },
+          {
+            "from": 2024,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Monterey",
+        "ranges": [
+          {
+            "from": 1992,
+            "to": 1999
+          }
+        ]
+      },
+      {
+        "name": "Antara",
+        "ranges": [
+          {
+            "from": 2006,
+            "to": 2015
+          }
+        ]
+      },
+      {
+        "name": "Mokka",
+        "ranges": [
+          {
+            "from": 2012,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Crossland",
+        "ranges": [
+          {
+            "from": 2017,
+            "to": 2024
+          }
+        ]
+      },
+      {
+        "name": "Grandland",
+        "ranges": [
+          {
+            "from": 2017,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Cascada",
+        "ranges": [
+          {
+            "from": 2013,
+            "to": 2019
+          }
+        ]
+      },
+      {
+        "name": "Rocks-e",
+        "ranges": [
+          {
+            "from": 2021,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Pagani",
+    "models": [
+      {
+        "name": "Zonda",
+        "ranges": [
+          {
+            "from": 1999,
+            "to": 2019
+          }
+        ]
+      },
+      {
+        "name": "Huayra",
+        "ranges": [
+          {
+            "from": 2011,
+            "to": 2023
+          }
+        ]
+      },
+      {
+        "name": "Utopia",
+        "ranges": [
+          {
+            "from": 2022,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Peugeot",
+    "models": [
+      {
+        "name": "106",
+        "ranges": [
+          {
+            "from": 1991,
+            "to": 2003
+          }
+        ]
+      },
+      {
+        "name": "205",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1998
+          }
+        ]
+      },
+      {
+        "name": "309",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1993
+          }
+        ]
+      },
+      {
+        "name": "405",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1997
+          }
+        ]
+      },
+      {
+        "name": "605",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1999
+          }
+        ]
+      },
+      {
+        "name": "107",
+        "ranges": [
+          {
+            "from": 2005,
+            "to": 2014
+          }
+        ]
+      },
+      {
+        "name": "108",
+        "ranges": [
+          {
+            "from": 2014,
+            "to": 2021
+          }
+        ]
+      },
+      {
+        "name": "206",
+        "ranges": [
+          {
+            "from": 1998,
+            "to": 2012
+          }
+        ]
+      },
+      {
+        "name": "207",
+        "ranges": [
+          {
+            "from": 2006,
+            "to": 2014
+          }
+        ]
+      },
+      {
+        "name": "208",
+        "ranges": [
+          {
+            "from": 2012,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "306",
+        "ranges": [
+          {
+            "from": 1993,
+            "to": 2002
+          }
+        ]
+      },
+      {
+        "name": "307",
+        "ranges": [
+          {
+            "from": 2001,
+            "to": 2008
+          }
+        ]
+      },
+      {
+        "name": "308",
+        "ranges": [
+          {
+            "from": 2007,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "406",
+        "ranges": [
+          {
+            "from": 1995,
+            "to": 2004
+          }
+        ]
+      },
+      {
+        "name": "407",
+        "ranges": [
+          {
+            "from": 2004,
+            "to": 2011
+          }
+        ]
+      },
+      {
+        "name": "408",
+        "ranges": [
+          {
+            "from": 2010,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "508",
+        "ranges": [
+          {
+            "from": 2010,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "607",
+        "ranges": [
+          {
+            "from": 1999,
+            "to": 2010
+          }
+        ]
+      },
+      {
+        "name": "806",
+        "ranges": [
+          {
+            "from": 1994,
+            "to": 2002
+          }
+        ]
+      },
+      {
+        "name": "807",
+        "ranges": [
+          {
+            "from": 2002,
+            "to": 2014
+          }
+        ]
+      },
+      {
+        "name": "1007",
+        "ranges": [
+          {
+            "from": 2005,
+            "to": 2009
+          }
+        ]
+      },
+      {
+        "name": "2008",
+        "ranges": [
+          {
+            "from": 2013,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "3008",
+        "ranges": [
+          {
+            "from": 2009,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "4007",
+        "ranges": [
+          {
+            "from": 2007,
+            "to": 2012
+          }
+        ]
+      },
+      {
+        "name": "4008",
+        "ranges": [
+          {
+            "from": 2012,
+            "to": 2017
+          }
+        ]
+      },
+      {
+        "name": "5008",
+        "ranges": [
+          {
+            "from": 2009,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "RCZ",
+        "ranges": [
+          {
+            "from": 2010,
+            "to": 2015
+          }
+        ]
+      },
+      {
+        "name": "iOn",
+        "ranges": [
+          {
+            "from": 2010,
+            "to": 2020
+          }
+        ]
+      },
+      {
+        "name": "Partner/Rifter",
+        "ranges": [
+          {
+            "from": 1996,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Polestar",
+    "models": [
+      {
+        "name": "1",
+        "ranges": [
+          {
+            "from": 2019,
+            "to": 2021
+          }
+        ]
+      },
+      {
+        "name": "2",
+        "ranges": [
+          {
+            "from": 2020,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "3",
+        "ranges": [
+          {
+            "from": 2023,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "4",
+        "ranges": [
+          {
+            "from": 2024,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Pontiac",
+    "models": [
+      {
+        "name": "Firebird",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2002
+          }
+        ]
+      },
+      {
+        "name": "Grand Am",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2005
+          }
+        ]
+      },
+      {
+        "name": "Grand Prix",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2008
+          }
+        ]
+      },
+      {
+        "name": "Bonneville",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2005
+          }
+        ]
+      },
+      {
+        "name": "Sunbird/Sunfire",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2005
+          }
+        ]
+      },
+      {
+        "name": "GTO",
+        "ranges": [
+          {
+            "from": 2004,
+            "to": 2006
+          }
+        ]
+      },
+      {
+        "name": "Solstice",
+        "ranges": [
+          {
+            "from": 2005,
+            "to": 2010
+          }
+        ]
+      },
+      {
+        "name": "G6",
+        "ranges": [
+          {
+            "from": 2005,
+            "to": 2010
+          }
+        ]
+      },
+      {
+        "name": "G8",
+        "ranges": [
+          {
+            "from": 2008,
+            "to": 2009
+          }
+        ]
+      },
+      {
+        "name": "Vibe",
+        "ranges": [
+          {
+            "from": 2002,
+            "to": 2010
+          }
+        ]
+      },
+      {
+        "name": "Aztek",
+        "ranges": [
+          {
+            "from": 2001,
+            "to": 2005
+          }
+        ]
+      },
+      {
+        "name": "Torrent",
+        "ranges": [
+          {
+            "from": 2006,
+            "to": 2009
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Porsche",
+    "models": [
+      {
+        "name": "911",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "928",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1995
+          }
+        ]
+      },
+      {
+        "name": "944",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1991
+          }
+        ]
+      },
+      {
+        "name": "968",
+        "ranges": [
+          {
+            "from": 1991,
+            "to": 1995
+          }
+        ]
+      },
+      {
+        "name": "Boxster/718",
+        "ranges": [
+          {
+            "from": 1996,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Cayman/718",
+        "ranges": [
+          {
+            "from": 2005,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Cayenne",
+        "ranges": [
+          {
+            "from": 2002,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Panamera",
+        "ranges": [
+          {
+            "from": 2009,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Macan",
+        "ranges": [
+          {
+            "from": 2014,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Taycan",
+        "ranges": [
+          {
+            "from": 2019,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Carrera GT",
+        "ranges": [
+          {
+            "from": 2003,
+            "to": 2007
+          }
+        ]
+      },
+      {
+        "name": "918 Spyder",
+        "ranges": [
+          {
+            "from": 2013,
+            "to": 2015
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Proton",
+    "models": [
+      {
+        "name": "Saga",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Wira",
+        "ranges": [
+          {
+            "from": 1993,
+            "to": 2009
+          }
+        ]
+      },
+      {
+        "name": "Satria",
+        "ranges": [
+          {
+            "from": 1994,
+            "to": 2015
+          }
+        ]
+      },
+      {
+        "name": "Perdana",
+        "ranges": [
+          {
+            "from": 1995,
+            "to": 2020
+          }
+        ]
+      },
+      {
+        "name": "Gen-2",
+        "ranges": [
+          {
+            "from": 2004,
+            "to": 2012
+          }
+        ]
+      },
+      {
+        "name": "Savvy",
+        "ranges": [
+          {
+            "from": 2005,
+            "to": 2011
+          }
+        ]
+      },
+      {
+        "name": "Persona",
+        "ranges": [
+          {
+            "from": 2007,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Exora",
+        "ranges": [
+          {
+            "from": 2009,
+            "to": 2023
+          }
+        ]
+      },
+      {
+        "name": "Inspira",
+        "ranges": [
+          {
+            "from": 2010,
+            "to": 2015
+          }
+        ]
+      },
+      {
+        "name": "Prevé",
+        "ranges": [
+          {
+            "from": 2012,
+            "to": 2020
+          }
+        ]
+      },
+      {
+        "name": "X70",
+        "ranges": [
+          {
+            "from": 2018,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "X50",
+        "ranges": [
+          {
+            "from": 2020,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "S70",
+        "ranges": [
+          {
+            "from": 2023,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Qoros",
+    "models": [
+      {
+        "name": "3",
+        "ranges": [
+          {
+            "from": 2013,
+            "to": 2022
+          }
+        ]
+      },
+      {
+        "name": "5",
+        "ranges": [
+          {
+            "from": 2016,
+            "to": 2022
+          }
+        ]
+      },
+      {
+        "name": "7",
+        "ranges": [
+          {
+            "from": 2020,
+            "to": 2022
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Ram",
+    "models": [
+      {
+        "name": "1500",
+        "ranges": [
+          {
+            "from": 2011,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "2500/3500",
+        "ranges": [
+          {
+            "from": 2011,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "ProMaster",
+        "ranges": [
+          {
+            "from": 2013,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "700",
+        "ranges": [
+          {
+            "from": 2014,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "1000",
+        "ranges": [
+          {
+            "from": 2018,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Rampage",
+        "ranges": [
+          {
+            "from": 2023,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Renault",
+    "models": [
+      {
+        "name": "5",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1996
+          },
+          {
+            "from": 2024,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "19",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1996
+          }
+        ]
+      },
+      {
+        "name": "21",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1994
+          }
+        ]
+      },
+      {
+        "name": "25",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1992
+          }
+        ]
+      },
+      {
+        "name": "Safrane",
+        "ranges": [
+          {
+            "from": 1992,
+            "to": 2000
+          }
+        ]
+      },
+      {
+        "name": "Twingo",
+        "ranges": [
+          {
+            "from": 1992,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Clio",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Megane",
+        "ranges": [
+          {
+            "from": 1995,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Laguna",
+        "ranges": [
+          {
+            "from": 1994,
+            "to": 2015
+          }
+        ]
+      },
+      {
+        "name": "Espace",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Scenic",
+        "ranges": [
+          {
+            "from": 1996,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Kangoo",
+        "ranges": [
+          {
+            "from": 1997,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Modus",
+        "ranges": [
+          {
+            "from": 2004,
+            "to": 2012
+          }
+        ]
+      },
+      {
+        "name": "Koleos",
+        "ranges": [
+          {
+            "from": 2007,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Kadjar",
+        "ranges": [
+          {
+            "from": 2015,
+            "to": 2022
+          }
+        ]
+      },
+      {
+        "name": "Captur",
+        "ranges": [
+          {
+            "from": 2013,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Talisman",
+        "ranges": [
+          {
+            "from": 2015,
+            "to": 2022
+          }
+        ]
+      },
+      {
+        "name": "Austral",
+        "ranges": [
+          {
+            "from": 2022,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Arkana",
+        "ranges": [
+          {
+            "from": 2019,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Rafale",
+        "ranges": [
+          {
+            "from": 2024,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Symbioz",
+        "ranges": [
+          {
+            "from": 2024,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Zoe",
+        "ranges": [
+          {
+            "from": 2012,
+            "to": 2024
+          }
+        ]
+      },
+      {
+        "name": "Fluence",
+        "ranges": [
+          {
+            "from": 2009,
+            "to": 2016
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Rimac",
+    "models": [
+      {
+        "name": "Concept One",
+        "ranges": [
+          {
+            "from": 2013,
+            "to": 2014
+          }
+        ]
+      },
+      {
+        "name": "Nevera",
+        "ranges": [
+          {
+            "from": 2021,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Rivian",
+    "models": [
+      {
+        "name": "R1T",
+        "ranges": [
+          {
+            "from": 2021,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "R1S",
+        "ranges": [
+          {
+            "from": 2022,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "R2",
+        "ranges": [
+          {
+            "from": 2026,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "R3",
+        "ranges": [
+          {
+            "from": 2026,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Rolls-Royce",
+    "models": [
+      {
+        "name": "Silver Spirit/Spur",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1998
+          }
+        ]
+      },
+      {
+        "name": "Corniche",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1995
+          },
+          {
+            "from": 2000,
+            "to": 2002
+          }
+        ]
+      },
+      {
+        "name": "Silver Seraph",
+        "ranges": [
+          {
+            "from": 1998,
+            "to": 2002
+          }
+        ]
+      },
+      {
+        "name": "Phantom",
+        "ranges": [
+          {
+            "from": 2003,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Ghost",
+        "ranges": [
+          {
+            "from": 2009,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Wraith",
+        "ranges": [
+          {
+            "from": 2013,
+            "to": 2023
+          }
+        ]
+      },
+      {
+        "name": "Dawn",
+        "ranges": [
+          {
+            "from": 2015,
+            "to": 2023
+          }
+        ]
+      },
+      {
+        "name": "Cullinan",
+        "ranges": [
+          {
+            "from": 2018,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Spectre",
+        "ranges": [
+          {
+            "from": 2023,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Rover",
+    "models": [
+      {
+        "name": "100",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1998
+          }
+        ]
+      },
+      {
+        "name": "200/25",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2005
+          }
+        ]
+      },
+      {
+        "name": "400/45",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2005
+          }
+        ]
+      },
+      {
+        "name": "600",
+        "ranges": [
+          {
+            "from": 1993,
+            "to": 1999
+          }
+        ]
+      },
+      {
+        "name": "800",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1999
+          }
+        ]
+      },
+      {
+        "name": "75",
+        "ranges": [
+          {
+            "from": 1998,
+            "to": 2005
+          }
+        ]
+      },
+      {
+        "name": "Streetwise",
+        "ranges": [
+          {
+            "from": 2003,
+            "to": 2005
+          }
+        ]
+      },
+      {
+        "name": "CityRover",
+        "ranges": [
+          {
+            "from": 2003,
+            "to": 2005
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Saab",
+    "models": [
+      {
+        "name": "900",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1998
+          }
+        ]
+      },
+      {
+        "name": "9000",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1998
+          }
+        ]
+      },
+      {
+        "name": "9-3",
+        "ranges": [
+          {
+            "from": 1998,
+            "to": 2014
+          }
+        ]
+      },
+      {
+        "name": "9-5",
+        "ranges": [
+          {
+            "from": 1997,
+            "to": 2012
+          }
+        ]
+      },
+      {
+        "name": "9-2X",
+        "ranges": [
+          {
+            "from": 2004,
+            "to": 2006
+          }
+        ]
+      },
+      {
+        "name": "9-7X",
+        "ranges": [
+          {
+            "from": 2005,
+            "to": 2009
+          }
+        ]
+      },
+      {
+        "name": "9-4X",
+        "ranges": [
+          {
+            "from": 2011,
+            "to": 2011
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Seat",
+    "models": [
+      {
+        "name": "Ibiza",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Marbella",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1998
+          }
+        ]
+      },
+      {
+        "name": "Toledo",
+        "ranges": [
+          {
+            "from": 1991,
+            "to": 2019
+          }
+        ]
+      },
+      {
+        "name": "Cordoba",
+        "ranges": [
+          {
+            "from": 1993,
+            "to": 2009
+          }
+        ]
+      },
+      {
+        "name": "Alhambra",
+        "ranges": [
+          {
+            "from": 1996,
+            "to": 2020
+          }
+        ]
+      },
+      {
+        "name": "Arosa",
+        "ranges": [
+          {
+            "from": 1997,
+            "to": 2004
+          }
+        ]
+      },
+      {
+        "name": "Leon",
+        "ranges": [
+          {
+            "from": 1999,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Altea",
+        "ranges": [
+          {
+            "from": 2004,
+            "to": 2015
+          }
+        ]
+      },
+      {
+        "name": "Exeo",
+        "ranges": [
+          {
+            "from": 2008,
+            "to": 2013
+          }
+        ]
+      },
+      {
+        "name": "Mii",
+        "ranges": [
+          {
+            "from": 2011,
+            "to": 2021
+          }
+        ]
+      },
+      {
+        "name": "Ateca",
+        "ranges": [
+          {
+            "from": 2016,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Arona",
+        "ranges": [
+          {
+            "from": 2017,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Tarraco",
+        "ranges": [
+          {
+            "from": 2018,
+            "to": 2024
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Skoda",
+    "models": [
+      {
+        "name": "Favorit",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1995
+          }
+        ]
+      },
+      {
+        "name": "Felicia",
+        "ranges": [
+          {
+            "from": 1994,
+            "to": 2001
+          }
+        ]
+      },
+      {
+        "name": "Octavia",
+        "ranges": [
+          {
+            "from": 1996,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Fabia",
+        "ranges": [
+          {
+            "from": 1999,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Superb",
+        "ranges": [
+          {
+            "from": 2001,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Roomster",
+        "ranges": [
+          {
+            "from": 2006,
+            "to": 2015
+          }
+        ]
+      },
+      {
+        "name": "Yeti",
+        "ranges": [
+          {
+            "from": 2009,
+            "to": 2017
+          }
+        ]
+      },
+      {
+        "name": "Citigo",
+        "ranges": [
+          {
+            "from": 2011,
+            "to": 2020
+          }
+        ]
+      },
+      {
+        "name": "Rapid",
+        "ranges": [
+          {
+            "from": 2012,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Kodiaq",
+        "ranges": [
+          {
+            "from": 2016,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Karoq",
+        "ranges": [
+          {
+            "from": 2017,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Scala",
+        "ranges": [
+          {
+            "from": 2019,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Kamiq",
+        "ranges": [
+          {
+            "from": 2019,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Enyaq",
+        "ranges": [
+          {
+            "from": 2020,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Elroq",
+        "ranges": [
+          {
+            "from": 2024,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Smart",
+    "models": [
+      {
+        "name": "Fortwo",
+        "ranges": [
+          {
+            "from": 1998,
+            "to": 2024
+          }
+        ]
+      },
+      {
+        "name": "Forfour",
+        "ranges": [
+          {
+            "from": 2004,
+            "to": 2006
+          },
+          {
+            "from": 2014,
+            "to": 2021
+          }
+        ]
+      },
+      {
+        "name": "Roadster",
+        "ranges": [
+          {
+            "from": 2003,
+            "to": 2005
+          }
+        ]
+      },
+      {
+        "name": "#1",
+        "ranges": [
+          {
+            "from": 2022,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "#3",
+        "ranges": [
+          {
+            "from": 2023,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "#5",
+        "ranges": [
+          {
+            "from": 2024,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SsangYong/KG Mobility",
+    "models": [
+      {
+        "name": "Korando",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Musso",
+        "ranges": [
+          {
+            "from": 1993,
+            "to": 2005
+          },
+          {
+            "from": 2018,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Chairman",
+        "ranges": [
+          {
+            "from": 1997,
+            "to": 2017
+          }
+        ]
+      },
+      {
+        "name": "Rexton",
+        "ranges": [
+          {
+            "from": 2001,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Rodius/Stavic",
+        "ranges": [
+          {
+            "from": 2004,
+            "to": 2019
+          }
+        ]
+      },
+      {
+        "name": "Kyron",
+        "ranges": [
+          {
+            "from": 2005,
+            "to": 2014
+          }
+        ]
+      },
+      {
+        "name": "Actyon",
+        "ranges": [
+          {
+            "from": 2005,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Tivoli",
+        "ranges": [
+          {
+            "from": 2015,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "XLV",
+        "ranges": [
+          {
+            "from": 2016,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Torres",
+        "ranges": [
+          {
+            "from": 2022,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Subaru",
+    "models": [
+      {
+        "name": "Leone/Loyale",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1994
+          }
+        ]
+      },
+      {
+        "name": "Legacy",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Impreza",
+        "ranges": [
+          {
+            "from": 1992,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "SVX",
+        "ranges": [
+          {
+            "from": 1991,
+            "to": 1996
+          }
+        ]
+      },
+      {
+        "name": "Vivio",
+        "ranges": [
+          {
+            "from": 1992,
+            "to": 1998
+          }
+        ]
+      },
+      {
+        "name": "Forester",
+        "ranges": [
+          {
+            "from": 1997,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Outback",
+        "ranges": [
+          {
+            "from": 1994,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Justy",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2011
+          },
+          {
+            "from": 2016,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Baja",
+        "ranges": [
+          {
+            "from": 2002,
+            "to": 2006
+          }
+        ]
+      },
+      {
+        "name": "Tribeca",
+        "ranges": [
+          {
+            "from": 2005,
+            "to": 2014
+          }
+        ]
+      },
+      {
+        "name": "BRZ",
+        "ranges": [
+          {
+            "from": 2012,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "XV/Crosstrek",
+        "ranges": [
+          {
+            "from": 2012,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Levorg",
+        "ranges": [
+          {
+            "from": 2014,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Ascent",
+        "ranges": [
+          {
+            "from": 2018,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Solterra",
+        "ranges": [
+          {
+            "from": 2022,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Suzuki",
+    "models": [
+      {
+        "name": "Alto",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Swift",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Cultus",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2003
+          }
+        ]
+      },
+      {
+        "name": "Cappuccino",
+        "ranges": [
+          {
+            "from": 1991,
+            "to": 1998
+          }
+        ]
+      },
+      {
+        "name": "Vitara/Escudo",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Jimny",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Baleno",
+        "ranges": [
+          {
+            "from": 1995,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Wagon R",
+        "ranges": [
+          {
+            "from": 1993,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Ignis",
+        "ranges": [
+          {
+            "from": 2000,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Liana",
+        "ranges": [
+          {
+            "from": 2001,
+            "to": 2007
+          }
+        ]
+      },
+      {
+        "name": "Grand Vitara",
+        "ranges": [
+          {
+            "from": 1998,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "SX4",
+        "ranges": [
+          {
+            "from": 2006,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Splash",
+        "ranges": [
+          {
+            "from": 2008,
+            "to": 2014
+          }
+        ]
+      },
+      {
+        "name": "Kizashi",
+        "ranges": [
+          {
+            "from": 2009,
+            "to": 2016
+          }
+        ]
+      },
+      {
+        "name": "Celerio",
+        "ranges": [
+          {
+            "from": 2014,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "S-Cross",
+        "ranges": [
+          {
+            "from": 2013,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Swace",
+        "ranges": [
+          {
+            "from": 2020,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Across",
+        "ranges": [
+          {
+            "from": 2020,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Tata",
+    "models": [
+      {
+        "name": "Sierra",
+        "ranges": [
+          {
+            "from": 1991,
+            "to": 2003
+          }
+        ]
+      },
+      {
+        "name": "Estate",
+        "ranges": [
+          {
+            "from": 1992,
+            "to": 2000
+          }
+        ]
+      },
+      {
+        "name": "Sumo",
+        "ranges": [
+          {
+            "from": 1994,
+            "to": 2019
+          }
+        ]
+      },
+      {
+        "name": "Safari",
+        "ranges": [
+          {
+            "from": 1998,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Indica",
+        "ranges": [
+          {
+            "from": 1998,
+            "to": 2018
+          }
+        ]
+      },
+      {
+        "name": "Indigo",
+        "ranges": [
+          {
+            "from": 2002,
+            "to": 2018
+          }
+        ]
+      },
+      {
+        "name": "Nano",
+        "ranges": [
+          {
+            "from": 2008,
+            "to": 2018
+          }
+        ]
+      },
+      {
+        "name": "Aria",
+        "ranges": [
+          {
+            "from": 2010,
+            "to": 2017
+          }
+        ]
+      },
+      {
+        "name": "Zest",
+        "ranges": [
+          {
+            "from": 2014,
+            "to": 2019
+          }
+        ]
+      },
+      {
+        "name": "Bolt",
+        "ranges": [
+          {
+            "from": 2014,
+            "to": 2019
+          }
+        ]
+      },
+      {
+        "name": "Tiago",
+        "ranges": [
+          {
+            "from": 2016,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Tigor",
+        "ranges": [
+          {
+            "from": 2017,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Nexon",
+        "ranges": [
+          {
+            "from": 2017,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Harrier",
+        "ranges": [
+          {
+            "from": 2019,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Altroz",
+        "ranges": [
+          {
+            "from": 2020,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Punch",
+        "ranges": [
+          {
+            "from": 2021,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Curvv",
+        "ranges": [
+          {
+            "from": 2024,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Tesla",
+    "models": [
+      {
+        "name": "Roadster",
+        "ranges": [
+          {
+            "from": 2008,
+            "to": 2012
+          },
+          {
+            "from": 2026,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Model S",
+        "ranges": [
+          {
+            "from": 2012,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Model X",
+        "ranges": [
+          {
+            "from": 2015,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Model 3",
+        "ranges": [
+          {
+            "from": 2017,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Model Y",
+        "ranges": [
+          {
+            "from": 2020,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Cybertruck",
+        "ranges": [
+          {
+            "from": 2023,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Toyota",
+    "models": [
+      {
+        "name": "Starlet",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1999
+          }
+        ]
+      },
+      {
+        "name": "Yaris",
+        "ranges": [
+          {
+            "from": 1999,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Corolla",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Carina",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1998
+          }
+        ]
+      },
+      {
+        "name": "Avensis",
+        "ranges": [
+          {
+            "from": 1997,
+            "to": 2018
+          }
+        ]
+      },
+      {
+        "name": "Camry",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Crown",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Supra",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2002
+          },
+          {
+            "from": 2019,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Celica",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2006
+          }
+        ]
+      },
+      {
+        "name": "MR2",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2007
+          }
+        ]
+      },
+      {
+        "name": "Paseo",
+        "ranges": [
+          {
+            "from": 1991,
+            "to": 1999
+          }
+        ]
+      },
+      {
+        "name": "Previa",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2019
+          }
+        ]
+      },
+      {
+        "name": "RAV4",
+        "ranges": [
+          {
+            "from": 1994,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Land Cruiser",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Hilux",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "4Runner",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Prius",
+        "ranges": [
+          {
+            "from": 1997,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Aygo",
+        "ranges": [
+          {
+            "from": 2005,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Auris",
+        "ranges": [
+          {
+            "from": 2006,
+            "to": 2018
+          }
+        ]
+      },
+      {
+        "name": "Verso",
+        "ranges": [
+          {
+            "from": 2009,
+            "to": 2018
+          }
+        ]
+      },
+      {
+        "name": "GT86/GR86",
+        "ranges": [
+          {
+            "from": 2012,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "C-HR",
+        "ranges": [
+          {
+            "from": 2016,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Highlander",
+        "ranges": [
+          {
+            "from": 2000,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Mirai",
+        "ranges": [
+          {
+            "from": 2014,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "bZ4X",
+        "ranges": [
+          {
+            "from": 2022,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Corolla Cross",
+        "ranges": [
+          {
+            "from": 2020,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Volkswagen",
+    "models": [
+      {
+        "name": "Polo",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Golf",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Vento/Jetta/Bora",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Passat",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Corrado",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1995
+          }
+        ]
+      },
+      {
+        "name": "Scirocco",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1992
+          },
+          {
+            "from": 2008,
+            "to": 2017
+          }
+        ]
+      },
+      {
+        "name": "Sharan",
+        "ranges": [
+          {
+            "from": 1995,
+            "to": 2022
+          }
+        ]
+      },
+      {
+        "name": "Touran",
+        "ranges": [
+          {
+            "from": 2003,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Lupo",
+        "ranges": [
+          {
+            "from": 1998,
+            "to": 2005
+          }
+        ]
+      },
+      {
+        "name": "Fox",
+        "ranges": [
+          {
+            "from": 2003,
+            "to": 2021
+          }
+        ]
+      },
+      {
+        "name": "Up!",
+        "ranges": [
+          {
+            "from": 2011,
+            "to": 2023
+          }
+        ]
+      },
+      {
+        "name": "New Beetle",
+        "ranges": [
+          {
+            "from": 1997,
+            "to": 2011
+          }
+        ]
+      },
+      {
+        "name": "Beetle",
+        "ranges": [
+          {
+            "from": 2011,
+            "to": 2019
+          }
+        ]
+      },
+      {
+        "name": "Phaeton",
+        "ranges": [
+          {
+            "from": 2002,
+            "to": 2016
+          }
+        ]
+      },
+      {
+        "name": "Touareg",
+        "ranges": [
+          {
+            "from": 2002,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Tiguan",
+        "ranges": [
+          {
+            "from": 2007,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Amarok",
+        "ranges": [
+          {
+            "from": 2010,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Arteon",
+        "ranges": [
+          {
+            "from": 2017,
+            "to": 2024
+          }
+        ]
+      },
+      {
+        "name": "T-Roc",
+        "ranges": [
+          {
+            "from": 2017,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "T-Cross",
+        "ranges": [
+          {
+            "from": 2018,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Taigo",
+        "ranges": [
+          {
+            "from": 2021,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "ID.3",
+        "ranges": [
+          {
+            "from": 2019,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "ID.4",
+        "ranges": [
+          {
+            "from": 2020,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "ID.5",
+        "ranges": [
+          {
+            "from": 2021,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "ID.6",
+        "ranges": [
+          {
+            "from": 2021,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "ID.7",
+        "ranges": [
+          {
+            "from": 2023,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "ID. Buzz",
+        "ranges": [
+          {
+            "from": 2022,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Volvo",
+    "models": [
+      {
+        "name": "240",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1993
+          }
+        ]
+      },
+      {
+        "name": "440/460",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1996
+          }
+        ]
+      },
+      {
+        "name": "480",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1995
+          }
+        ]
+      },
+      {
+        "name": "740/760",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1992
+          }
+        ]
+      },
+      {
+        "name": "850",
+        "ranges": [
+          {
+            "from": 1991,
+            "to": 1996
+          }
+        ]
+      },
+      {
+        "name": "940/960",
+        "ranges": [
+          {
+            "from": 1990,
+            "to": 1998
+          }
+        ]
+      },
+      {
+        "name": "S40/V40",
+        "ranges": [
+          {
+            "from": 1995,
+            "to": 2012
+          }
+        ]
+      },
+      {
+        "name": "S70/V70",
+        "ranges": [
+          {
+            "from": 1996,
+            "to": 2016
+          }
+        ]
+      },
+      {
+        "name": "S60",
+        "ranges": [
+          {
+            "from": 2000,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "S80",
+        "ranges": [
+          {
+            "from": 1998,
+            "to": 2016
+          }
+        ]
+      },
+      {
+        "name": "S90/V90",
+        "ranges": [
+          {
+            "from": 1996,
+            "to": 1998
+          },
+          {
+            "from": 2016,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "C30",
+        "ranges": [
+          {
+            "from": 2006,
+            "to": 2013
+          }
+        ]
+      },
+      {
+        "name": "C70",
+        "ranges": [
+          {
+            "from": 1997,
+            "to": 2013
+          }
+        ]
+      },
+      {
+        "name": "V40",
+        "ranges": [
+          {
+            "from": 2012,
+            "to": 2019
+          }
+        ]
+      },
+      {
+        "name": "V50",
+        "ranges": [
+          {
+            "from": 2004,
+            "to": 2012
+          }
+        ]
+      },
+      {
+        "name": "V60",
+        "ranges": [
+          {
+            "from": 2010,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "XC40",
+        "ranges": [
+          {
+            "from": 2017,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "XC60",
+        "ranges": [
+          {
+            "from": 2008,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "XC70",
+        "ranges": [
+          {
+            "from": 2000,
+            "to": 2016
+          }
+        ]
+      },
+      {
+        "name": "XC90",
+        "ranges": [
+          {
+            "from": 2002,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "EX30",
+        "ranges": [
+          {
+            "from": 2023,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "EX90",
+        "ranges": [
+          {
+            "from": 2023,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "EC40/C40",
+        "ranges": [
+          {
+            "from": 2021,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Wuling",
+    "models": [
+      {
+        "name": "Hongguang",
+        "ranges": [
+          {
+            "from": 2010,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Mini EV",
+        "ranges": [
+          {
+            "from": 2020,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "Bingo",
+        "ranges": [
+          {
+            "from": 2023,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "XPeng",
+    "models": [
+      {
+        "name": "G3",
+        "ranges": [
+          {
+            "from": 2018,
+            "to": 2023
+          }
+        ]
+      },
+      {
+        "name": "P7",
+        "ranges": [
+          {
+            "from": 2020,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "P5",
+        "ranges": [
+          {
+            "from": 2021,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "G9",
+        "ranges": [
+          {
+            "from": 2022,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "G6",
+        "ranges": [
+          {
+            "from": 2023,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "X9",
+        "ranges": [
+          {
+            "from": 2024,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Yamaha",
+    "models": [
+      {
+        "name": "OX99-11",
+        "ranges": [
+          {
+            "from": 1992,
+            "to": 1992
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Zeekr",
+    "models": [
+      {
+        "name": "001",
+        "ranges": [
+          {
+            "from": 2021,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "009",
+        "ranges": [
+          {
+            "from": 2022,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "X",
+        "ranges": [
+          {
+            "from": 2023,
+            "to": 2026
+          }
+        ]
+      },
+      {
+        "name": "007",
+        "ranges": [
+          {
+            "from": 2023,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Zenvo",
+    "models": [
+      {
+        "name": "ST1",
+        "ranges": [
+          {
+            "from": 2009,
+            "to": 2016
+          }
+        ]
+      },
+      {
+        "name": "TS1",
+        "ranges": [
+          {
+            "from": 2016,
+            "to": 2023
+          }
+        ]
+      },
+      {
+        "name": "TSR-S",
+        "ranges": [
+          {
+            "from": 2018,
+            "to": 2023
+          }
+        ]
+      },
+      {
+        "name": "Aurora",
+        "ranges": [
+          {
+            "from": 2025,
+            "to": 2026
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Zotye",
+    "models": [
+      {
+        "name": "Nomad",
+        "ranges": [
+          {
+            "from": 2006,
+            "to": 2016
+          }
+        ]
+      },
+      {
+        "name": "Z100",
+        "ranges": [
+          {
+            "from": 2013,
+            "to": 2020
+          }
+        ]
+      },
+      {
+        "name": "T600",
+        "ranges": [
+          {
+            "from": 2013,
+            "to": 2020
+          }
+        ]
+      }
+    ]
+  }
+]

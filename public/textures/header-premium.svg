@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240">
+  <rect width="240" height="240" fill="#ffffff" />
+  <g fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round">
+    <path
+      d="M-40 52 C28 18, 88 96, 156 58 C198 34, 248 72, 280 52"
+      stroke-opacity="0.1"
+      stroke-width="0.75"
+    />
+    <path
+      d="M-50 108 C32 74, 92 142, 164 104 C210 78, 262 118, 290 100"
+      stroke-opacity="0.075"
+      stroke-width="0.65"
+    />
+    <path
+      d="M-35 168 C38 132, 98 200, 168 162 C214 136, 268 176, 285 158"
+      stroke-opacity="0.085"
+      stroke-width="0.7"
+    />
+    <path
+      d="M-45 212 C30 182, 86 238, 158 208 C202 186, 255 224, 288 206"
+      stroke-opacity="0.06"
+      stroke-width="0.6"
+    />
+    <path
+      d="M52 -45 C18 32, 96 88, 58 156 C34 198, 72 248, 52 280"
+      stroke-opacity="0.07"
+      stroke-width="0.62"
+    />
+    <path
+      d="M108 -50 C74 34, 142 94, 104 166 C80 212, 118 262, 100 290"
+      stroke-opacity="0.055"
+      stroke-width="0.58"
+    />
+    <path
+      d="M168 -40 C132 36, 200 98, 162 170 C138 216, 176 266, 158 288"
+      stroke-opacity="0.08"
+      stroke-width="0.68"
+    />
+    <path
+      d="M212 -48 C178 28, 238 86, 208 152 C186 198, 224 244, 206 285"
+      stroke-opacity="0.065"
+      stroke-width="0.6"
+    />
+    <path
+      d="M40 118 C68 98, 98 108, 118 132 C138 156, 128 186, 102 204 C76 218, 48 198, 42 168 C38 142, 52 128, 40 118"
+      stroke-opacity="0.045"
+      stroke-width="0.55"
+    />
+    <path
+      d="M148 36 C172 52, 182 78, 168 102 C154 126, 126 132, 108 114 C92 98, 98 72, 118 56 C132 44, 140 40, 148 36"
+      stroke-opacity="0.04"
+      stroke-width="0.5"
+    />
+    <path
+      d="M182 148 C206 164, 214 188, 198 212 C182 236, 152 242, 132 224 C114 208, 118 182, 136 164 C154 148, 170 144, 182 148"
+      stroke-opacity="0.042"
+      stroke-width="0.5"
+    />
+  </g>
+</svg>

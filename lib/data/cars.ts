@@ -1,0 +1,246 @@
+import type { Car } from "../types";
+
+export const cars: Car[] = [
+  {
+    id: "1",
+    slug: "mercedes-classe-s-amg-line-2022",
+    brand: "Mercedes-Benz",
+    model: "Classe S AMG Line",
+    year: 2022,
+    price: 89000,
+    fuel: "Diesel",
+    transmission: "Automatica",
+    mileage: 34200,
+    power: "286 CV",
+    color: "Obsidian Black",
+    featured: true,
+    description:
+      "Mercedes Classe S W223 in allestimento AMG Line, finitura Obsidian Black. Berlina di riferimento nel segmento executive: tagliandi completi, unico proprietario, ispezionata nel nostro showroom.",
+    specifications: {
+      Motore: "3.0L Diesel 6 cilindri",
+      Potenza: "286 CV",
+      Coppia: "600 Nm",
+      "0-100 km/h": "6,6 secondi",
+      "Velocità max": "250 km/h",
+      Trazione: "Integrale 4MATIC",
+      Carrozzeria: "Berlina",
+      Porte: "4",
+      Posti: "5",
+    },
+    features: [
+      "Pacchetto AMG Line",
+      "Cerchi neri da 20''",
+      "Interni pelle Nappa nera",
+      "MBUX Hyperscreen",
+      "Sospensioni pneumatiche AIRMATIC",
+      "Head-up display",
+      "Sistema audio Burmester 3D",
+      "Certificazione CS Motors",
+    ],
+  },
+  {
+    id: "2",
+    slug: "bmw-serie-5-m-sport-2021",
+    brand: "BMW",
+    model: "Serie 5 M Sport",
+    year: 2021,
+    price: 52000,
+    fuel: "Diesel",
+    transmission: "Automatica",
+    mileage: 47800,
+    power: "286 CV",
+    color: "Carbon Black",
+    featured: true,
+    description:
+      "BMW Serie 5 G30 con pacchetto M Sport in Carbon Black Metallizzato. Equilibrio tra dinamica e comfort, selezionata e preparata secondo gli standard CS Motors.",
+    specifications: {
+      Motore: "2.0L Diesel TwinPower Turbo",
+      Potenza: "286 CV",
+      Coppia: "650 Nm",
+      "0-100 km/h": "5,7 secondi",
+      "Velocità max": "250 km/h",
+      Trazione: "Posteriore",
+      Carrozzeria: "Berlina",
+      Porte: "4",
+      Posti: "5",
+    },
+    features: [
+      "Pacchetto M Sport completo",
+      "Cerchi M da 19'' neri lucidi",
+      "Interni pelle Vernasca",
+      "BMW Live Cockpit Professional",
+      "Adaptive M Suspension",
+      "Fari LED adattivi",
+      "Driving Assistant Plus",
+      "Garanzia CS Motors 12 mesi",
+    ],
+  },
+  {
+    id: "3",
+    slug: "audi-a6-s-line-2020",
+    brand: "Audi",
+    model: "A6 S-Line",
+    year: 2020,
+    price: 38500,
+    fuel: "Diesel",
+    transmission: "Automatica",
+    mileage: 62100,
+    power: "204 CV",
+    color: "Brilliant Black",
+    featured: true,
+    description:
+      "Audi A6 C8 berlina in allestimento S-Line. Design sobrio, tecnologia avanzata e condizioni verificate. Proposta ideale per chi cerca una executive concreta e curata.",
+    specifications: {
+      Motore: "2.0L TDI",
+      Potenza: "204 CV",
+      Coppia: "400 Nm",
+      "0-100 km/h": "7,9 secondi",
+      "Velocità max": "243 km/h",
+      Trazione: "Integrale quattro",
+      Carrozzeria: "Berlina",
+      Porte: "4",
+      Posti: "5",
+    },
+    features: [
+      "Pacchetto estetico S-Line",
+      "Virtual Cockpit Plus",
+      "MMI Navigation Plus",
+      "Matrix LED",
+      "Interni pelle/Alcantara",
+      "Sedili sportivi elettrici",
+      "Audi phone box wireless",
+      "Perizia CS Motors inclusa",
+    ],
+  },
+  {
+    id: "4",
+    slug: "mercedes-glc-coupe-2023",
+    brand: "Mercedes-Benz",
+    model: "GLC Coupé",
+    year: 2023,
+    price: 62000,
+    fuel: "Ibrido",
+    transmission: "Automatica",
+    mileage: 18900,
+    power: "313 CV",
+    color: "Selenite Grey",
+    featured: true,
+    description:
+      "Mercedes GLC Coupé C253 con tecnologia EQ Hybrid. Chilometraggio contenuto, allestimento completo e presentata nel nostro set fotografico interno.",
+    specifications: {
+      Motore: "2.0L Ibrido Plug-in",
+      Potenza: "313 CV (sistema)",
+      Coppia: "450 Nm",
+      "0-100 km/h": "6,2 secondi",
+      "Velocità max": "235 km/h",
+      Trazione: "Integrale 4MATIC",
+      Carrozzeria: "Coupé SUV",
+      Porte: "5",
+      Posti: "5",
+    },
+    features: [
+      "EQ Power ibrido plug-in",
+      "Tetto panoramico apribile",
+      "MBUX con comandi vocali",
+      "360° camera",
+      "Sedili riscaldati e ventilati",
+      "Portellone elettrico",
+      "Adaptive cruise control",
+      "Certificazione CS Motors",
+    ],
+  },
+  {
+    id: "5",
+    slug: "audi-rsq3-2022",
+    brand: "Audi",
+    model: "RS Q3",
+    year: 2022,
+    price: 68000,
+    fuel: "Benzina",
+    transmission: "Automatica",
+    mileage: 28400,
+    power: "400 CV",
+    color: "Nardo Grey",
+    featured: false,
+    description:
+      "Audi RS Q3 F3 in Nardo Grey. Compattezza urbana e carattere RS in un SUV premium quotidiano, verificato e documentato.",
+    specifications: {
+      Motore: "2.5L TFSI 5 cilindri",
+      Potenza: "400 CV",
+      Coppia: "480 Nm",
+      "0-100 km/h": "4,5 secondi",
+      "Velocità max": "250 km/h",
+      Trazione: "Integrale quattro",
+      Carrozzeria: "SUV Compatto",
+      Porte: "5",
+      Posti: "5",
+    },
+    features: [
+      "Pacchetto RS completo",
+      "Scarico RS sportivo",
+      "Sedili RS in pelle/Alcantara",
+      "Audi Virtual Cockpit",
+      "Sospensioni RS sport",
+      "Freni RS rossi",
+      "Bang & Olufsen sound system",
+      "Storia manutenzione documentata",
+    ],
+  },
+  {
+    id: "6",
+    slug: "bmw-x5-m-sport-2021",
+    brand: "BMW",
+    model: "X5 M Sport",
+    year: 2021,
+    price: 58000,
+    fuel: "Diesel",
+    transmission: "Automatica",
+    mileage: 51200,
+    power: "265 CV",
+    color: "Carbon Black",
+    featured: false,
+    description:
+      "BMW X5 G05 con pacchetto M Sport. SUV premium con spazio, tecnologia e guida dinamica — selezionato e presentato con standard CS Motors.",
+    specifications: {
+      Motore: "3.0L Diesel TwinPower Turbo",
+      Potenza: "265 CV",
+      Coppia: "620 Nm",
+      "0-100 km/h": "6,5 secondi",
+      "Velocità max": "230 km/h",
+      Trazione: "Integrale xDrive",
+      Carrozzeria: "SUV",
+      Porte: "5",
+      Posti: "5",
+    },
+    features: [
+      "Pacchetto M Sport",
+      "Cerchi da 21'' M",
+      "Interni pelle Dakota",
+      "BMW Gesture Control",
+      "Sospensioni pneumatiche",
+      "Tetto panoramico Sky Lounge",
+      "Driving Assistant Professional",
+      "Gancio traino elettrico",
+    ],
+  },
+];
+
+export function getCarBySlug(slug: string): Car | undefined {
+  return cars.find((car) => car.slug === slug);
+}
+
+export function getFeaturedCars(): Car[] {
+  return cars.filter((car) => car.featured);
+}
+
+export function getAllBrands(): string[] {
+  return [...new Set(cars.map((car) => car.brand))].sort();
+}
+
+export function getAllYears(): number[] {
+  return [...new Set(cars.map((car) => car.year))].sort((a, b) => b - a);
+}
+
+export function getAllFuelTypes(): string[] {
+  return [...new Set(cars.map((car) => car.fuel))];
+}

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="500" viewBox="0 0 1600 500" preserveAspectRatio="none">
+  <defs>
+    <filter id="marbleSurface" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.015 0.04" numOctaves="3" seed="24" stitchTiles="stitch" result="noise" />
+      <feColorMatrix in="noise" type="matrix" result="grain"
+        values="0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0.08 0" />
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="#f7f6f2" />
+  <g fill="none" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Venatura principale — curva organica -->
+    <path d="M-40 180 C120 140, 210 220, 340 175 C470 130, 560 240, 690 190 C820 140, 920 260, 1050 210 C1180 160, 1280 270, 1420 220 C1520 185, 1580 245, 1660 210" stroke-opacity="0.22" stroke-width="2.4" />
+    <path d="M-40 180 C120 140, 210 220, 340 175 C470 130, 560 240, 690 190 C820 140, 920 260, 1050 210 C1180 160, 1280 270, 1420 220 C1520 185, 1580 245, 1660 210" stroke-opacity="0.1" stroke-width="5" />
+
+    <!-- Ramificazione sinistra -->
+    <path d="M280 175 C310 130, 350 95, 390 120 C420 138, 400 185, 430 210" stroke-opacity="0.16" stroke-width="1.2" />
+    <path d="M560 240 C590 195, 630 160, 660 185 C685 205, 670 250, 700 275" stroke-opacity="0.14" stroke-width="1" />
+
+    <!-- Venatura centrale ondulata -->
+    <path d="M-20 310 C100 270, 180 350, 300 300 C420 250, 500 360, 620 315 C740 270, 820 380, 960 330 C1100 280, 1200 390, 1340 340 C1460 300, 1540 370, 1660 325" stroke-opacity="0.2" stroke-width="2" />
+    <path d="M820 380 C850 340, 880 310, 910 335 C935 355, 920 400, 950 425" stroke-opacity="0.13" stroke-width="0.9" />
+
+    <!-- Venatura bassa — flusso lento -->
+    <path d="M-30 400 C140 370, 240 430, 380 395 C520 360, 620 440, 760 405 C900 370, 1000 450, 1140 415 C1280 380, 1380 455, 1520 420 C1580 400, 1620 435, 1660 410" stroke-opacity="0.18" stroke-width="1.8" />
+
+    <!-- Venatura alta sottile -->
+    <path d="M60 90 C180 60, 260 130, 380 95 C500 60, 580 140, 720 100 C860 60, 940 150, 1080 105 C1220 60, 1300 145, 1440 95 C1520 65, 1580 120, 1660 85" stroke-opacity="0.15" stroke-width="1.3" />
+
+    <!-- Micro-ramificazioni -->
+    <path d="M920 260 C945 230, 975 215, 995 240" stroke-opacity="0.12" stroke-width="0.7" />
+    <path d="M1180 160 C1205 135, 1235 125, 1255 148" stroke-opacity="0.11" stroke-width="0.7" />
+    <path d="M420 250 C445 278, 470 295, 495 275" stroke-opacity="0.1" stroke-width="0.6" />
+    <path d="M1340 340 C1365 365, 1390 380, 1415 358" stroke-opacity="0.1" stroke-width="0.6" />
+
+    <!-- Venatura secondaria incrociata — curva, non diagonale -->
+    <path d="M200 500 C280 420, 360 380, 440 420 C520 460, 560 360, 640 400 C720 440, 780 340, 860 385 C940 430, 1000 330, 1080 375 C1160 420, 1220 320, 1300 365 C1380 410, 1440 310, 1520 355" stroke-opacity="0.14" stroke-width="1.1" />
+  </g>
+  <rect width="100%" height="100%" filter="url(#marbleSurface)" fill="#000000" opacity="0.35" />
+</svg>
