@@ -1,7 +1,7 @@
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { WhatsAppButton } from "@/components/contact/ContactForm";
 
-const ADDRESS = "Via Ugo Foscolo 5\n21023 Besozzo (VA)";
+const ADDRESS_DISPLAY = "Gemonio (VA)\n21036";
 const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
   "Via Ugo Foscolo 5, 21023 Besozzo VA"
 )}`;
@@ -10,7 +10,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Indirizzo",
-    value: ADDRESS,
+    value: ADDRESS_DISPLAY,
     href: MAPS_URL,
     external: true,
   },
