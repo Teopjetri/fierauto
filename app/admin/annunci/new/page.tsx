@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { createDraftListing } from "@/lib/listings/store";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Nuovo annuncio",
   robots: { index: false, follow: false },
