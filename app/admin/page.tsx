@@ -20,7 +20,7 @@ export default function AdminPage() {
         </Link>
 
         <span className="font-display text-[10px] tracking-[0.35em] uppercase text-champagne mb-4 block">
-          CS Motors · Pannello admin
+          Fierauto · Pannello admin
         </span>
         <h1 className="font-display text-3xl md:text-4xl font-light tracking-[-0.02em] mb-4">
           Gestione

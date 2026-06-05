@@ -83,7 +83,7 @@ export async function addPhoto(
     orientation: file.orientation,
     isHero: isFirst,
     order: manifest.photos.length,
-    alt: car ? `${car.brand} ${car.model} — CS Motors Studio` : "CS Motors Studio",
+    alt: car ? `${car.brand} ${car.model} — Fierauto Studio` : "Fierauto Studio",
     createdAt: new Date().toISOString(),
   };
 

@@ -11,7 +11,7 @@ interface StudioPlaceholderProps {
 /** Placeholder premium CS Motors Studio — nessuna foto hardcoded. */
 export function StudioPlaceholder({
   className,
-  label = "CS Motors Studio",
+  label = "Fierauto Studio",
   variant = "card",
 }: StudioPlaceholderProps) {
   return (

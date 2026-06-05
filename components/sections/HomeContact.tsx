@@ -23,8 +23,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "Matteo_pjetri@libero.it",
-    href: "mailto:Matteo_pjetri@libero.it",
+    value: "fierauto2026@libero.it",
+    href: "mailto:fierauto2026@libero.it",
   },
   {
     icon: Clock,

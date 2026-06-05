@@ -35,7 +35,7 @@ export function WhyChooseUs() {
       <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-8">
         <SectionTitle
           label="Il nostro standard"
-          title="Perché CS Motors"
+          title="Perché Fierauto"
           subtitle="Un approccio ordinato, professionale e coerente — come ci si aspetta da un autosalone serio."
           align="center"
         />

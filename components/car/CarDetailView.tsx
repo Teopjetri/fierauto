@@ -90,7 +90,7 @@ export function CarDetailView({ car }: CarDetailViewProps) {
           {galleryPhotos.length > 0 && (
             <div className="space-y-12 md:space-y-16 border-t border-white/[0.05] pt-16 md:pt-20">
               <p className="font-display text-[10px] tracking-[0.38em] uppercase text-champagne">
-                Servizio fotografico · CS Motors Studio
+                Servizio fotografico · Fierauto Studio
               </p>
               <div className="grid grid-cols-12 gap-6 md:gap-8">
                 {galleryPhotos.map((photo, i) => {

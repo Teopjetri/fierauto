@@ -91,7 +91,7 @@ export function BrandHeroIntro({
             transition={{ duration: 0.8, delay: 0.1 }}
             className="font-display text-[10px] sm:text-[11px] tracking-[0.45em] uppercase text-champagne/90 mb-8 md:mb-10"
           >
-            CS Motors • Milano
+            Fierauto • Milano
           </motion.p>
 
           <motion.h1

@@ -6,7 +6,7 @@ export const testimonials: Testimonial[] = [
     name: "Marco Bianchi",
     role: "Proprietario Mercedes Classe S AMG Line",
     quote:
-      "CS Motors ha reso l'acquisto un'esperienza all'altezza dell'auto. Trasparenza, competenza e attenzione ai dettagli in ogni fase — dalla prima visita alla consegna.",
+      "Fierauto ha reso l'acquisto un'esperienza all'altezza dell'auto. Trasparenza, competenza e attenzione ai dettagli in ogni fase — dalla prima visita alla consegna.",
     rating: 5,
   },
   {
@@ -14,7 +14,7 @@ export const testimonials: Testimonial[] = [
     name: "Elena Rossi",
     role: "Proprietaria BMW Serie 5",
     quote:
-      "Cercavo un'auto premium con la certezza di un servizio professionale. CS Motors ha superato ogni aspettativa: consulenza chiara, veicolo impeccabile e assistenza post-vendita eccellente.",
+      "Cercavo un'auto premium con la certezza di un servizio professionale. Fierauto ha superato ogni aspettativa: consulenza chiara, veicolo impeccabile e assistenza post-vendita eccellente.",
     rating: 5,
   },
   {

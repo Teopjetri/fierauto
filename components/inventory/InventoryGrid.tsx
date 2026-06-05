@@ -52,7 +52,7 @@ export function InventoryGrid({ cars }: InventoryGridProps) {
         <SectionTitle
           label="Parco auto"
           title="Vetture disponibili"
-          subtitle="Presentate nello studio CS Motors — carica le foto dal pannello gestione."
+          subtitle="Presentate nello studio Fierauto — carica le foto dal pannello gestione."
         />
 
         <FadeIn className="mb-12">

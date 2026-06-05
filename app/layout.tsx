@@ -20,11 +20,11 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: {
-    default: "CS Motors · Vetture selezionate · Milano",
-    template: "%s · CS Motors",
+    default: "Fierauto · Vetture selezionate · Milano",
+    template: "%s · Fierauto",
   },
   description:
-    "Selezione esclusiva di vetture usate premium. Ispezionate, documentate e presentate nel nostro showroom a Milano.",
+    "Selezione esclusiva di vetture usate premium su Fierauto.it. Ispezionate, documentate e presentate nel nostro showroom.",
 };
 
 export default async function RootLayout({

@@ -35,7 +35,7 @@ export const cars: Car[] = [
       "Sospensioni pneumatiche AIRMATIC",
       "Head-up display",
       "Sistema audio Burmester 3D",
-      "Certificazione CS Motors",
+      "Certificazione Fierauto",
     ],
   },
   {
@@ -52,7 +52,7 @@ export const cars: Car[] = [
     color: "Carbon Black",
     featured: true,
     description:
-      "BMW Serie 5 G30 con pacchetto M Sport in Carbon Black Metallizzato. Equilibrio tra dinamica e comfort, selezionata e preparata secondo gli standard CS Motors.",
+      "BMW Serie 5 G30 con pacchetto M Sport in Carbon Black Metallizzato. Equilibrio tra dinamica e comfort, selezionata e preparata secondo gli standard Fierauto.",
     specifications: {
       Motore: "2.0L Diesel TwinPower Turbo",
       Potenza: "286 CV",
@@ -72,7 +72,7 @@ export const cars: Car[] = [
       "Adaptive M Suspension",
       "Fari LED adattivi",
       "Driving Assistant Plus",
-      "Garanzia CS Motors 12 mesi",
+      "Garanzia Fierauto 12 mesi",
     ],
   },
   {
@@ -109,7 +109,7 @@ export const cars: Car[] = [
       "Interni pelle/Alcantara",
       "Sedili sportivi elettrici",
       "Audi phone box wireless",
-      "Perizia CS Motors inclusa",
+      "Perizia Fierauto inclusa",
     ],
   },
   {
@@ -146,7 +146,7 @@ export const cars: Car[] = [
       "Sedili riscaldati e ventilati",
       "Portellone elettrico",
       "Adaptive cruise control",
-      "Certificazione CS Motors",
+      "Certificazione Fierauto",
     ],
   },
   {
@@ -200,7 +200,7 @@ export const cars: Car[] = [
     color: "Carbon Black",
     featured: false,
     description:
-      "BMW X5 G05 con pacchetto M Sport. SUV premium con spazio, tecnologia e guida dinamica — selezionato e presentato con standard CS Motors.",
+      "BMW X5 G05 con pacchetto M Sport. SUV premium con spazio, tecnologia e guida dinamica — selezionato e presentato con standard Fierauto.",
     specifications: {
       Motore: "3.0L Diesel TwinPower Turbo",
       Potenza: "265 CV",
