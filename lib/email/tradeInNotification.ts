@@ -1,6 +1,9 @@
-import nodemailer from "nodemailer";
-
-const DEFAULT_OWNER_EMAIL = "fierauto2026@libero.it";
+import {
+  createSmtpTransporter,
+  getSmtpFromAddress,
+  getTradeInRecipient,
+  SmtpNotConfiguredError,
+} from "@/lib/email/smtp";
 
 export interface TradeInEmailPayload {
   email: string;
@@ -24,24 +27,15 @@ function fieldLine(label: string, value: string): string {
 export async function sendTradeInNotification(
   payload: TradeInEmailPayload
 ): Promise<void> {
-  const ownerEmail = process.env.OWNER_EMAIL?.trim() || DEFAULT_OWNER_EMAIL;
-  const host = process.env.SMTP_HOST?.trim();
-  const user = process.env.SMTP_USER?.trim();
-  const pass = process.env.SMTP_PASS?.trim();
-  const port = Number(process.env.SMTP_PORT?.trim() || "465");
-
-  if (!host || !user || !pass) {
-    throw new Error(
-      "Servizio email non configurato. Contatta il concessionario telefonicamente."
-    );
+  let transporter;
+  try {
+    transporter = createSmtpTransporter();
+  } catch (err) {
+    if (err instanceof SmtpNotConfiguredError) {
+      throw err;
+    }
+    throw err;
   }
-
-  const transporter = nodemailer.createTransport({
-    host,
-    port,
-    secure: port === 465,
-    auth: { user, pass },
-  });
 
   const dateLabel = payload.createdAt.toLocaleString("it-IT", {
     timeZone: "Europe/Rome",
@@ -55,23 +49,40 @@ export async function sendTradeInNotification(
     fieldLine("Email utente", payload.email),
     fieldLine("Marca", payload.brand),
     fieldLine("Modello", payload.model),
-    fieldLine("Versione", payload.version),
+    fieldLine("Versione / Allestimento", payload.version),
     fieldLine("Anno", payload.year),
     fieldLine("Chilometri", payload.mileage),
     fieldLine("Alimentazione", payload.fuel),
     fieldLine("Potenza CV", payload.powerCv),
     fieldLine("Prezzo richiesto", payload.requestedPrice),
-    fieldLine("Data richiesta", dateLabel),
+    fieldLine("Data e ora richiesta", dateLabel),
     "",
     `Fotografie allegate: ${payload.attachments.length}`,
   ].join("\n");
 
-  await transporter.sendMail({
-    from: `"Fierauto — Valutazione usato" <${user}>`,
-    to: ownerEmail,
-    replyTo: payload.email,
-    subject: `Valutazione usato — ${payload.brand} ${payload.model}`.trim(),
-    text,
-    attachments: payload.attachments,
-  });
+  const fromUser = getSmtpFromAddress();
+  const mailAttachments = payload.attachments.map((file) => ({
+    filename: file.filename,
+    content: file.content,
+    contentType: file.contentType,
+  }));
+
+  try {
+    await transporter.sendMail({
+      from: `"Fierauto — Valutazione usato" <${fromUser}>`,
+      to: getTradeInRecipient(),
+      replyTo: payload.email,
+      subject: `Valutazione usato — ${payload.brand} ${payload.model}`.trim(),
+      text,
+      attachments: mailAttachments,
+    });
+  } catch (err) {
+    const message = err instanceof Error ? err.message : String(err);
+    console.error("[trade-in] SMTP sendMail failed", { message });
+    throw new Error(
+      "Invio email non riuscito. Verifica la connessione e riprova tra qualche minuto."
+    );
+  }
 }
+
+export { SmtpNotConfiguredError };

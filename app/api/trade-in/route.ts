@@ -1,8 +1,12 @@
 import { NextResponse } from "next/server";
-import { sendTradeInNotification } from "@/lib/email/tradeInNotification";
+import {
+  sendTradeInNotification,
+  SmtpNotConfiguredError,
+} from "@/lib/email/tradeInNotification";
 import { saveTradeInPhoto, saveTradeInSubmission } from "@/lib/tradein/store";
 
-const ALLOWED_EXT = [".jpg", ".jpeg", ".png", ".webp", ".avif"] as const;
+const MAX_TRADE_IN_PHOTOS = 8;
+const ALLOWED_EXT = [".jpg", ".jpeg", ".png", ".webp", ".avif", ".heic", ".heif"] as const;
 
 function mimeForExt(ext: string): string {
   switch (ext) {
@@ -15,9 +19,26 @@ function mimeForExt(ext: string): string {
       return "image/webp";
     case ".avif":
       return "image/avif";
+    case ".heic":
+      return "image/heic";
+    case ".heif":
+      return "image/heif";
     default:
       return "application/octet-stream";
   }
+}
+
+function publicTradeInEmailError(err: unknown): string {
+  if (err instanceof SmtpNotConfiguredError) {
+    console.error(
+      "[trade-in] SMTP non configurato: imposta SMTP_PASS in .env.local (dev) o .env.production (server)"
+    );
+    return "Servizio email temporaneamente non disponibile. Riprova più tardi.";
+  }
+  if (err instanceof Error) {
+    return err.message;
+  }
+  return "Invio non riuscito. Riprova più tardi.";
 }
 
 export async function POST(req: Request) {
@@ -41,6 +62,13 @@ export async function POST(req: Request) {
 
   if (files.length === 0) {
     return NextResponse.json({ error: "Carica almeno una foto del veicolo." }, { status: 400 });
+  }
+
+  if (files.length > MAX_TRADE_IN_PHOTOS) {
+    return NextResponse.json(
+      { error: `Massimo ${MAX_TRADE_IN_PHOTOS} fotografie per richiesta.` },
+      { status: 400 }
+    );
   }
 
   const submissionId = `trade-${Date.now()}`;
@@ -101,15 +129,7 @@ export async function POST(req: Request) {
       id: submission.id,
       error: err instanceof Error ? err.message : String(err),
     });
-    return NextResponse.json(
-      {
-        error:
-          err instanceof Error
-            ? err.message
-            : "Richiesta salvata ma invio email non riuscito. Riprova più tardi.",
-      },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: publicTradeInEmailError(err) }, { status: 500 });
   }
 
   console.info("[trade-in] Richiesta permuta inviata", {
