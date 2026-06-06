@@ -646,7 +646,7 @@ function HomepageCoverSection({
           Copertina homepage
         </p>
         <p className="text-sm text-muted font-light leading-relaxed max-w-lg">
-          Anteprima verticale 4:5 mostrata nella homepage del sito. La scheda vettura userà la foto
+          Anteprima 4:3 mostrata nella homepage del sito. La scheda vettura userà la foto
           originale.
         </p>
       </div>

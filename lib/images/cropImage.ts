@@ -1,6 +1,12 @@
-export const CROP_ASPECT = 4 / 5;
-export const CROP_OUTPUT_WIDTH = 1200;
-export const CROP_OUTPUT_HEIGHT = 1500;
+import {
+  HOME_CROP_ASPECT,
+  HOME_CROP_OUTPUT_HEIGHT,
+  HOME_CROP_OUTPUT_WIDTH,
+} from "@/lib/listings/types";
+
+export const CROP_ASPECT = HOME_CROP_ASPECT;
+export const CROP_OUTPUT_WIDTH = HOME_CROP_OUTPUT_WIDTH;
+export const CROP_OUTPUT_HEIGHT = HOME_CROP_OUTPUT_HEIGHT;
 
 export interface CropTransform {
   baseScale: number;

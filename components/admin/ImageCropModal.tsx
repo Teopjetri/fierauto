@@ -151,8 +151,8 @@ export function ImageCropModal({ file, onConfirm, onCancel }: ImageCropModalProp
             Inquadratura homepage
           </h3>
           <p className="text-sm text-muted font-light mt-1.5 leading-relaxed">
-            Trascina e zooma per definire l&apos;anteprima verticale 4:5. La scheda vettura userà
-            la foto originale.
+            Trascina e zooma per definire l&apos;anteprima 4:3 della homepage. La scheda vettura
+            userà la foto originale.
           </p>
         </div>
 
@@ -163,7 +163,7 @@ export function ImageCropModal({ file, onConfirm, onCancel }: ImageCropModalProp
               "relative w-full max-w-sm mx-auto overflow-hidden bg-black touch-none select-none ring-1 ring-white/15",
               dragging ? "cursor-grabbing" : "cursor-grab"
             )}
-            style={{ aspectRatio: "4/5" }}
+            style={{ aspectRatio: `${CROP_ASPECT}` }}
             onPointerDown={onPointerDown}
             onPointerMove={onPointerMove}
             onPointerUp={onPointerUp}

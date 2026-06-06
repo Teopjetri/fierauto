@@ -5,7 +5,7 @@ export interface ListingImage {
   /** Foto originale — usata nella scheda vettura (4:3) */
   src: string;
   filename: string;
-  /** Ritaglio verticale 4:5 per la homepage */
+  /** Ritaglio 4:3 per la homepage (editorial-showcase__home-cover) */
   cropSrc?: string;
   cropFilename?: string;
   order: number;
@@ -55,7 +55,10 @@ export const LISTING_STATUS_LABELS: Record<ListingStatus, string> = {
   sold: "Venduto",
 };
 
-export const HOME_PHOTO_ASPECT = "aspect-[4/5]";
+export const HOME_CROP_ASPECT = 4 / 3;
+export const HOME_CROP_OUTPUT_WIDTH = 1200;
+export const HOME_CROP_OUTPUT_HEIGHT = 900;
+export const HOME_PHOTO_ASPECT = "aspect-[4/3]";
 export const DETAIL_PHOTO_ASPECT = "aspect-[4/3]";
 
 /** @deprecated Usare HOME_PHOTO_ASPECT */
@@ -69,7 +72,7 @@ export function coverImage(listing: Listing): ListingImage | null {
   return sortImages(listing.images)[0] ?? null;
 }
 
-/** Ritaglio 4:5 homepage — obbligatorio per la vetrina */
+/** Ritaglio 4:3 homepage — obbligatorio per la vetrina */
 export function homeCropSrc(image: ListingImage): string | null {
   return image.cropSrc ?? null;
 }
