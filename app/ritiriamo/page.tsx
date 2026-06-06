@@ -13,6 +13,50 @@ export default function RitiriamoPage() {
               -webkit-tap-highlight-color: transparent;
               touch-action: manipulation;
             }
+            .trade-in-form__upload input[type="file"] {
+              position: absolute !important;
+              inset: 0 !important;
+              width: 100% !important;
+              height: 100% !important;
+              margin: 0 !important;
+              padding: 0 !important;
+              opacity: 0 !important;
+              cursor: pointer;
+              z-index: 20;
+              font-size: 0 !important;
+              line-height: 0 !important;
+              color: transparent !important;
+              border: none !important;
+              background: transparent !important;
+              appearance: none;
+              -webkit-appearance: none;
+              text-indent: -9999px;
+            }
+            .trade-in-form__upload input[type="file"]::-webkit-file-upload-button {
+              visibility: hidden;
+              width: 0;
+              height: 0;
+              margin: 0;
+              padding: 0;
+              border: 0;
+              font-size: 0;
+              appearance: none;
+              -webkit-appearance: none;
+            }
+            .trade-in-form__upload input[type="file"]::file-selector-button {
+              visibility: hidden;
+              width: 0;
+              height: 0;
+              margin: 0;
+              padding: 0;
+              border: 0;
+              font-size: 0;
+              appearance: none;
+            }
+            .trade-in-form__upload label:has(> input[type="file"]) {
+              overflow: hidden;
+              font-size: 0;
+            }
             .trade-in-page {
               padding-bottom: env(safe-area-inset-bottom, 0px);
             }

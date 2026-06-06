@@ -16,7 +16,7 @@ function formatListingPrice(price: string): string {
 
 const DESKTOP_DESC_FONT_SIZE = "1.1rem";
 const DESKTOP_DESC_LINE_HEIGHT = 1.8;
-const DESKTOP_DESC_LINES = 6;
+const DESKTOP_DESC_LINES = 4;
 const DESKTOP_DESC_MAX_HEIGHT = `calc(${DESKTOP_DESC_FONT_SIZE} * ${DESKTOP_DESC_LINE_HEIGHT} * ${DESKTOP_DESC_LINES})`;
 
 const desktopDescriptionWrapStyle = {
@@ -73,11 +73,11 @@ export function ListingRowDesktop({
                 .listing-row--desktop .listing-row-desktop__description {
                   display: -webkit-box !important;
                   -webkit-box-orient: vertical !important;
-                  -webkit-line-clamp: 6 !important;
-                  line-clamp: 6 !important;
+                  -webkit-line-clamp: 4 !important;
+                  line-clamp: 4 !important;
                   overflow: hidden !important;
                   text-overflow: ellipsis !important;
-                  max-height: calc(1.1rem * 1.8 * 6) !important;
+                  max-height: calc(1.1rem * 1.8 * 4) !important;
                   margin: 0 0 2rem !important;
                 }
               }

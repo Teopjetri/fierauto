@@ -16,7 +16,7 @@ function formatListingPrice(price: string): string {
 
 const MOBILE_DESC_FONT_SIZE = "0.875rem";
 const MOBILE_DESC_LINE_HEIGHT = 1.5;
-const MOBILE_DESC_LINES = 3;
+const MOBILE_DESC_LINES = 2;
 const MOBILE_DESC_MAX_HEIGHT = `calc(${MOBILE_DESC_FONT_SIZE} * ${MOBILE_DESC_LINE_HEIGHT} * ${MOBILE_DESC_LINES})`;
 
 const mobileDescriptionStyle = {

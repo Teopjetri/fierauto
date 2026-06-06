@@ -29,7 +29,12 @@ export function TradeInForm({
   const [email, setEmail] = useState("");
   const [brand, setBrand] = useState("");
   const [model, setModel] = useState("");
+  const [version, setVersion] = useState("");
   const [year, setYear] = useState("");
+  const [mileage, setMileage] = useState("");
+  const [fuel, setFuel] = useState("");
+  const [powerCv, setPowerCv] = useState("");
+  const [requestedPrice, setRequestedPrice] = useState("");
   const [photos, setPhotos] = useState<LocalImagePreview[]>([]);
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState(false);
@@ -68,7 +73,12 @@ export function TradeInForm({
     form.append("email", email);
     form.append("brand", brand);
     form.append("model", model);
+    form.append("version", version);
     form.append("year", year);
+    form.append("mileage", mileage);
+    form.append("fuel", fuel);
+    form.append("powerCv", powerCv);
+    form.append("requestedPrice", requestedPrice);
     photos.forEach(({ file }) => form.append("photos", file));
 
     try {
@@ -172,6 +182,71 @@ export function TradeInForm({
             onChange={(e) => setModel(e.target.value)}
             className={inputCls}
             placeholder="Es. Serie 5"
+          />
+        </label>
+
+        <label className="block">
+          <span className="text-[10px] tracking-[0.2em] uppercase text-muted mb-2 block">
+            Versione / Allestimento
+          </span>
+          <input
+            value={version}
+            onChange={(e) => setVersion(e.target.value)}
+            className={inputCls}
+            placeholder="Es. S-Line S-Tronic"
+          />
+        </label>
+
+        <label className="block">
+          <span className="text-[10px] tracking-[0.2em] uppercase text-muted mb-2 block">
+            Chilometri *
+          </span>
+          <input
+            required
+            value={mileage}
+            onChange={(e) => setMileage(e.target.value)}
+            className={inputCls}
+            placeholder="Es. 85.000"
+            inputMode="numeric"
+          />
+        </label>
+
+        <div className="grid grid-cols-2 gap-4">
+          <label className="block">
+            <span className="text-[10px] tracking-[0.2em] uppercase text-muted mb-2 block">
+              Alimentazione
+            </span>
+            <input
+              value={fuel}
+              onChange={(e) => setFuel(e.target.value)}
+              className={inputCls}
+              placeholder="Es. Diesel"
+            />
+          </label>
+          <label className="block">
+            <span className="text-[10px] tracking-[0.2em] uppercase text-muted mb-2 block">
+              Potenza CV
+            </span>
+            <input
+              value={powerCv}
+              onChange={(e) => setPowerCv(e.target.value)}
+              className={inputCls}
+              placeholder="Es. 190"
+              inputMode="numeric"
+            />
+          </label>
+        </div>
+
+        <label className="block">
+          <span className="text-[10px] tracking-[0.2em] uppercase text-muted mb-2 block">
+            Prezzo richiesto
+          </span>
+          <input
+            value={requestedPrice}
+            onChange={(e) => setRequestedPrice(e.target.value)}
+            className={inputCls}
+            placeholder="Es. 18.500"
+            inputMode="decimal"
           />
         </label>
 

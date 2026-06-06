@@ -6,7 +6,12 @@ export interface TradeInSubmission {
   email: string;
   brand: string;
   model: string;
+  version: string;
   year: string;
+  mileage: string;
+  fuel: string;
+  powerCv: string;
+  requestedPrice: string;
   photos: string[];
   status: "pending" | "reviewed";
   createdAt: string;
@@ -29,7 +34,12 @@ export async function saveTradeInSubmission(
     email: data.email,
     brand: data.brand,
     model: data.model,
+    version: data.version ?? "",
     year: data.year,
+    mileage: data.mileage,
+    fuel: data.fuel ?? "",
+    powerCv: data.powerCv ?? "",
+    requestedPrice: data.requestedPrice ?? "",
     photos: data.photos,
     status: "pending",
     createdAt: new Date().toISOString(),
