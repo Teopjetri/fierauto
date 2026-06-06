@@ -131,7 +131,7 @@ cmd_configure_email() {
   SMTP_PASS="${SMTP_PASS:?Set SMTP_PASS, es: SMTP_PASS='...' ./deploy.sh configure-email}"
   OWNER_EMAIL="${OWNER_EMAIL:-fierauto2026@libero.it}" \
   SMTP_HOST="${SMTP_HOST:-smtp.libero.it}" \
-  SMTP_PORT="${SMTP_PORT:-465}" \
+  SMTP_PORT="${SMTP_PORT:-587}" \
   SMTP_USER="${SMTP_USER:-fierauto2026@libero.it}" \
   SMTP_PASS="$SMTP_PASS" \
     ./deploy/ensure-email-env.sh

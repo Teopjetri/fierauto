@@ -1,9 +1,14 @@
 import { NextResponse } from "next/server";
+import { verifySmtpReady } from "@/lib/email/smtp";
 import {
   sendTradeInNotification,
   SmtpNotConfiguredError,
+  SmtpTimeoutError,
 } from "@/lib/email/tradeInNotification";
 import { saveTradeInPhoto, saveTradeInSubmission } from "@/lib/tradein/store";
+
+export const dynamic = "force-dynamic";
+export const maxDuration = 120;
 
 const MAX_TRADE_IN_PHOTOS = 8;
 const ALLOWED_EXT = [".jpg", ".jpeg", ".png", ".webp", ".avif", ".heic", ".heif"] as const;
@@ -34,6 +39,9 @@ function publicTradeInEmailError(err: unknown): string {
       "[trade-in] SMTP non configurato: imposta SMTP_PASS in .env.local (dev) o .env.production (server)"
     );
     return "Servizio email temporaneamente non disponibile. Riprova più tardi.";
+  }
+  if (err instanceof SmtpTimeoutError) {
+    return "Invio email troppo lento. Riprova tra qualche minuto.";
   }
   if (err instanceof Error) {
     return err.message;
@@ -69,6 +77,15 @@ export async function POST(req: Request) {
       { error: `Massimo ${MAX_TRADE_IN_PHOTOS} fotografie per richiesta.` },
       { status: 400 }
     );
+  }
+
+  try {
+    await verifySmtpReady();
+  } catch (err) {
+    console.error("[trade-in] SMTP verify failed", {
+      error: err instanceof Error ? err.message : String(err),
+    });
+    return NextResponse.json({ error: publicTradeInEmailError(err) }, { status: 503 });
   }
 
   const submissionId = `trade-${Date.now()}`;

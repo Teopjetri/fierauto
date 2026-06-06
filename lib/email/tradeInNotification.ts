@@ -1,8 +1,12 @@
 import {
   createSmtpTransporter,
+  getSmtpAttemptPorts,
   getSmtpFromAddress,
   getTradeInRecipient,
   SmtpNotConfiguredError,
+  SmtpTimeoutError,
+  SMTP_SEND_TIMEOUT_MS,
+  withTimeout,
 } from "@/lib/email/smtp";
 
 export interface TradeInEmailPayload {
@@ -27,16 +31,6 @@ function fieldLine(label: string, value: string): string {
 export async function sendTradeInNotification(
   payload: TradeInEmailPayload
 ): Promise<void> {
-  let transporter;
-  try {
-    transporter = createSmtpTransporter();
-  } catch (err) {
-    if (err instanceof SmtpNotConfiguredError) {
-      throw err;
-    }
-    throw err;
-  }
-
   const dateLabel = payload.createdAt.toLocaleString("it-IT", {
     timeZone: "Europe/Rome",
     dateStyle: "long",
@@ -67,22 +61,50 @@ export async function sendTradeInNotification(
     contentType: file.contentType,
   }));
 
-  try {
-    await transporter.sendMail({
-      from: `"Fierauto — Valutazione usato" <${fromUser}>`,
-      to: getTradeInRecipient(),
-      replyTo: payload.email,
-      subject: `Valutazione usato — ${payload.brand} ${payload.model}`.trim(),
-      text,
-      attachments: mailAttachments,
-    });
-  } catch (err) {
-    const message = err instanceof Error ? err.message : String(err);
-    console.error("[trade-in] SMTP sendMail failed", { message });
+  const mail = {
+    from: `"Fierauto — Valutazione usato" <${fromUser}>`,
+    to: getTradeInRecipient(),
+    replyTo: payload.email,
+    subject: `Valutazione usato — ${payload.brand} ${payload.model}`.trim(),
+    text,
+    attachments: mailAttachments,
+  };
+
+  let lastError: unknown;
+
+  for (const port of getSmtpAttemptPorts()) {
+    const transporter = createSmtpTransporter(port);
+    try {
+      await withTimeout(
+        transporter.sendMail(mail),
+        SMTP_SEND_TIMEOUT_MS,
+        () => new SmtpTimeoutError()
+      );
+      transporter.close();
+      return;
+    } catch (err) {
+      lastError = err;
+      transporter.close();
+      console.error("[trade-in] SMTP sendMail failed", {
+        port,
+        message: err instanceof Error ? err.message : String(err),
+      });
+    }
+  }
+
+  if (lastError instanceof SmtpTimeoutError) {
     throw new Error(
-      "Invio email non riuscito. Verifica la connessione e riprova tra qualche minuto."
+      "Invio email troppo lento. Riprova tra qualche minuto o contattaci telefonicamente."
     );
   }
+
+  if (lastError instanceof SmtpNotConfiguredError) {
+    throw lastError;
+  }
+
+  throw new Error(
+    "Invio email non riuscito. Verifica la connessione e riprova tra qualche minuto."
+  );
 }
 
-export { SmtpNotConfiguredError };
+export { SmtpNotConfiguredError, SmtpTimeoutError };

@@ -81,14 +81,32 @@ export function TradeInForm({
     form.append("requestedPrice", requestedPrice);
     photos.forEach(({ file }) => form.append("photos", file));
 
+    const controller = new AbortController();
+    const timeoutId = window.setTimeout(() => controller.abort(), 120_000);
+
     try {
-      const res = await fetch("/api/trade-in", { method: "POST", body: form });
-      const data = await res.json();
+      const res = await fetch("/api/trade-in", {
+        method: "POST",
+        body: form,
+        signal: controller.signal,
+      });
+      const raw = await res.text();
+      let data: { error?: string } = {};
+      try {
+        data = raw ? (JSON.parse(raw) as { error?: string }) : {};
+      } catch {
+        throw new Error("Risposta del server non valida. Riprova.");
+      }
       if (!res.ok) throw new Error(data.error ?? "Invio non riuscito");
       setDone(true);
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Errore durante l'invio");
+      if (err instanceof Error && err.name === "AbortError") {
+        setError("Richiesta scaduta. Controlla la connessione e riprova.");
+      } else {
+        setError(err instanceof Error ? err.message : "Errore durante l'invio");
+      }
     } finally {
+      window.clearTimeout(timeoutId);
       setLoading(false);
     }
   };

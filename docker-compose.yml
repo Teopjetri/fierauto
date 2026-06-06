@@ -15,6 +15,9 @@ services:
     environment:
       NODE_ENV: production
       PORT: "3000"
+    dns:
+      - 1.1.1.1
+      - 8.8.8.8
     volumes:
       - fierauto-data:/app/data
       - fierauto-uploads:/app/public/uploads
