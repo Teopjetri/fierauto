@@ -18,14 +18,47 @@ const spaceGrotesk = Space_Grotesk({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: {
-    default: "Fierauto · Vetture selezionate · Milano",
-    template: "%s · Fierauto",
-  },
-  description:
-    "Selezione esclusiva di vetture usate premium su Fierauto.it. Ispezionate, documentate e presentate nel nostro showroom.",
-};
+const SITE_URL = "https://fierauto.it";
+const SITE_NAME = "Fierauto";
+const DEFAULT_TITLE = "Fierauto · Vetture selezionate · Milano";
+const DEFAULT_DESCRIPTION =
+  "Selezione esclusiva di vetture usate premium su Fierauto.it. Ispezionate, documentate e presentate nel nostro showroom.";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const logo = await getSiteLogo();
+  const shareImages = logo.src
+    ? [
+        {
+          url: `${logo.src}?v=${Math.floor(logo.version)}`,
+          alt: SITE_NAME,
+        },
+      ]
+    : [];
+
+  return {
+    metadataBase: new URL(SITE_URL),
+    title: {
+      default: DEFAULT_TITLE,
+      template: "%s · Fierauto",
+    },
+    description: DEFAULT_DESCRIPTION,
+    openGraph: {
+      type: "website",
+      locale: "it_IT",
+      url: SITE_URL,
+      siteName: SITE_NAME,
+      title: DEFAULT_TITLE,
+      description: DEFAULT_DESCRIPTION,
+      images: shareImages,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: DEFAULT_TITLE,
+      description: DEFAULT_DESCRIPTION,
+      images: shareImages.map((image) => image.url),
+    },
+  };
+}
 
 export default async function RootLayout({
   children,
