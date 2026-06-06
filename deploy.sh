@@ -125,12 +125,36 @@ cmd_setup_auth() {
   log "HTTP Basic Auth enabled for /admin and write APIs"
 }
 
+cmd_configure_email() {
+  require_cmd docker
+  chmod +x deploy/ensure-email-env.sh
+  SMTP_PASS="${SMTP_PASS:?Set SMTP_PASS, es: SMTP_PASS='...' ./deploy.sh configure-email}"
+  OWNER_EMAIL="${OWNER_EMAIL:-fierauto2026@libero.it}" \
+  SMTP_HOST="${SMTP_HOST:-smtp.libero.it}" \
+  SMTP_PORT="${SMTP_PORT:-465}" \
+  SMTP_USER="${SMTP_USER:-fierauto2026@libero.it}" \
+  SMTP_PASS="$SMTP_PASS" \
+    ./deploy/ensure-email-env.sh
+  load_env
+  if [[ -z "${SMTP_PASS:-}" ]]; then
+    die "SMTP_PASS vuota in $ENV_FILE"
+  fi
+  log "Ricreo il container app per applicare le variabili SMTP..."
+  $COMPOSE up -d --force-recreate app
+  $COMPOSE ps
+  log "Email permuta configurata."
+}
+
 cmd_update() {
   require_cmd docker
   load_env
+  if [[ -z "${SMTP_PASS:-}" ]]; then
+    log "ATTENZIONE: SMTP_PASS non impostata in $ENV_FILE — il form permuta non invierà email."
+    log "Esegui: SMTP_PASS='...' ./deploy.sh configure-email"
+  fi
   log "Pull/build and restart..."
   $COMPOSE build app
-  $COMPOSE up -d
+  $COMPOSE up -d --force-recreate app
   $COMPOSE ps
 }
 
@@ -160,6 +184,7 @@ Fierauto deploy.sh
   ./deploy.sh up           Start stack (HTTP) — requires DNS → server IP
   ./deploy.sh ssl          Obtain Let's Encrypt cert + switch to HTTPS
   ./deploy.sh setup-auth   Protect /admin (requires ADMIN_HTTP_* in .env)
+  ./deploy.sh configure-email  Set SMTP in .env.production (requires SMTP_PASS)
   ./deploy.sh update       Rebuild and restart after git pull
   ./deploy.sh logs [svc]   Follow logs (default: app)
   ./deploy.sh status       Compose PS + quick curl
@@ -183,6 +208,7 @@ main() {
     up) cmd_up ;;
     ssl) cmd_ssl ;;
     setup-auth) cmd_setup_auth ;;
+    configure-email) cmd_configure_email ;;
     update) cmd_update ;;
     logs) cmd_logs "$@" ;;
     status) cmd_status ;;
