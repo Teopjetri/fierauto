@@ -29,6 +29,13 @@ interface CropSession {
 
 const UPLOAD_DIAG = "[UPLOAD-DIAG]";
 
+/** Evita cache browser su crop sovrascritto allo stesso path (-home.jpg). */
+function adminImageUrl(src: string, cacheKey: string): string {
+  if (!cacheKey) return src;
+  const sep = src.includes("?") ? "&" : "?";
+  return `${src}${sep}v=${encodeURIComponent(cacheKey)}`;
+}
+
 interface ListingEditorProps {
   listing?: Listing;
   mode: "create" | "edit";
@@ -60,12 +67,14 @@ export function ListingEditor({ listing, mode }: ListingEditorProps) {
   const [fileQueue, setFileQueue] = useState<File[]>([]);
   const [pendingPreviews, setPendingPreviews] = useState<LocalImagePreview[]>([]);
   const [cropSession, setCropSession] = useState<CropSession | null>(null);
+  const [cropPreviewNonce, setCropPreviewNonce] = useState(0);
   const [cropSavedToast, setCropSavedToast] = useState(false);
   const [dragId, setDragId] = useState<string | null>(null);
   const [error, setError] = useState("");
 
   const photos = sortImages(data?.images ?? []);
   const cover = photos[0] ?? null;
+  const cropPreviewKey = `${data?.updatedAt ?? "0"}:${cropPreviewNonce}`;
   const totalSelected = photos.length + pendingPreviews.length;
   const canUpload = Boolean(data) && totalSelected < MAX_LISTING_IMAGES;
 
@@ -166,8 +175,8 @@ export function ListingEditor({ listing, mode }: ListingEditorProps) {
       });
       const json = await res.json();
       if (!res.ok) throw new Error(json.error ?? "Salvataggio ritaglio fallito");
-      setData(json);
-      router.refresh();
+      setData(json as Listing);
+      setCropPreviewNonce((n) => n + 1);
     } catch (e) {
       setError(e instanceof Error ? e.message : "Salvataggio ritaglio fallito");
       throw e;
@@ -246,7 +255,10 @@ export function ListingEditor({ listing, mode }: ListingEditorProps) {
 
   const openCoverCrop = () => {
     if (!cover) return;
-    setCropSession({ imageId: cover.id, imageUrl: cover.src });
+    const imageUrl = hasHomeCrop(cover)
+      ? adminImageUrl(cover.cropSrc!, cropPreviewKey)
+      : adminImageUrl(cover.src, `${cover.id}:${cover.createdAt}`);
+    setCropSession({ imageId: cover.id, imageUrl });
   };
 
   const removePhoto = async (imageId: string) => {
@@ -420,6 +432,11 @@ export function ListingEditor({ listing, mode }: ListingEditorProps) {
       {cover && data && (
         <HomepageCoverSection
           cover={cover}
+          cropDisplaySrc={
+            hasHomeCrop(cover) ? adminImageUrl(cover.cropSrc!, cropPreviewKey) : null
+          }
+          placeholderSrc={adminImageUrl(cover.src, `${cover.id}:${cover.createdAt}`)}
+          previewKey={cropPreviewKey}
           cropSaved={cropSavedToast}
           onCustomize={openCoverCrop}
         />
@@ -466,14 +483,20 @@ export function ListingEditor({ listing, mode }: ListingEditorProps) {
 
 function HomepageCoverSection({
   cover,
+  cropDisplaySrc,
+  placeholderSrc,
+  previewKey,
   cropSaved,
   onCustomize,
 }: {
   cover: ListingImage;
+  cropDisplaySrc: string | null;
+  placeholderSrc: string;
+  previewKey: string;
   cropSaved: boolean;
   onCustomize: () => void;
 }) {
-  const hasCrop = hasHomeCrop(cover);
+  const hasCrop = Boolean(cropDisplaySrc);
 
   return (
     <section className="border border-white/10 bg-gradient-to-b from-white/[0.04] to-transparent p-6 md:p-8 space-y-6">
@@ -498,7 +521,8 @@ function HomepageCoverSection({
           {hasCrop ? (
             /* eslint-disable-next-line @next/next/no-img-element */
             <img
-              src={cover.cropSrc!}
+              key={`crop-preview-${previewKey}`}
+              src={cropDisplaySrc!}
               alt=""
               className="absolute inset-0 h-full w-full object-cover"
             />
@@ -506,7 +530,8 @@ function HomepageCoverSection({
             <>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={cover.src}
+                key={`crop-placeholder-${cover.id}`}
+                src={placeholderSrc}
                 alt=""
                 className="absolute inset-0 h-full w-full object-cover opacity-35 blur-[1px]"
               />

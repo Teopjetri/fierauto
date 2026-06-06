@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { coverImage, homeCropSrc, type Listing } from "@/lib/listings/types";
-import { formatPrice, cn } from "@/lib/utils";
+import { formatPrice } from "@/lib/utils";
 
 function formatListingPrice(price: string): string {
   const trimmed = price.trim();
@@ -40,31 +40,11 @@ const mobileDescriptionWrapStyle = {
   marginBottom: "0.5rem",
 };
 
-const MOBILE_PRICE_FILL = {
-  color: "rgb(0, 255, 110)",
-  WebkitTextFillColor: "rgb(0, 255, 110)",
-  WebkitTextStroke: "0",
-  textShadow: "none",
-} as const;
-
-const MOBILE_CTA_FILL = {
-  color: "rgb(255, 0, 0)",
-  WebkitTextFillColor: "rgb(255, 0, 0)",
-  WebkitTextStroke: "0",
-  textShadow: "none",
-} as const;
-
 const MOBILE_BRAND_HERO_EFFECT = {
   color: "#ffffff",
   textShadow:
     "0 0 1px rgba(255, 0, 0, 1), 0 0 2px rgba(255, 0, 0, 1), 0 0 4px rgba(255, 0, 0, 0.88), 0 0 7px rgba(255, 0, 0, 0.48), 0 1px 3px rgba(0, 0, 0, 0.5)",
 } as const;
-
-const MOBILE_PANEL_COMPACT = {
-  padding: "0.35rem 0.85rem",
-  lineHeight: 1,
-  alignSelf: "start" as const,
-};
 
 export function ListingRowMobile({
   listing,
@@ -93,41 +73,19 @@ export function ListingRowMobile({
             sizes="48vw"
             className="object-cover object-center editorial-showcase__photo"
           />
-        </div>
-        <div
-          className={cn(
-            "editorial-showcase__photo-actions",
-            price &&
-              "editorial-showcase__photo-actions--paired grid grid-cols-2 gap-3 w-[calc(200%+0.75rem)]"
-          )}
-        >
           {price && (
-            <div
-              className="listing-card-story__panel listing-card-story__panel--left listing-card-story__panel--price"
-              style={MOBILE_PANEL_COMPACT}
-            >
-              <p
-                className="listing-card-story__price"
-                style={{
-                  fontSize: "clamp(2.13rem, 7.08vw, 2.76rem)",
-                  letterSpacing: "0.1em",
-                  ...MOBILE_PRICE_FILL,
-                }}
-              >
-                {formatListingPrice(price)}
-              </p>
-            </div>
+            <p className="listing-card-story__price-overlay">
+              {formatListingPrice(price)}
+            </p>
           )}
+        </div>
+        <div className="editorial-showcase__photo-actions editorial-showcase__photo-actions--full">
           <Link
             href={`/inventory/${listing.slug}`}
             className="listing-card-story__panel listing-card-story__panel--left listing-card-story__panel--cta listing-card-story__cta-card"
-            style={{
-              fontSize: "clamp(2.3rem, 7.38vw, 2.88rem)",
-              ...MOBILE_PANEL_COMPACT,
-              ...MOBILE_CTA_FILL,
-            }}
           >
-            Scopri
+            <span>Vedi dettagli</span>
+            <span aria-hidden>→</span>
           </Link>
         </div>
       </div>

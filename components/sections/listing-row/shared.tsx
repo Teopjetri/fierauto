@@ -61,21 +61,14 @@ export function ListingStory({ listing }: { listing: Listing }) {
   );
 }
 
-export function ListingPriceCard({ price }: { price: string }) {
-  return (
-    <div className="listing-card-story__panel listing-card-story__panel--left listing-card-story__panel--price">
-      <p className="listing-card-story__price">{formatListingPrice(price)}</p>
-    </div>
-  );
-}
-
 export function ListingCtaCard({ slug }: { slug: string }) {
   return (
     <Link
       href={`/inventory/${slug}`}
       className="listing-card-story__panel listing-card-story__panel--left listing-card-story__panel--cta listing-card-story__cta-card"
     >
-      Scopri
+      <span>Vedi dettagli</span>
+      <span aria-hidden>→</span>
     </Link>
   );
 }
@@ -91,6 +84,7 @@ export function ListingPhoto({
   const photoSrc = cover ? homeCropSrc(cover) : null;
   if (!photoSrc) return null;
 
+  const price = listing.price?.trim();
   const alt = `${listing.brand} ${listing.model}`.trim();
 
   return (
@@ -103,6 +97,11 @@ export function ListingPhoto({
         sizes="(max-width: 1023px) 48vw, 52vw"
         className="object-cover object-center editorial-showcase__photo"
       />
+      {price && (
+        <p className="listing-card-story__price-overlay">
+          {formatListingPrice(price)}
+        </p>
+      )}
     </div>
   );
 }
@@ -116,7 +115,6 @@ export function ListingRowLayout({
   index: number;
   variant: "desktop" | "mobile";
 }) {
-  const price = listing.price?.trim();
   const isDesktop = variant === "desktop";
 
   return (
@@ -130,14 +128,7 @@ export function ListingRowLayout({
     >
       <div className="editorial-showcase__photo-col editorial-showcase__photo-col--left w-[48%] shrink-0 min-w-0">
         <ListingPhoto listing={listing} index={index} />
-        <div
-          className={cn(
-            "editorial-showcase__photo-actions",
-            price &&
-              "editorial-showcase__photo-actions--paired grid grid-cols-2 gap-3 w-[calc(200%+0.75rem)]"
-          )}
-        >
-          {price && <ListingPriceCard price={price} />}
+        <div className="editorial-showcase__photo-actions editorial-showcase__photo-actions--full">
           <ListingCtaCard slug={listing.slug} />
         </div>
       </div>
