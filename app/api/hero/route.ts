@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { revalidatePath } from "next/cache";
+import { requireAdminSession } from "@/lib/auth/requireAdmin";
 import { getHeroImage, saveHeroImage } from "@/lib/hero/store";
 
 export async function GET() {
@@ -7,6 +8,8 @@ export async function GET() {
 }
 
 export async function POST(req: Request) {
+  const auth = await requireAdminSession();
+  if (auth instanceof NextResponse) return auth;
   const form = await req.formData();
   const file = form.get("image");
 

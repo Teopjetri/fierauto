@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { revalidatePath } from "next/cache";
+import { requireAdminSession } from "@/lib/auth/requireAdmin";
 import { setListingImageCrop } from "@/lib/listings/store";
 
 interface RouteParams {
@@ -7,6 +8,8 @@ interface RouteParams {
 }
 
 export async function POST(req: Request, { params }: RouteParams) {
+  const auth = await requireAdminSession();
+  if (auth instanceof NextResponse) return auth;
   const { id, imageId } = await params;
   const form = await req.formData();
   const crop = form.get("crop");

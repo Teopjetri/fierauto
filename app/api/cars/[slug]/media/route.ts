@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { requireAdminSession } from "@/lib/auth/requireAdmin";
 import { readCarMedia, addPhoto } from "@/lib/media/carMediaStore";
 import { detectOrientation } from "@/lib/media/types";
 import { getCarBySlug } from "@/lib/data/cars";
@@ -8,6 +9,8 @@ interface RouteParams {
 }
 
 export async function GET(_req: Request, { params }: RouteParams) {
+  const auth = await requireAdminSession();
+  if (auth instanceof NextResponse) return auth;
   const { slug } = await params;
   if (!getCarBySlug(slug)) {
     return NextResponse.json({ error: "Veicolo non trovato" }, { status: 404 });
@@ -17,6 +20,8 @@ export async function GET(_req: Request, { params }: RouteParams) {
 }
 
 export async function POST(req: Request, { params }: RouteParams) {
+  const auth = await requireAdminSession();
+  if (auth instanceof NextResponse) return auth;
   const { slug } = await params;
   if (!getCarBySlug(slug)) {
     return NextResponse.json({ error: "Veicolo non trovato" }, { status: 404 });
@@ -63,6 +68,8 @@ export async function POST(req: Request, { params }: RouteParams) {
 }
 
 export async function PATCH(req: Request, { params }: RouteParams) {
+  const auth = await requireAdminSession();
+  if (auth instanceof NextResponse) return auth;
   const { slug } = await params;
   if (!getCarBySlug(slug)) {
     return NextResponse.json({ error: "Veicolo non trovato" }, { status: 404 });

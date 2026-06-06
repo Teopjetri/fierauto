@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { requireAdminSession } from "@/lib/auth/requireAdmin";
 import { addListingImages, getListingById } from "@/lib/listings/store";
 import { MAX_LISTING_IMAGES } from "@/lib/listings/types";
 
@@ -7,6 +8,8 @@ interface RouteParams {
 }
 
 export async function POST(req: Request, { params }: RouteParams) {
+  const auth = await requireAdminSession();
+  if (auth instanceof NextResponse) return auth;
   const { id } = await params;
   console.log("[UPLOAD-DIAG] api:listings-images:POST:received", { listingId: id });
 
@@ -58,6 +61,8 @@ export async function POST(req: Request, { params }: RouteParams) {
 }
 
 export async function PATCH(req: Request, { params }: RouteParams) {
+  const auth = await requireAdminSession();
+  if (auth instanceof NextResponse) return auth;
   const { id } = await params;
   const body = await req.json();
   const { reorderListingImages } = await import("@/lib/listings/store");

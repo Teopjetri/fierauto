@@ -1,12 +1,17 @@
 import { NextResponse } from "next/server";
+import { requireAdminSession } from "@/lib/auth/requireAdmin";
 import { createDraftListing, createListing, getAllListings } from "@/lib/listings/store";
 import type { ListingInput } from "@/lib/listings/types";
 
 export async function GET() {
+  const auth = await requireAdminSession();
+  if (auth instanceof NextResponse) return auth;
   return NextResponse.json(await getAllListings());
 }
 
 export async function POST(req: Request) {
+  const auth = await requireAdminSession();
+  if (auth instanceof NextResponse) return auth;
   const body = (await req.json()) as ListingInput & { draft?: boolean };
 
   if (body.draft) {

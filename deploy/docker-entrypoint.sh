@@ -5,6 +5,7 @@ mkdir -p \
   /app/data/listings \
   /app/data/car-media \
   /app/data/trade-in \
+  /app/data/admin/sessions \
   /app/public/uploads/listings \
   /app/public/uploads/trade-in \
   /app/public/hero \
