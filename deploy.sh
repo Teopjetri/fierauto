@@ -156,6 +156,19 @@ cmd_update() {
   $COMPOSE build app
   $COMPOSE up -d --force-recreate app
   $COMPOSE ps
+  if [[ -n "${SMTP_PASS:-}" ]]; then
+    cmd_test_smtp || true
+  fi
+}
+
+cmd_test_smtp() {
+  require_cmd docker
+  load_env
+  if [[ -z "${SMTP_PASS:-}" ]]; then
+    die "SMTP_PASS non impostata in $ENV_FILE — esegui prima: SMTP_PASS='...' ./deploy.sh configure-email"
+  fi
+  log "Test SMTP dal container app..."
+  $COMPOSE exec -T app node scripts/test-smtp.mjs
 }
 
 cmd_logs() {
@@ -185,6 +198,7 @@ Fierauto deploy.sh
   ./deploy.sh ssl          Obtain Let's Encrypt cert + switch to HTTPS
   ./deploy.sh setup-auth   Protect /admin (requires ADMIN_HTTP_* in .env)
   ./deploy.sh configure-email  Set SMTP in .env.production (requires SMTP_PASS)
+  ./deploy.sh test-smtp    Verify Libero SMTP from app container
   ./deploy.sh update       Rebuild and restart after git pull
   ./deploy.sh logs [svc]   Follow logs (default: app)
   ./deploy.sh status       Compose PS + quick curl
@@ -209,6 +223,7 @@ main() {
     ssl) cmd_ssl ;;
     setup-auth) cmd_setup_auth ;;
     configure-email) cmd_configure_email ;;
+    test-smtp) cmd_test_smtp ;;
     update) cmd_update ;;
     logs) cmd_logs "$@" ;;
     status) cmd_status ;;
