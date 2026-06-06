@@ -84,11 +84,18 @@ export function ListingEditor({ listing, mode }: ListingEditorProps) {
 
   useEffect(() => {
     traceFileUpload("listing-editor", "component-mount", { mode, listingId: data?.id ?? null });
+  }, [mode, data?.id]);
+
+  useEffect(() => {
     return () => {
-      traceFileUpload("listing-editor", "component-unmount", { mode, listingId: data?.id ?? null });
+      traceFileUpload("listing-editor", "component-unmount", {
+        mode,
+        listingId: pendingPreviewsRef.current.length ? data?.id ?? null : null,
+      });
       revokeLocalImagePreviews(pendingPreviewsRef.current);
     };
-  }, [mode, data?.id]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const shiftPendingPreview = () => {
     setPendingPreviews((prev) => {
@@ -228,7 +235,6 @@ export function ListingEditor({ listing, mode }: ListingEditorProps) {
         console.error(UPLOAD_DIAG, "queue:process:error", e);
         setError(e instanceof Error ? e.message : "Upload fallito");
         setFileQueue((prev) => prev.slice(1));
-        shiftPendingPreview();
       } finally {
         uploadProcessingRef.current = false;
         console.log(UPLOAD_DIAG, "queue:process:done", {

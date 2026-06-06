@@ -4,6 +4,18 @@ export interface LocalImagePreview {
   previewUrl: string;
 }
 
+/**
+ * Copia il file selezionato dal picker prima di resettare l'input.
+ * Su Safari/iOS il reset invalida i File originali e rompe blob: preview + upload.
+ */
+export async function detachImageFile(file: File): Promise<File> {
+  const buffer = await file.arrayBuffer();
+  return new File([buffer], file.name, {
+    type: file.type || "application/octet-stream",
+    lastModified: file.lastModified,
+  });
+}
+
 /** Accetta JPG, PNG, WEBP, HEIC e foto smartphone con MIME vuoto o generico. */
 export function isImageFile(file: File): boolean {
   if (file.type.startsWith("image/")) return true;
@@ -21,12 +33,13 @@ export function createLocalImagePreview(file: File, index = 0): LocalImagePrevie
   };
 }
 
-export function buildLocalImagePreviews(
+export async function buildLocalImagePreviews(
   files: File[],
   options?: { startIndex?: number }
-): LocalImagePreview[] {
+): Promise<LocalImagePreview[]> {
   const start = options?.startIndex ?? 0;
-  return files.map((file, index) => createLocalImagePreview(file, start + index));
+  const owned = await Promise.all(files.map((file) => detachImageFile(file)));
+  return owned.map((file, index) => createLocalImagePreview(file, start + index));
 }
 
 export function revokeLocalImagePreviews(previews: LocalImagePreview[]): void {

@@ -44,7 +44,7 @@ export function ImageUploadPicker({
 
   const room = Math.max(0, maxFiles - selectedCount);
 
-  const addFiles = (incoming: File[]) => {
+  const addFiles = async (incoming: File[]) => {
     traceFileUpload(traceSource, "enqueue", {
       incomingLength: incoming.length,
       files: incoming.map((f) => ({ name: f.name, type: f.type || "(empty)", size: f.size })),
@@ -72,7 +72,7 @@ export function ImageUploadPicker({
     const nextFiles = accepted.slice(0, room);
     if (!nextFiles.length) return;
 
-    const items = buildLocalImagePreviews(nextFiles, { startIndex: previews.length });
+    const items = await buildLocalImagePreviews(nextFiles, { startIndex: previews.length });
     traceFileUpload(traceSource, "state-update", {
       added: items.length,
       selectedCount: selectedCount + items.length,
@@ -86,11 +86,12 @@ export function ImageUploadPicker({
 
   const onFileInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     traceFileUpload(traceSource, "input-change", describeFiles(e.target.files));
-    const list = Array.from(e.target.files ?? []);
-    window.setTimeout(() => {
-      e.target.value = "";
-    }, 300);
-    if (list.length) addFiles(list);
+    const input = e.target;
+    const list = Array.from(input.files ?? []);
+    if (!list.length) return;
+    void addFiles(list).finally(() => {
+      input.value = "";
+    });
   };
 
   return (
