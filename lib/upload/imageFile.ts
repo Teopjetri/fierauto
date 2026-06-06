@@ -10,6 +10,9 @@ export interface LocalImagePreview {
  */
 export async function detachImageFile(file: File): Promise<File> {
   const buffer = await file.arrayBuffer();
+  if (!buffer.byteLength) {
+    throw new Error("Il file immagine è vuoto. Seleziona di nuovo la foto.");
+  }
   return new File([buffer], file.name, {
     type: file.type || "application/octet-stream",
     lastModified: file.lastModified,

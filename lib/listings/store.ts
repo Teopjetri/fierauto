@@ -1,5 +1,6 @@
 import { promises as fs } from "fs";
 import path from "path";
+import { normalizeListingImageBuffer } from "@/lib/images/normalizeListingImage";
 import {
   isPublishedOnHome,
   MAX_LISTING_IMAGES,
@@ -262,20 +263,23 @@ export async function addListingImages(
   if (remaining <= 0) throw new Error(`Massimo ${MAX_LISTING_IMAGES} immagini per annuncio.`);
 
   await ensureDirs(id);
-  const allowed = [".jpg", ".jpeg", ".png", ".webp", ".heic", ".heif"];
   const newImages: ListingImage[] = [];
 
   for (const file of files.slice(0, remaining)) {
-    let ext = path.extname(file.originalName).toLowerCase();
-    if (!ext) ext = ".jpg";
-    if (!allowed.includes(ext)) continue;
-    const imageId = `${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
-    const filename = `${imageId}${ext}`;
-    await fs.writeFile(path.join(UPLOAD_ROOT, id, filename), file.buffer);
+    if (!file.buffer.length) {
+      throw new Error("Il file immagine è vuoto. Seleziona di nuovo la foto.");
+    }
+
+    const { buffer: jpegBuffer, filename, imageId } = await normalizeListingImageBuffer(
+      file.buffer,
+      file.originalName
+    );
+    await fs.writeFile(path.join(UPLOAD_ROOT, id, filename), jpegBuffer);
     console.log("[UPLOAD-DIAG] store:addListingImages:written", {
       listingId: id,
       filename,
-      bytes: file.buffer.length,
+      bytes: jpegBuffer.length,
+      originalName: file.originalName,
     });
     newImages.push({
       id: imageId,
@@ -284,10 +288,6 @@ export async function addListingImages(
       order: listing.images.length + newImages.length,
       createdAt: new Date().toISOString(),
     });
-  }
-
-  if (files.length > 0 && newImages.length === 0) {
-    throw new Error("Formato non supportato. Usa JPG, PNG, WEBP o HEIC.");
   }
 
   const updated = await updateListingImages(id, [...listing.images, ...newImages]);

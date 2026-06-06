@@ -4,7 +4,7 @@
 FROM node:20-bookworm-slim AS base
 WORKDIR /app
 RUN apt-get update \
-  && apt-get install -y --no-install-recommends ca-certificates gosu \
+  && apt-get install -y --no-install-recommends ca-certificates gosu libvips42 \
   && rm -rf /var/lib/apt/lists/*
 
 FROM base AS deps

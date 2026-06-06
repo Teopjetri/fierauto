@@ -30,6 +30,14 @@ export async function POST(req: Request, { params }: RouteParams) {
     return NextResponse.json({ error: "Nessun file." }, { status: 400 });
   }
 
+  const emptyUpload = files.find((f) => f.size <= 0);
+  if (emptyUpload) {
+    return NextResponse.json(
+      { error: "Il file immagine è vuoto. Seleziona di nuovo la foto." },
+      { status: 400 }
+    );
+  }
+
   if (listing.images.length >= MAX_LISTING_IMAGES) {
     return NextResponse.json({ error: `Massimo ${MAX_LISTING_IMAGES} immagini.` }, { status: 400 });
   }

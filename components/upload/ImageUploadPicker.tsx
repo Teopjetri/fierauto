@@ -72,7 +72,15 @@ export function ImageUploadPicker({
     const nextFiles = accepted.slice(0, room);
     if (!nextFiles.length) return;
 
-    const items = await buildLocalImagePreviews(nextFiles, { startIndex: previews.length });
+    let items;
+    try {
+      items = await buildLocalImagePreviews(nextFiles, { startIndex: previews.length });
+    } catch (err) {
+      onValidationError?.(
+        err instanceof Error ? err.message : "Impossibile leggere la foto selezionata."
+      );
+      return;
+    }
     traceFileUpload(traceSource, "state-update", {
       added: items.length,
       selectedCount: selectedCount + items.length,

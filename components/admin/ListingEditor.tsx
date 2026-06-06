@@ -44,6 +44,7 @@ interface ListingEditorProps {
 export function ListingEditor({ listing, mode }: ListingEditorProps) {
   const router = useRouter();
   const pendingPreviewsRef = useRef<LocalImagePreview[]>([]);
+  const localThumbRef = useRef<Record<string, string>>({});
   const brandRef = useRef<HTMLInputElement>(null);
   const modelRef = useRef<HTMLInputElement>(null);
   const versionRef = useRef<HTMLInputElement>(null);
@@ -66,6 +67,7 @@ export function ListingEditor({ listing, mode }: ListingEditorProps) {
   const [uploading, setUploading] = useState(false);
   const [fileQueue, setFileQueue] = useState<File[]>([]);
   const [pendingPreviews, setPendingPreviews] = useState<LocalImagePreview[]>([]);
+  const [localThumbByImageId, setLocalThumbByImageId] = useState<Record<string, string>>({});
   const [cropSession, setCropSession] = useState<CropSession | null>(null);
   const [cropPreviewNonce, setCropPreviewNonce] = useState(0);
   const [cropSavedToast, setCropSavedToast] = useState(false);
@@ -83,6 +85,10 @@ export function ListingEditor({ listing, mode }: ListingEditorProps) {
   }, [pendingPreviews]);
 
   useEffect(() => {
+    localThumbRef.current = localThumbByImageId;
+  }, [localThumbByImageId]);
+
+  useEffect(() => {
     traceFileUpload("listing-editor", "component-mount", { mode, listingId: data?.id ?? null });
   }, [mode, data?.id]);
 
@@ -93,15 +99,27 @@ export function ListingEditor({ listing, mode }: ListingEditorProps) {
         listingId: pendingPreviewsRef.current.length ? data?.id ?? null : null,
       });
       revokeLocalImagePreviews(pendingPreviewsRef.current);
+      Object.values(localThumbRef.current).forEach((url) => URL.revokeObjectURL(url));
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const shiftPendingPreview = () => {
+  const transferPendingPreviewToThumb = (imageId: string) => {
     setPendingPreviews((prev) => {
       const [first, ...rest] = prev;
-      if (first) URL.revokeObjectURL(first.previewUrl);
+      if (!first) return prev;
+      setLocalThumbByImageId((map) => ({ ...map, [imageId]: first.previewUrl }));
       return rest;
+    });
+  };
+
+  const releaseLocalThumb = (imageId: string) => {
+    setLocalThumbByImageId((prev) => {
+      const url = prev[imageId];
+      if (url) URL.revokeObjectURL(url);
+      const next = { ...prev };
+      delete next[imageId];
+      return next;
     });
   };
 
@@ -142,8 +160,9 @@ export function ListingEditor({ listing, mode }: ListingEditorProps) {
     }
   };
 
-  const uploadOriginal = async (file: File): Promise<string> => {
+  const uploadOriginal = async (file: File): Promise<{ imageId: string }> => {
     if (!data) throw new Error("Annuncio non pronto");
+    if (!file.size) throw new Error("Il file immagine è vuoto. Seleziona di nuovo la foto.");
     console.log(UPLOAD_DIAG, "upload:request:start", {
       listingId: data.id,
       fileName: file.name,
@@ -166,7 +185,7 @@ export function ListingEditor({ listing, mode }: ListingEditorProps) {
     if (!added) throw new Error("Immagine non registrata");
     console.log(UPLOAD_DIAG, "upload:request:ok", { imageId: added.id, src: added.src });
     setData(listing);
-    return added.id;
+    return { imageId: added.id };
   };
 
   const uploadHomeCrop = async (imageId: string, blob: Blob) => {
@@ -227,10 +246,10 @@ export function ListingEditor({ listing, mode }: ListingEditorProps) {
       setUploading(true);
       setError("");
       try {
-        await uploadOriginal(file);
-        console.log(UPLOAD_DIAG, "queue:process:upload-complete", { fileName: file.name });
+        const { imageId } = await uploadOriginal(file);
+        console.log(UPLOAD_DIAG, "queue:process:upload-complete", { fileName: file.name, imageId });
         setFileQueue((prev) => prev.slice(1));
-        shiftPendingPreview();
+        transferPendingPreviewToThumb(imageId);
       } catch (e) {
         console.error(UPLOAD_DIAG, "queue:process:error", e);
         setError(e instanceof Error ? e.message : "Upload fallito");
@@ -271,6 +290,7 @@ export function ListingEditor({ listing, mode }: ListingEditorProps) {
     if (!data || !confirm("Eliminare questa immagine?")) return;
     const res = await fetch(`/api/listings/${data.id}/images/${imageId}`, { method: "DELETE" });
     if (res.ok) {
+      releaseLocalThumb(imageId);
       setData(await res.json());
       router.refresh();
     }
@@ -405,11 +425,10 @@ export function ListingEditor({ listing, mode }: ListingEditorProps) {
                       DETAIL_PHOTO_ASPECT
                     )}
                   >
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={photo.src}
-                      alt=""
-                      className="absolute inset-0 h-full w-full object-contain bg-black"
+                    <ListingPhotoThumb
+                      photo={photo}
+                      localSrc={localThumbByImageId[photo.id]}
+                      onServerLoaded={() => releaseLocalThumb(photo.id)}
                     />
                     <div className="absolute top-2 left-2 flex items-center gap-1.5">
                       <GripVertical size={14} className="text-white/60 cursor-grab" />
@@ -484,6 +503,53 @@ export function ListingEditor({ listing, mode }: ListingEditorProps) {
         />
       )}
     </div>
+  );
+}
+
+function ListingPhotoThumb({
+  photo,
+  localSrc,
+  onServerLoaded,
+}: {
+  photo: ListingImage;
+  localSrc?: string;
+  onServerLoaded: () => void;
+}) {
+  const [src, setSrc] = useState(localSrc ?? photo.src);
+
+  useEffect(() => {
+    if (!localSrc) {
+      setSrc(photo.src);
+      return;
+    }
+
+    setSrc(localSrc);
+    const probe = new window.Image();
+    probe.onload = () => {
+      setSrc(photo.src);
+      onServerLoaded();
+    };
+    probe.onerror = () => {
+      setSrc(localSrc);
+    };
+    probe.src = photo.src;
+
+    return () => {
+      probe.onload = null;
+      probe.onerror = null;
+    };
+  }, [localSrc, onServerLoaded, photo.src]);
+
+  return (
+    /* eslint-disable-next-line @next/next/no-img-element */
+    <img
+      src={src}
+      alt=""
+      className="absolute inset-0 h-full w-full object-contain bg-black"
+      onError={() => {
+        if (localSrc && src !== localSrc) setSrc(localSrc);
+      }}
+    />
   );
 }
 
