@@ -39,6 +39,10 @@ export function ListingStory({ listing }: { listing: Listing }) {
         <h3 className="listing-card-story__model">{listing.model}</h3>
       )}
 
+      {listing.version?.trim() && (
+        <p className="listing-card-story__version">{listing.version.trim()}</p>
+      )}
+
       {listing.description && (
         <p className="listing-card-story__description">{listing.description}</p>
       )}

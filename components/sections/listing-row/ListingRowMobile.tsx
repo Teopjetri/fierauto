@@ -40,6 +40,11 @@ const mobileDescriptionWrapStyle = {
   marginBottom: "0.5rem",
 };
 
+const MOBILE_PRICE_POSITION = {
+  right: "calc(0.55rem - 6pt)",
+  bottom: "calc(0.5rem - 7pt)",
+} as const;
+
 const MOBILE_BRAND_HERO_EFFECT = {
   color: "#ffffff",
   textShadow:
@@ -58,11 +63,17 @@ export function ListingRowMobile({
   if (!photoSrc) return null;
 
   const price = listing.price?.trim();
+  const version = listing.version?.trim();
 
   const alt = `${listing.brand} ${listing.model}`.trim();
 
+  const mobileDescriptionWrapStyleWithVersion = {
+    ...mobileDescriptionWrapStyle,
+    marginTop: version ? "2pt" : mobileDescriptionWrapStyle.marginTop,
+  };
+
   return (
-    <article className="listing-row listing-row--mobile editorial-showcase__row w-full flex flex-row flex-nowrap items-start">
+    <article className="listing-row listing-row--mobile editorial-showcase__row flex md:hidden w-full flex-row flex-nowrap items-start">
       <div className="editorial-showcase__photo-col editorial-showcase__photo-col--left w-[48%] shrink-0 min-w-0">
         <div className="editorial-showcase__home-cover">
           <Image
@@ -74,7 +85,10 @@ export function ListingRowMobile({
             className="object-cover object-center editorial-showcase__photo"
           />
           {price && (
-            <p className="listing-card-story__price-overlay">
+            <p
+              className="listing-card-story__price-overlay listing-card-story__price-overlay--mobile"
+              style={MOBILE_PRICE_POSITION}
+            >
               {formatListingPrice(price)}
             </p>
           )}
@@ -104,13 +118,22 @@ export function ListingRowMobile({
           )}
 
           {listing.model && (
-            <h3 className="listing-card-story__model">{listing.model}</h3>
+            <h3
+              className="listing-card-story__model"
+              style={version ? { marginBottom: "0.35rem" } : undefined}
+            >
+              {listing.model}
+            </h3>
+          )}
+
+          {version && (
+            <p className="listing-card-story__version">{version}</p>
           )}
 
           {listing.description && (
             <div
               className="listing-row-mobile__description-wrap"
-              style={mobileDescriptionWrapStyle}
+              style={mobileDescriptionWrapStyleWithVersion}
             >
               <p className="listing-row-mobile__description" style={mobileDescriptionStyle}>
                 {listing.description}

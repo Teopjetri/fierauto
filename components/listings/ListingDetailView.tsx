@@ -1,24 +1,35 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-import { DETAIL_PHOTO_ASPECT, sortImages, type Listing } from "@/lib/listings/types";
+import { ListingImageGallery } from "@/components/listings/ListingImageGallery";
+import { sortImages, type Listing } from "@/lib/listings/types";
 import { cn } from "@/lib/utils";
 
 const SPEC_ROWS = [
   { label: "Anno", key: "year" as const },
+  { label: "Potenza CV", key: "powerCv" as const },
+  { label: "Alimentazione", key: "fuel" as const },
   { label: "Chilometri", key: "mileage" as const },
-  { label: "Carburante", key: "fuel" as const },
-];
+] as const;
+
+function formatSpecValue(key: (typeof SPEC_ROWS)[number]["key"], value: string): string {
+  const trimmed = value.trim();
+  if (!trimmed) return "";
+  if (key === "powerCv" && !/cv/i.test(trimmed)) return `${trimmed} CV`;
+  if (key === "mileage" && !/km/i.test(trimmed)) return `${trimmed} km`;
+  return trimmed;
+}
 
 export function ListingDetailView({ listing }: { listing: Listing }) {
   const images = sortImages(listing.images);
-  const [hero, ...gallery] = images;
+  const title = [listing.brand, listing.model].map((part) => part?.trim()).filter(Boolean).join(" ");
+  const version = listing.version?.trim() ?? "";
+  const imageAlt = title || "Veicolo";
   const specs = SPEC_ROWS.map(({ label, key }) => ({
     label,
-    value: listing[key]?.trim() ?? "",
+    value: formatSpecValue(key, listing[key] ?? ""),
   })).filter((row) => row.value);
 
-  if (!hero) return null;
+  if (images.length === 0) return null;
 
   return (
     <div className="min-h-screen bg-[#030304]">
@@ -32,27 +43,20 @@ export function ListingDetailView({ listing }: { listing: Listing }) {
         </Link>
       </div>
 
-      <div className="relative w-full aspect-[4/3] max-h-[min(82vh,920px)] bg-[#070708]">
-        <Image
-          src={hero.src}
-          alt={`${listing.brand} ${listing.model}`.trim()}
-          fill
-          priority
-          sizes="100vw"
-          className="object-contain"
-        />
-      </div>
+      <ListingImageGallery images={images} alt={imageAlt} />
 
       <div className="max-w-4xl mx-auto px-6 sm:px-10 md:px-14 py-14 md:py-20 space-y-10 md:space-y-12">
         <header>
-          {listing.brand && (
-            <p className="font-display text-[10px] tracking-[0.45em] uppercase text-champagne mb-5 md:mb-6">
-              {listing.brand}
+          {title && (
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-light tracking-[-0.03em] text-white/92">
+              {title}
+            </h1>
+          )}
+          {version && (
+            <p className="mt-4 md:mt-5 text-white/55 font-light text-lg md:text-xl tracking-[-0.02em]">
+              {version}
             </p>
           )}
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-light tracking-[-0.03em] text-white/92">
-            {listing.model}
-          </h1>
         </header>
 
         {listing.description && (
@@ -97,19 +101,6 @@ export function ListingDetailView({ listing }: { listing: Listing }) {
           </div>
         )}
       </div>
-
-      {gallery.length > 0 && (
-        <div className="space-y-1 pb-24">
-          {gallery.map((img) => (
-            <div
-              key={img.id}
-              className={cn("relative w-full bg-[#070708]", DETAIL_PHOTO_ASPECT, "max-h-[75vh]")}
-            >
-              <Image src={img.src} alt="" fill sizes="100vw" className="object-contain" />
-            </div>
-          ))}
-        </div>
-      )}
     </div>
   );
 }

@@ -50,8 +50,14 @@ export function ListingRowDesktop({
   if (!photoSrc) return null;
 
   const price = listing.price?.trim();
+  const version = listing.version?.trim();
 
   const alt = `${listing.brand} ${listing.model}`.trim();
+
+  const desktopDescriptionWrapStyleWithVersion = {
+    ...desktopDescriptionWrapStyle,
+    paddingTop: version ? "calc(130pt - 1.5rem)" : desktopDescriptionWrapStyle.paddingTop,
+  };
 
   return (
     <>
@@ -91,7 +97,7 @@ export function ListingRowDesktop({
             className="object-cover object-center editorial-showcase__photo"
           />
           {price && (
-            <p className="listing-card-story__price-overlay">
+            <p className="listing-card-story__price-overlay listing-card-story__price-overlay--desktop">
               {formatListingPrice(price)}
             </p>
           )}
@@ -118,10 +124,14 @@ export function ListingRowDesktop({
             <h3 className="listing-card-story__model">{listing.model}</h3>
           )}
 
+          {version && (
+            <p className="listing-card-story__version">{version}</p>
+          )}
+
           {listing.description && (
             <div
               className="listing-row-desktop__description-wrap"
-              style={desktopDescriptionWrapStyle}
+              style={desktopDescriptionWrapStyleWithVersion}
             >
               <p className="listing-row-desktop__description" style={desktopDescriptionStyle}>
                 {listing.description}

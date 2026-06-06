@@ -643,19 +643,9 @@ body {
   word-break: break-word;
 }
 
-.listing-row--mobile .listing-card-story__price-overlay {
-  font-size: clamp(1.52rem, 5.06vw, 1.97rem);
-  letter-spacing: 0.08em;
-}
-
 @media (max-width: 767px) {
   .listing-row--mobile .listing-card-story__cta-card {
     font-size: clamp(2.53rem, 8.12vw, 3.17rem) !important;
-  }
-
-  .listing-row--mobile .listing-card-story__price-overlay {
-    font-size: clamp(1.52rem, 5.06vw, 1.97rem) !important;
-    letter-spacing: 0.08em !important;
   }
 
   .listing-row--mobile .listing-card-story__panel--cta {
@@ -836,6 +826,29 @@ body {
   transform: translateY(-26pt);
 }
 
+.listing-card-story__version {
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  color: rgba(255, 255, 255, 0.85);
+  margin: -1.1rem 0 0;
+  transform: translateY(-26pt);
+}
+
+.listing-row--desktop .listing-card-story__version {
+  margin: -1.1rem 0 0;
+}
+
+.listing-row--mobile .listing-card-story__version {
+  font-size: 1.05rem;
+  margin: -0.2rem 0 0.15rem;
+  transform: none;
+  color: rgba(255, 255, 255, 0.82);
+}
+
 .listing-card-story__description {
   font-family: var(--font-inter), system-ui, sans-serif;
   font-size: 1.1rem;
@@ -894,8 +907,6 @@ body {
 
 .listing-card-story__price-overlay {
   position: absolute;
-  right: calc(0.85rem - 8pt);
-  bottom: calc(0.75rem - 9pt);
   z-index: 2;
   margin: 0;
   font-family: "Avilock", var(--font-display), sans-serif;
@@ -911,13 +922,15 @@ body {
   pointer-events: none;
 }
 
-.listing-row--desktop .listing-card-story__price-overlay {
+.listing-card-story__price-overlay--desktop {
+  right: calc(0.85rem - 8pt);
+  bottom: calc(0.75rem - 9pt);
   font-size: clamp(2.62rem, 3.37vw, 3.07rem);
 }
 
-.listing-row--mobile .listing-card-story__price-overlay {
-  right: calc(0.55rem - 8pt);
-  bottom: calc(0.5rem - 9pt);
+.listing-card-story__price-overlay--mobile {
+  font-size: clamp(1.52rem, 5.06vw, 1.97rem);
+  letter-spacing: 0.08em;
 }
 
 .listing-card-story__panel--cta {
