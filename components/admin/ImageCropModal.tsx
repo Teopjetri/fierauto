@@ -11,15 +11,15 @@ import {
 import { cn } from "@/lib/utils";
 
 interface ImageCropModalProps {
-  file?: File;
-  imageUrl?: string;
+  file: File;
   onConfirm: (blob: Blob) => Promise<void>;
   onCancel: () => void;
 }
 
-export function ImageCropModal({ file, imageUrl, onConfirm, onCancel }: ImageCropModalProps) {
+export function ImageCropModal({ file, onConfirm, onCancel }: ImageCropModalProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [image, setImage] = useState<HTMLImageElement | null>(null);
+  const [loadError, setLoadError] = useState("");
   const [cropSize, setCropSize] = useState({ width: 320, height: 400 });
   const [zoom, setZoom] = useState(1);
   const [offset, setOffset] = useState({ x: 0, y: 0 });
@@ -31,27 +31,37 @@ export function ImageCropModal({ file, imageUrl, onConfirm, onCancel }: ImageCro
   useEffect(() => {
     let active = true;
     let revoke: (() => void) | undefined;
+    setLoadError("");
+    setImage(null);
+
+    if (!file.size) {
+      setLoadError("Il file immagine è vuoto.");
+      return;
+    }
+
+    const url = URL.createObjectURL(file);
+    revoke = () => URL.revokeObjectURL(url);
     const img = new Image();
     img.decoding = "async";
     img.onload = () => {
-      if (active) setImage(img);
+      if (!active) return;
+      if (!img.naturalWidth || !img.naturalHeight) {
+        setLoadError("Impossibile leggere le dimensioni dell'immagine.");
+        return;
+      }
+      setImage(img);
     };
     img.onerror = () => {
-      if (active) setImage(null);
+      if (active) setLoadError("Impossibile caricare l'immagine per il ritaglio.");
     };
-    if (file) {
-      const url = URL.createObjectURL(file);
-      revoke = () => URL.revokeObjectURL(url);
-      img.src = url;
-    } else if (imageUrl) {
-      img.src = imageUrl;
-    }
+    img.src = url;
+
     return () => {
       active = false;
       revoke?.();
       setImage(null);
     };
-  }, [file, imageUrl]);
+  }, [file]);
 
   useEffect(() => {
     const el = containerRef.current;
@@ -159,7 +169,11 @@ export function ImageCropModal({ file, imageUrl, onConfirm, onCancel }: ImageCro
             onPointerUp={onPointerUp}
             onPointerCancel={onPointerUp}
           >
-            {!image ? (
+            {loadError ? (
+              <div className="absolute inset-0 flex items-center justify-center px-4 text-center">
+                <p className="text-sm text-red-400 font-light">{loadError}</p>
+              </div>
+            ) : !image ? (
               <div className="absolute inset-0 flex items-center justify-center">
                 <Loader2 className="animate-spin text-champagne" />
               </div>

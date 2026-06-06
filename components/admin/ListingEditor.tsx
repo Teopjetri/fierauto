@@ -23,8 +23,7 @@ import { traceFileUpload } from "@/lib/upload/fileUploadTrace";
 
 interface CropSession {
   imageId: string;
-  file?: File;
-  imageUrl?: string;
+  file: File;
 }
 
 const UPLOAD_DIAG = "[UPLOAD-DIAG]";
@@ -45,6 +44,7 @@ export function ListingEditor({ listing, mode }: ListingEditorProps) {
   const router = useRouter();
   const pendingPreviewsRef = useRef<LocalImagePreview[]>([]);
   const localThumbRef = useRef<Record<string, string>>({});
+  const cropSourceFileRef = useRef<Record<string, File>>({});
   const brandRef = useRef<HTMLInputElement>(null);
   const modelRef = useRef<HTMLInputElement>(null);
   const versionRef = useRef<HTMLInputElement>(null);
@@ -69,6 +69,7 @@ export function ListingEditor({ listing, mode }: ListingEditorProps) {
   const [pendingPreviews, setPendingPreviews] = useState<LocalImagePreview[]>([]);
   const [localThumbByImageId, setLocalThumbByImageId] = useState<Record<string, string>>({});
   const [cropSession, setCropSession] = useState<CropSession | null>(null);
+  const [cropOpening, setCropOpening] = useState(false);
   const [cropPreviewNonce, setCropPreviewNonce] = useState(0);
   const [cropSavedToast, setCropSavedToast] = useState(false);
   const [dragId, setDragId] = useState<string | null>(null);
@@ -108,9 +109,29 @@ export function ListingEditor({ listing, mode }: ListingEditorProps) {
     setPendingPreviews((prev) => {
       const [first, ...rest] = prev;
       if (!first) return prev;
+      cropSourceFileRef.current[imageId] = first.file;
       setLocalThumbByImageId((map) => ({ ...map, [imageId]: first.previewUrl }));
       return rest;
     });
+  };
+
+  const resolveCropSourceFile = async (image: ListingImage): Promise<File> => {
+    const cached = cropSourceFileRef.current[image.id];
+    if (cached?.size) return cached;
+
+    const localUrl = localThumbByImageId[image.id];
+    if (localUrl) {
+      const blob = await fetch(localUrl).then((r) => r.blob());
+      if (blob.size) {
+        return new File([blob], "cover.jpg", { type: blob.type || "image/jpeg" });
+      }
+    }
+
+    const res = await fetch(adminImageUrl(image.src, `${image.id}:${image.createdAt}`));
+    if (!res.ok) throw new Error("Impossibile caricare l'immagine per il ritaglio.");
+    const blob = await res.blob();
+    if (!blob.size) throw new Error("Il file immagine è vuoto.");
+    return new File([blob], "cover.jpg", { type: blob.type || "image/jpeg" });
   };
 
   const releaseLocalThumb = (imageId: string) => {
@@ -268,8 +289,13 @@ export function ListingEditor({ listing, mode }: ListingEditorProps) {
 
   const onCropConfirm = async (blob: Blob) => {
     if (!cropSession) return;
+    if (!blob.size) {
+      setError("Esportazione ritaglio fallita. Riprova.");
+      return;
+    }
     try {
       await uploadHomeCrop(cropSession.imageId, blob);
+      delete cropSourceFileRef.current[cropSession.imageId];
       setCropSession(null);
       setCropSavedToast(true);
       window.setTimeout(() => setCropSavedToast(false), 2000);
@@ -279,11 +305,18 @@ export function ListingEditor({ listing, mode }: ListingEditorProps) {
   };
 
   const openCoverCrop = () => {
-    if (!cover) return;
-    const imageUrl = hasHomeCrop(cover)
-      ? adminImageUrl(cover.cropSrc!, cropPreviewKey)
-      : adminImageUrl(cover.src, `${cover.id}:${cover.createdAt}`);
-    setCropSession({ imageId: cover.id, imageUrl });
+    if (!cover || cropOpening) return;
+    setCropOpening(true);
+    setError("");
+    void resolveCropSourceFile(cover)
+      .then((file) => {
+        cropSourceFileRef.current[cover.id] = file;
+        setCropSession({ imageId: cover.id, file });
+      })
+      .catch((e) => {
+        setError(e instanceof Error ? e.message : "Impossibile aprire il ritaglio.");
+      })
+      .finally(() => setCropOpening(false));
   };
 
   const removePhoto = async (imageId: string) => {
@@ -461,8 +494,10 @@ export function ListingEditor({ listing, mode }: ListingEditorProps) {
             hasHomeCrop(cover) ? adminImageUrl(cover.cropSrc!, cropPreviewKey) : null
           }
           placeholderSrc={adminImageUrl(cover.src, `${cover.id}:${cover.createdAt}`)}
+          localPreviewSrc={localThumbByImageId[cover.id]}
           previewKey={cropPreviewKey}
           cropSaved={cropSavedToast}
+          cropOpening={cropOpening}
           onCustomize={openCoverCrop}
         />
       )}
@@ -497,7 +532,6 @@ export function ListingEditor({ listing, mode }: ListingEditorProps) {
       {cropSession && (
         <ImageCropModal
           file={cropSession.file}
-          imageUrl={cropSession.imageUrl}
           onConfirm={onCropConfirm}
           onCancel={() => setCropSession(null)}
         />
@@ -553,22 +587,57 @@ function ListingPhotoThumb({
   );
 }
 
+function AdminPreviewImage({
+  primarySrc,
+  fallbackSrc,
+  alt,
+  className,
+}: {
+  primarySrc: string;
+  fallbackSrc?: string;
+  alt: string;
+  className: string;
+}) {
+  const [src, setSrc] = useState(primarySrc);
+
+  useEffect(() => {
+    setSrc(primarySrc);
+  }, [primarySrc]);
+
+  return (
+    /* eslint-disable-next-line @next/next/no-img-element */
+    <img
+      src={src}
+      alt={alt}
+      className={className}
+      onError={() => {
+        if (fallbackSrc && src !== fallbackSrc) setSrc(fallbackSrc);
+      }}
+    />
+  );
+}
+
 function HomepageCoverSection({
   cover,
   cropDisplaySrc,
   placeholderSrc,
+  localPreviewSrc,
   previewKey,
   cropSaved,
+  cropOpening,
   onCustomize,
 }: {
   cover: ListingImage;
   cropDisplaySrc: string | null;
   placeholderSrc: string;
+  localPreviewSrc?: string;
   previewKey: string;
   cropSaved: boolean;
+  cropOpening: boolean;
   onCustomize: () => void;
 }) {
   const hasCrop = Boolean(cropDisplaySrc);
+  const coverFallback = localPreviewSrc ?? placeholderSrc;
 
   return (
     <section className="border border-white/10 bg-gradient-to-b from-white/[0.04] to-transparent p-6 md:p-8 space-y-6">
@@ -591,19 +660,19 @@ function HomepageCoverSection({
           )}
         >
           {hasCrop ? (
-            /* eslint-disable-next-line @next/next/no-img-element */
-            <img
+            <AdminPreviewImage
               key={`crop-preview-${previewKey}`}
-              src={cropDisplaySrc!}
+              primarySrc={cropDisplaySrc!}
+              fallbackSrc={coverFallback}
               alt=""
               className="absolute inset-0 h-full w-full object-cover"
             />
           ) : (
             <>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <AdminPreviewImage
                 key={`crop-placeholder-${cover.id}`}
-                src={placeholderSrc}
+                primarySrc={placeholderSrc}
+                fallbackSrc={localPreviewSrc}
                 alt=""
                 className="absolute inset-0 h-full w-full object-cover opacity-35 blur-[1px]"
               />
@@ -621,8 +690,10 @@ function HomepageCoverSection({
           <button
             type="button"
             onClick={onCustomize}
-            className="w-full md:w-auto inline-flex items-center justify-center px-8 py-4 font-display text-[11px] tracking-[0.22em] uppercase bg-champagne text-background hover:bg-champagne/90 transition-colors"
+            disabled={cropOpening}
+            className="w-full md:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 font-display text-[11px] tracking-[0.22em] uppercase bg-champagne text-background hover:bg-champagne/90 disabled:opacity-60 transition-colors"
           >
+            {cropOpening ? <Loader2 size={14} className="animate-spin" /> : null}
             {hasCrop ? "Regola inquadratura homepage" : "Personalizza anteprima homepage"}
           </button>
 

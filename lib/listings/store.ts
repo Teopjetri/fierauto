@@ -353,7 +353,8 @@ export async function setListingImageCrop(
     }
   }
 
-  await fs.writeFile(cropPath, buffer);
+  const { buffer: jpegBuffer } = await normalizeListingImageBuffer(buffer, cropFilename);
+  await fs.writeFile(cropPath, jpegBuffer);
 
   const updatedImages = listing.images.map((img) =>
     img.id === imageId

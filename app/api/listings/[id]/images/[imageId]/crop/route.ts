@@ -18,8 +18,21 @@ export async function POST(req: Request, { params }: RouteParams) {
     return NextResponse.json({ error: "Nessun ritaglio inviato." }, { status: 400 });
   }
 
+  if (crop.size <= 0) {
+    return NextResponse.json(
+      { error: "Il ritaglio è vuoto. Ripeti l'inquadratura." },
+      { status: 400 }
+    );
+  }
+
   try {
     const buffer = Buffer.from(await crop.arrayBuffer());
+    if (!buffer.length) {
+      return NextResponse.json(
+        { error: "Il ritaglio è vuoto. Ripeti l'inquadratura." },
+        { status: 400 }
+      );
+    }
     const listing = await setListingImageCrop(id, imageId, buffer);
     revalidatePath("/");
     revalidatePath(`/inventory/${listing.slug}`);
