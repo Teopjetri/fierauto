@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { revalidatePath } from "next/cache";
 import { setListingImageCrop } from "@/lib/listings/store";
 
 interface RouteParams {
@@ -16,7 +17,10 @@ export async function POST(req: Request, { params }: RouteParams) {
 
   try {
     const buffer = Buffer.from(await crop.arrayBuffer());
-    return NextResponse.json(await setListingImageCrop(id, imageId, buffer));
+    const listing = await setListingImageCrop(id, imageId, buffer);
+    revalidatePath("/");
+    revalidatePath(`/inventory/${listing.slug}`);
+    return NextResponse.json(listing);
   } catch (e) {
     return NextResponse.json(
       { error: e instanceof Error ? e.message : "Salvataggio ritaglio fallito" },

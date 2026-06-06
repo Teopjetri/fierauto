@@ -1,16 +1,17 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { Upload, Loader2, Check, ImagePlus } from "lucide-react";
+import { Loader2, Check } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { describeFiles, traceFileUpload } from "@/lib/upload/fileUploadTrace";
+import { ImageUploadPicker } from "@/components/upload/ImageUploadPicker";
+import {
+  revokeLocalImagePreviews,
+  type LocalImagePreview,
+} from "@/lib/upload/imageFile";
+import { traceFileUpload } from "@/lib/upload/fileUploadTrace";
 
-interface PhotoItem {
-  id: string;
-  file: File;
-  preview: string;
-}
+const MAX_TRADE_IN_PHOTOS = 8;
 
 interface TradeInFormProps {
   uploadHint?: string;
@@ -18,32 +19,28 @@ interface TradeInFormProps {
   onClose?: () => void;
 }
 
-function isImageFile(file: File) {
-  if (file.type.startsWith("image/")) return true;
-  if (/\.(heic|heif|jpe?g|png|webp|avif|gif)$/i.test(file.name)) return true;
-  if (file.size > 0 && (!file.type || file.type === "application/octet-stream")) return true;
-  return false;
-}
-
 export function TradeInForm({
   uploadHint = "Tocca per caricare le foto",
   variant = "page",
   onClose,
 }: TradeInFormProps) {
-  const previewGridRef = useRef<HTMLDivElement>(null);
-  const previewUrlsRef = useRef<string[]>([]);
+  const photosRef = useRef<LocalImagePreview[]>([]);
 
   const [email, setEmail] = useState("");
   const [brand, setBrand] = useState("");
   const [model, setModel] = useState("");
   const [year, setYear] = useState("");
-  const [photos, setPhotos] = useState<PhotoItem[]>([]);
+  const [photos, setPhotos] = useState<LocalImagePreview[]>([]);
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState(false);
   const [error, setError] = useState("");
 
   const inputCls =
     "w-full bg-surface border border-border px-4 py-3 text-sm focus:border-champagne/40 focus:outline-none";
+
+  useEffect(() => {
+    photosRef.current = photos;
+  }, [photos]);
 
   useEffect(() => {
     traceFileUpload("trade-in-form", "component-mount", { variant });
@@ -57,87 +54,10 @@ export function TradeInForm({
     return () => {
       document.removeEventListener("visibilitychange", onVisibility);
       traceFileUpload("trade-in-form", "component-unmount", { variant });
-      previewUrlsRef.current.forEach((url) => URL.revokeObjectURL(url));
-      previewUrlsRef.current = [];
+      revokeLocalImagePreviews(photosRef.current);
       delete document.body.dataset.tradeInPickerOpen;
     };
   }, [variant]);
-
-  const addFiles = useCallback((incoming: File[]) => {
-    traceFileUpload("trade-in-form", "enqueue", {
-      incomingLength: incoming.length,
-      files: incoming.map((f) => ({ name: f.name, type: f.type || "(empty)", size: f.size })),
-    });
-
-    if (!incoming.length) return;
-
-    const accepted = incoming.filter(isImageFile);
-    const rejected = incoming.filter((f) => !isImageFile(f));
-    if (!accepted.length) {
-      traceFileUpload("trade-in-form", "validation-reject", {
-        rejected: rejected.map((f) => ({
-          name: f.name,
-          type: f.type || "(empty)",
-          size: f.size,
-          isImageFile: false,
-        })),
-      });
-      setError("Formato foto non riconosciuto. Seleziona un'immagine dalla galleria.");
-      return;
-    }
-
-    let scheduled: PhotoItem[] = [];
-
-    setPhotos((prev) => {
-      const room = Math.max(0, 8 - prev.length);
-      const nextFiles = accepted.slice(0, room);
-      if (!nextFiles.length) return prev;
-
-      const stamp = Date.now();
-      scheduled = nextFiles.map((file, index) => {
-        const preview = URL.createObjectURL(file);
-        previewUrlsRef.current.push(preview);
-        return {
-          id: `${stamp}-${index}-${file.name}-${file.size}`,
-          file,
-          preview,
-        };
-      });
-
-      const next = [...prev, ...scheduled].slice(0, 8);
-      traceFileUpload("trade-in-form", "state-update", {
-        prevLength: prev.length,
-        nextLength: next.length,
-      });
-      return next;
-    });
-
-    if (!scheduled.length) return;
-
-    setError("");
-    window.requestAnimationFrame(() => {
-      previewGridRef.current?.scrollIntoView({ block: "nearest", behavior: "smooth" });
-    });
-  }, []);
-
-  const markPickerOpen = () => {
-    document.body.dataset.tradeInPickerOpen = "1";
-  };
-
-  const onFileInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const described = describeFiles(e.target.files);
-    traceFileUpload("trade-in-form", "input-change", {
-      inputId: e.target.id || "(none)",
-      ...described,
-    });
-
-    const list = Array.from(e.target.files ?? []);
-    delete document.body.dataset.tradeInPickerOpen;
-    window.setTimeout(() => {
-      e.target.value = "";
-    }, 300);
-    if (list.length) addFiles(list);
-  };
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -255,86 +175,27 @@ export function TradeInForm({
           />
         </label>
 
-        <div>
-          <span className="text-[10px] tracking-[0.2em] uppercase text-muted mb-2 block">
-            Foto del veicolo *
-          </span>
-          <div className="trade-in-form__upload border border-dashed border-white/15 p-4 sm:p-5">
-            {photos.length > 0 && (
-              <>
-                <p className="mb-3 text-xs text-champagne/90 font-light">
-                  {photos.length} foto selezionate
-                </p>
-                <div ref={previewGridRef} className="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-4">
-                  {photos.map((photo, index) => (
-                    <div
-                      key={photo.id}
-                      className="h-[120px] w-full overflow-hidden ring-1 ring-white/10 bg-black/40"
-                    >
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        src={photo.preview}
-                        alt={`Anteprima foto ${index + 1}`}
-                        className="block h-full w-full object-cover"
-                      />
-                    </div>
-                  ))}
-                </div>
-              </>
-            )}
-
-            <label
-              onPointerDown={markPickerOpen}
-              onDragOver={(e) => e.preventDefault()}
-              onDrop={(e) => {
-                e.preventDefault();
-                addFiles(Array.from(e.dataTransfer.files));
-              }}
-              className={cn(
-                "relative block w-full min-h-[120px] cursor-pointer border border-dashed border-white/10 hover:border-champagne/35 text-center transition-colors touch-manipulation overflow-hidden",
-                photos.length > 0
-                  ? "py-4 px-3"
-                  : "py-8 px-4 border-transparent hover:border-champagne/35"
-              )}
-            >
-              <input
-                type="file"
-                accept="image/*,.heic,.heif"
-                multiple
-                onChange={onFileInputChange}
-                className="absolute inset-0 z-20 h-full w-full cursor-pointer opacity-[0.01]"
-              />
-              <div className="pointer-events-none relative z-10">
-                <Upload
-                  size={photos.length > 0 ? 20 : 24}
-                  className="mx-auto text-champagne/60 mb-2"
-                  strokeWidth={1.25}
-                />
-                <p className="font-display text-[10px] tracking-[0.2em] uppercase text-muted">
-                  {photos.length > 0
-                    ? `Aggiungi altre foto (${photos.length}/8)`
-                    : uploadHint}
-                </p>
-                {photos.length === 0 && (
-                  <p className="text-xs text-muted/70 mt-2">Max 8 foto</p>
-                )}
-              </div>
-            </label>
-          </div>
-
-          {photos.length === 0 && (
-            <div className="mt-3 flex items-center gap-2 text-xs text-muted/60">
-              <ImagePlus size={14} />
-              <span>Aggiungi almeno una fotografia</span>
-            </div>
-          )}
-        </div>
+        <ImageUploadPicker
+          traceSource="trade-in-form"
+          label="Foto del veicolo *"
+          uploadHint={uploadHint}
+          maxFiles={MAX_TRADE_IN_PHOTOS}
+          selectedCount={photos.length}
+          previews={photos}
+          onPreviewsAdded={(items) => {
+            setError("");
+            setPhotos((prev) => [...prev, ...items].slice(0, MAX_TRADE_IN_PHOTOS));
+          }}
+          onValidationError={setError}
+          className="trade-in-form__upload"
+          inputId="trade-in-photo-upload"
+        />
 
         {error && <p className="text-sm text-red-400/90">{error}</p>}
 
         <button
           type="submit"
-          disabled={loading}
+          disabled={loading || photos.length === 0}
           className={cn(
             "w-full py-3.5 font-display text-[10px] tracking-[0.25em] uppercase",
             "bg-champagne/90 text-background hover:bg-champagne transition-colors",

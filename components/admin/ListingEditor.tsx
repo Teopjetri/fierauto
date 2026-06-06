@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { Upload, Trash2, GripVertical, Loader2, Save, Star, Check, ImageIcon } from "lucide-react";
+import { Trash2, GripVertical, Loader2, Save, Star, Check, ImageIcon } from "lucide-react";
 import { ImageCropModal } from "@/components/admin/ImageCropModal";
+import { ImageUploadPicker } from "@/components/upload/ImageUploadPicker";
 import type { Listing, ListingImage, ListingStatus } from "@/lib/listings/types";
 import {
   DETAIL_PHOTO_ASPECT,
@@ -15,7 +15,11 @@ import {
   sortImages,
 } from "@/lib/listings/types";
 import { cn } from "@/lib/utils";
-import { describeFiles, traceFileUpload } from "@/lib/upload/fileUploadTrace";
+import {
+  revokeLocalImagePreviews,
+  type LocalImagePreview,
+} from "@/lib/upload/imageFile";
+import { traceFileUpload } from "@/lib/upload/fileUploadTrace";
 
 interface CropSession {
   imageId: string;
@@ -32,7 +36,7 @@ interface ListingEditorProps {
 
 export function ListingEditor({ listing, mode }: ListingEditorProps) {
   const router = useRouter();
-  const inputRef = useRef<HTMLInputElement>(null);
+  const pendingPreviewsRef = useRef<LocalImagePreview[]>([]);
   const brandRef = useRef<HTMLInputElement>(null);
   const modelRef = useRef<HTMLInputElement>(null);
   const versionRef = useRef<HTMLInputElement>(null);
@@ -54,6 +58,7 @@ export function ListingEditor({ listing, mode }: ListingEditorProps) {
   const [saving, setSaving] = useState(false);
   const [uploading, setUploading] = useState(false);
   const [fileQueue, setFileQueue] = useState<File[]>([]);
+  const [pendingPreviews, setPendingPreviews] = useState<LocalImagePreview[]>([]);
   const [cropSession, setCropSession] = useState<CropSession | null>(null);
   const [cropSavedToast, setCropSavedToast] = useState(false);
   const [dragId, setDragId] = useState<string | null>(null);
@@ -61,14 +66,28 @@ export function ListingEditor({ listing, mode }: ListingEditorProps) {
 
   const photos = sortImages(data?.images ?? []);
   const cover = photos[0] ?? null;
-  const canUpload = Boolean(data) && photos.length < MAX_LISTING_IMAGES;
+  const totalSelected = photos.length + pendingPreviews.length;
+  const canUpload = Boolean(data) && totalSelected < MAX_LISTING_IMAGES;
+
+  useEffect(() => {
+    pendingPreviewsRef.current = pendingPreviews;
+  }, [pendingPreviews]);
 
   useEffect(() => {
     traceFileUpload("listing-editor", "component-mount", { mode, listingId: data?.id ?? null });
     return () => {
       traceFileUpload("listing-editor", "component-unmount", { mode, listingId: data?.id ?? null });
+      revokeLocalImagePreviews(pendingPreviewsRef.current);
     };
   }, [mode, data?.id]);
+
+  const shiftPendingPreview = () => {
+    setPendingPreviews((prev) => {
+      const [first, ...rest] = prev;
+      if (first) URL.revokeObjectURL(first.previewUrl);
+      return rest;
+    });
+  };
 
   const payload = () => ({
     brand,
@@ -157,45 +176,22 @@ export function ListingEditor({ listing, mode }: ListingEditorProps) {
     }
   };
 
-  const enqueueFiles = (files: FileList | File[]) => {
-    const incoming = Array.from(files);
-    traceFileUpload("listing-editor", "enqueue", {
-      incomingLength: incoming.length,
-      files: incoming.map((f) => ({ name: f.name, type: f.type || "(empty)", size: f.size })),
-    });
-
-    if (!data) {
-      console.warn(UPLOAD_DIAG, "enqueue:skipped", { reason: "listing-not-ready" });
+  const enqueuePreviews = (items: LocalImagePreview[]) => {
+    if (!data || !items.length) {
       traceFileUpload("listing-editor", "validation-reject", { reason: "listing-not-ready" });
       return;
     }
-    const remaining = MAX_LISTING_IMAGES - photos.length - fileQueue.length;
-    const rejected = incoming.filter((f) => !f.type.startsWith("image/"));
-    const list = incoming.filter((f) => f.type.startsWith("image/")).slice(0, remaining);
 
-    if (rejected.length) {
-      traceFileUpload("listing-editor", "validation-reject", {
-        filter: "file.type.startsWith('image/')",
-        rejected: rejected.map((f) => ({
-          name: f.name,
-          type: f.type || "(empty)",
-          size: f.size,
-        })),
-      });
-    }
-
+    const files = items.map((item) => item.file);
     console.log(UPLOAD_DIAG, "enqueue:click", {
-      received: incoming.length,
-      accepted: list.length,
+      received: files.length,
       queueBefore: fileQueue.length,
       listingId: data.id,
     });
-    if (!list.length) return;
-    traceFileUpload("listing-editor", "state-update", {
-      queueAdd: list.length,
-      queueBefore: fileQueue.length,
-    });
-    setFileQueue((prev) => [...prev, ...list]);
+
+    setError("");
+    setPendingPreviews((prev) => [...prev, ...items]);
+    setFileQueue((prev) => [...prev, ...files]);
   };
 
   useEffect(() => {
@@ -218,10 +214,12 @@ export function ListingEditor({ listing, mode }: ListingEditorProps) {
         await uploadOriginal(file);
         console.log(UPLOAD_DIAG, "queue:process:upload-complete", { fileName: file.name });
         setFileQueue((prev) => prev.slice(1));
+        shiftPendingPreview();
       } catch (e) {
         console.error(UPLOAD_DIAG, "queue:process:error", e);
         setError(e instanceof Error ? e.message : "Upload fallito");
         setFileQueue((prev) => prev.slice(1));
+        shiftPendingPreview();
       } finally {
         uploadProcessingRef.current = false;
         console.log(UPLOAD_DIAG, "queue:process:done", {
@@ -350,50 +348,26 @@ export function ListingEditor({ listing, mode }: ListingEditorProps) {
         ) : (
           <>
             {canUpload && (
-              <label
-                htmlFor="listing-photo-upload"
-                onDragOver={(e) => e.preventDefault()}
-                onDrop={(e) => {
-                  e.preventDefault();
-                  enqueueFiles(e.dataTransfer.files);
-                }}
-                className={cn(
-                  "block cursor-pointer border border-dashed border-white/15 hover:border-champagne/40 bg-white/[0.02] p-10 md:p-12 text-center transition-colors",
-                  uploading && "pointer-events-none opacity-80"
-                )}
-              >
-                <input
-                  id="listing-photo-upload"
-                  ref={inputRef}
-                  type="file"
-                  accept="image/*"
-                  multiple
-                  disabled={uploading}
-                  className="sr-only"
-                  onChange={(e) => {
-                    const described = describeFiles(e.target.files);
-                    traceFileUpload("listing-editor", "input-change", described);
-                    console.log(UPLOAD_DIAG, "ui:file-input:change", {
-                      count: e.target.files?.length ?? 0,
-                    });
-                    if (e.target.files) enqueueFiles(e.target.files);
-                    e.target.value = "";
-                  }}
-                />
-                {uploading ? (
-                  <Loader2 className="mx-auto animate-spin text-champagne" />
-                ) : (
-                  <>
-                    <Upload size={28} className="mx-auto text-champagne/70 mb-4" />
-                    <p className="font-display text-[11px] tracking-[0.22em] uppercase text-white/80 mb-2">
-                      Trascina le foto qui
-                    </p>
-                    <p className="text-sm text-muted font-light">
-                      oppure tocca per selezionare · JPG · PNG · WEBP · HEIC
-                    </p>
-                  </>
-                )}
-              </label>
+              <ImageUploadPicker
+                traceSource="listing-editor"
+                label=""
+                uploadHint="Trascina le foto qui o tocca per selezionare"
+                maxFiles={MAX_LISTING_IMAGES}
+                selectedCount={totalSelected}
+                previews={pendingPreviews}
+                onPreviewsAdded={enqueuePreviews}
+                onValidationError={setError}
+                disabled={uploading || !data}
+                inputId="listing-photo-upload"
+                showEmptyHint={false}
+              />
+            )}
+
+            {uploading && (
+              <p className="inline-flex items-center gap-2 text-xs text-champagne/90 font-light">
+                <Loader2 size={14} className="animate-spin" />
+                Caricamento in corso…
+              </p>
             )}
 
             {photos.length > 0 && (
@@ -413,7 +387,12 @@ export function ListingEditor({ listing, mode }: ListingEditorProps) {
                       DETAIL_PHOTO_ASPECT
                     )}
                   >
-                    <Image src={photo.src} alt="" fill className="object-contain bg-black" sizes="200px" />
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={photo.src}
+                      alt=""
+                      className="absolute inset-0 h-full w-full object-contain bg-black"
+                    />
                     <div className="absolute top-2 left-2 flex items-center gap-1.5">
                       <GripVertical size={14} className="text-white/60 cursor-grab" />
                       {i === 0 && (
@@ -517,10 +496,20 @@ function HomepageCoverSection({
           )}
         >
           {hasCrop ? (
-            <Image src={cover.cropSrc!} alt="" fill className="object-cover" sizes="300px" />
+            /* eslint-disable-next-line @next/next/no-img-element */
+            <img
+              src={cover.cropSrc!}
+              alt=""
+              className="absolute inset-0 h-full w-full object-cover"
+            />
           ) : (
             <>
-              <Image src={cover.src} alt="" fill className="object-cover opacity-35 blur-[1px]" sizes="300px" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={cover.src}
+                alt=""
+                className="absolute inset-0 h-full w-full object-cover opacity-35 blur-[1px]"
+              />
               <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 px-4 text-center bg-black/40">
                 <ImageIcon size={28} className="text-white/40" />
                 <p className="text-[10px] uppercase tracking-[0.18em] text-white/55 font-display">

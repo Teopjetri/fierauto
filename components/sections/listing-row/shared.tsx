@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Fragment } from "react";
-import { coverImage, type Listing } from "@/lib/listings/types";
+import { coverImage, homeCropSrc, type Listing } from "@/lib/listings/types";
 import { formatPrice, cn } from "@/lib/utils";
 
 export function formatListingPrice(price: string): string {
@@ -88,7 +88,7 @@ export function ListingPhoto({
   index: number;
 }) {
   const cover = coverImage(listing);
-  const photoSrc = cover?.src ?? null;
+  const photoSrc = cover ? homeCropSrc(cover) : null;
   if (!photoSrc) return null;
 
   const alt = `${listing.brand} ${listing.model}`.trim();

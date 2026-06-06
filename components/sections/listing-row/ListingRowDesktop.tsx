@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { coverImage, type Listing } from "@/lib/listings/types";
+import { coverImage, homeCropSrc, type Listing } from "@/lib/listings/types";
 import { formatPrice, cn } from "@/lib/utils";
 
 function formatListingPrice(price: string): string {
@@ -46,7 +46,8 @@ export function ListingRowDesktop({
   index: number;
 }) {
   const cover = coverImage(listing);
-  if (!cover?.src) return null;
+  const photoSrc = cover ? homeCropSrc(cover) : null;
+  if (!photoSrc) return null;
 
   const price = listing.price?.trim();
 
@@ -82,7 +83,7 @@ export function ListingRowDesktop({
       <div className="editorial-showcase__photo-col editorial-showcase__photo-col--left w-[48%] shrink-0 min-w-0">
         <div className="editorial-showcase__home-cover">
           <Image
-            src={cover.src}
+            src={photoSrc}
             alt={alt}
             fill
             priority={index < 2}

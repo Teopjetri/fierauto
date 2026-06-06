@@ -1,7 +1,7 @@
 "use client";
 
 import type { Listing } from "@/lib/listings/types";
-import { coverImage } from "@/lib/listings/types";
+import { coverImage, homeCropSrc } from "@/lib/listings/types";
 import { ListingRowDesktop } from "@/components/sections/listing-row/ListingRowDesktop";
 import { ListingRowMobile } from "@/components/sections/listing-row/ListingRowMobile";
 
@@ -10,7 +10,7 @@ export { ListingRowMobile } from "@/components/sections/listing-row/ListingRowMo
 
 export function ListingRow({ listing, index }: { listing: Listing; index: number }) {
   const cover = coverImage(listing);
-  if (!cover?.src) return null;
+  if (!cover || !homeCropSrc(cover)) return null;
 
   return (
     <div className="listing-row-pair">
