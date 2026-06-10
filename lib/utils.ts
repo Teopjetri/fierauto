@@ -13,6 +13,6 @@ export function formatMileage(km: number): string {
 }
 
 export function getWhatsAppUrl(message: string): string {
-  const phone = "393423834947";
+  const phone = "393520168703";
   return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 }

@@ -17,8 +17,8 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Telefono",
-    value: "+39 3423834947",
-    href: "tel:+393423834947",
+    value: "+39 352 016 8703",
+    href: "tel:+393520168703",
   },
   {
     icon: Mail,
